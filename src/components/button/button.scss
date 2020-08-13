@@ -1,0 +1,43 @@
+.btn {
+	transition: all 0.2s;
+	border-radius: 30px;
+	padding: 16px 32px;
+	&:hover {
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05), 0 2px 2px rgba(0, 0, 0, 0.05),
+			0 4px 4px rgba(0, 0, 0, 0.05), 0 8px 8px rgba(0, 0, 0, 0.05),
+			0 16px 16px rgba(0, 0, 0, 0.05);
+	}
+}
+
+.round {
+	border-radius: 50%;
+	width: 42px;
+	height: 42px;
+	position: relative;
+	margin-right: 10px;
+	padding: 0;
+	transform: scale(1);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	&::before {
+		content: "";
+		top: calc(50% - 6px);
+		left: calc(50% - 6px);
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		background: url("/img/arrow-down-icon.svg") center center no-repeat;
+	}
+	&::after {
+		content: "";
+		opacity: 0;
+		top: calc(50% - 12px);
+		left: calc(50% - 6px);
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		background: url("/img/arrow-down-icon.svg") center center no-repeat;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+}
