@@ -24,57 +24,78 @@ function Header() {
 
 	return (
 		<header>
-			<div
-				className={isMenuOpen ? "overlay show-overlay" : "overlay"}
-			></div>
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-6 col-sm-3">
-						<a href="/" title="Go to Home Page">
+						<a href="/" title="Go to Home Page" className="logo">
 							<img src="/img/intellrocket-logo.png" alt="" />
 						</a>
 					</div>
 					<div className="col-6 col-sm-9 d-flex align-items-center justify-content-end">
-						<nav>
-							<ul
-								className={
-									isMenuOpen
-										? "header-list open"
-										: "header-list"
-								}
-							>
-								<li className="header-item">
-									<a href="/home" className="underline">
-										Home
-									</a>
-								</li>
-								<li className="header-item">
-									<a href="/about-us" className="underline">
-										About us
-									</a>
-								</li>
-								<li className="header-item">
-									<a href="/services" className="underline">
-										Services
-									</a>
-								</li>
-								<li className="header-item">
-									<a href="/work" className="underline">
-										Work
-									</a>
-								</li>
-								{windowWidth <= 992 ? (
+						<div
+							id={
+								windowWidth <= 992
+									? "mobile-overlay"
+									: "navigation"
+							}
+							className={isMenuOpen ? "menu-open" : ""}
+						>
+							<nav>
+								<ul
+									className={
+										isMenuOpen
+											? "header-list open"
+											: "header-list"
+									}
+								>
 									<li className="header-item">
-										<a href="/work" className="underline">
-											Get a Quote
+										<a href="/home" className="underline">
+											Home
 										</a>
 									</li>
-								) : (
-									<Button name="btn" label="Get a Quote" />
-								)}
-							</ul>
-						</nav>
-
+									<li className="header-item">
+										<a
+											href="/about-us"
+											className="underline"
+										>
+											About us
+										</a>
+									</li>
+									<li className="header-item">
+										<a
+											href="/services"
+											className="underline"
+										>
+											Services
+										</a>
+									</li>
+									<li className="header-item">
+										<a href="/work" className="underline">
+											Work
+										</a>
+									</li>
+									{windowWidth <= 992 ? (
+										<li className="header-item">
+											<a
+												href="/work"
+												className="underline"
+											>
+												Get a Quote
+											</a>
+										</li>
+									) : (
+										<Button
+											name="btn"
+											label="Get a Quote"
+										/>
+									)}
+								</ul>
+								<div className="social-items">
+									<a href="#" className="social-icon"></a>
+									<a href="#" className="social-icon"></a>
+								</div>
+							</nav>
+						</div>
 						<button
 							className={isMenuOpen ? "menu active" : "menu"}
 							onClick={handleMenuOpen}

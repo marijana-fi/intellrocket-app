@@ -1,5 +1,5 @@
 import React from "react";
-import offerData from "../offerData";
+import offerData from "../../data/offerData";
 import CardOffer from "./CardOffer";
 
 function SectionOffer() {
