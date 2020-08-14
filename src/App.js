@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/header/Header";
 import SectionHero from "./components/section-hero/SectionHero";
 import SectionDigital from "./components/section-digital/SectionDigital";
@@ -11,19 +11,32 @@ import SectionQuote from "./components/section-quote/SectionQuote";
 import Footer from "./components/footer/Footer";
 
 function App() {
-	return (
-		<div className="App">
-			<Header />
-			<SectionHero />
-			<SectionDigital />
-			<SectionOffer />
-			<SectionSlider title="Our Works" data={sliderWorkData} />
-			<SectionServices />
-			<SectionSlider title="Our Blog" data={sliderBlogData} />
-			<SectionQuote />
-			<Footer />
-		</div>
-	);
+  const [isLight, setIsLight] = useState(true);
+
+  const toggleTheme = () => {
+    setIsLight(!isLight);
+  };
+  return (
+    <div className={isLight ? "App" : "App dark"}>
+      <div className="theme-toggle-wrapper">
+        <input type="checkbox" id="checkbox" onChange={() => toggleTheme()} />
+        <label className="theme-toggle" htmlFor="checkbox">
+          <div className="toggle"></div>
+          <span>Dark</span>
+          <span>Light</span>
+        </label>
+      </div>
+      <Header isLight={isLight} />
+      <SectionHero />
+      <SectionDigital />
+      <SectionOffer />
+      <SectionSlider title="Our Works" data={sliderWorkData} />
+      <SectionServices />
+      <SectionSlider title="Our Blog" data={sliderBlogData} />
+      <SectionQuote />
+      <Footer isLight={isLight} />
+    </div>
+  );
 }
 
 export default App;

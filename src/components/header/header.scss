@@ -1,157 +1,195 @@
 header {
-	padding: 10px 0;
-	z-index: 10;
-	.logo {
-		display: inline-block;
-		width: 180px;
-	}
-	#navigation {
-	}
-	#mobile-overlay {
-		background: #000;
-		position: fixed;
-		z-index: 3;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		transition: transform 0.6s 0.5s ease-in-out;
-		pointer-events: none;
-		overflow: hidden;
-		transform: translateX(100%);
-		&.menu-open {
-			pointer-events: all;
-			padding: 150px 0 0 15px;
-			transform: translateX(0);
-			transition: transform 0.6s ease-in-out;
-			.social-items {
-				display: flex;
-			}
-		}
-		.social-items {
-			display: none;
-			margin-top: 20px;
-			.social-icon {
-				width: 50px;
-				height: 50px;
-				border: 1px solid #fff;
-				border-radius: 50%;
-				margin-right: 10px;
-				background: url("/img/social-fb-icon.svg") center center
-					no-repeat;
-			}
-		}
-	}
+  padding: 10px 0;
+  z-index: 10;
+  .logo {
+    display: inline-block;
+    width: 180px;
+  }
+  #navigation {
+    .social-items {
+      display: none;
+    }
+  }
+  #mobile-overlay {
+    background: #000;
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateX(100%);
 
-	.header-list {
-		display: none;
-		align-items: center;
-		.header-item {
-			display: inline-block;
-			margin-right: 30px;
-			position: relative;
-			.underline {
-				&::after {
-					background-color: #000;
-				}
-			}
-		}
-		&.open {
-			display: block;
-			.header-item {
-				display: block;
-				a {
-					color: #fff;
-					font-size: 1.375rem;
-					line-height: 2;
-				}
-				.underline {
-					&::after {
-						background-color: #fff;
-					}
-				}
-			}
-		}
-	}
-	.btn {
-		display: none;
-	}
-	.menu {
-		z-index: 4;
-		&:focus {
-			outline: none;
-		}
-		position: relative;
-		display: flex;
-		background: transparent;
-		color: #111;
-		align-items: center;
-		.text {
-			margin-right: 10px;
-			color: #111;
-			font-size: 1.2rem;
-			transition: 0.6s 0.4s ease-in-out;
-		}
-		.hamburger {
-			width: 30px;
-			span {
-				display: block;
-				width: 30px;
-				height: 3px;
-				border-radius: 5px;
-				background: #111;
-				transition: 0.6s 0.4s ease-in-out;
-				transform: rotate(0deg);
-				position: absolute;
-				top: 3px;
-				&:nth-of-type(2) {
-					top: 12px;
-				}
-				&:nth-of-type(3) {
-					top: 22px;
-				}
-			}
-		}
-		&.active {
-			.text {
-				color: #fff;
-				transition: 0.6s 0.4s ease-in-out;
-			}
+    &.menu-open {
+      pointer-events: all;
+      padding: 150px 0 0 15px;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+      .social-items {
+        display: flex;
+        overflow: hidden;
+        a {
+          transform: translateY(0);
+          transition: all 0.3s;
+          opacity: 1;
+        }
+      }
+    }
+    .header-list {
+      .header-item {
+        overflow: hidden;
+        a {
+          display: block;
+          transform: translateY(50%);
+          transition: all 0.4s;
+          color: #fff;
+          font-size: 1.375rem;
+          line-height: 2;
+          opacity: 0;
+        }
+      }
+      &.open {
+        display: block;
+        .header-item {
+          display: block;
+          overflow: hidden;
+          a {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.4s 0.9s cubic-bezier(0, 0.5, 1, 1);
+          }
+          .underline {
+            &::after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .social-items {
+      display: none;
+      margin-top: 20px;
+      a {
+        opacity: 0;
+        display: flex;
+        transform: translateY(100%);
+        .social-icon {
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 
-			.hamburger {
-				span {
-					background: #fff;
-					top: 14px;
-					transform: rotate(135deg);
-					transition: all 0.6s 0.05s ease-in-out;
+  .header-list {
+    display: none;
+    align-items: center;
+    .header-item {
+      display: inline-block;
+      margin-right: 30px;
+      position: relative;
+      overflow: hidden;
+      a {
+        transform: translateY(0);
+        display: inline-block;
+        transition: all 0.4s 0.9s cubic-bezier(0, 0.5, 1, 1);
+      }
 
-					&:nth-of-type(2) {
-						transform: rotate(0deg);
-						opacity: 0;
-						right: -30px;
-						transition: 0.16s ease-in-out;
-					}
-					&:nth-of-type(3) {
-						transition: all 0.6s 0.05s ease-in-out;
-						top: 14px;
-						transform: rotate(-135deg);
-					}
-				}
-			}
-		}
-	}
+      .underline {
+        &::after {
+          background-color: #000;
+        }
+      }
+    }
+  }
+  .btn {
+    display: none;
+  }
+  .menu {
+    z-index: 4;
+    &:focus {
+      outline: none;
+    }
+    position: relative;
+    display: flex;
+    background: transparent;
+    color: #111;
+    align-items: center;
+    .text {
+      margin-right: 10px;
+      color: var(--text-primary);
+      font-size: 1.2rem;
+      transition: 0.6s 0.4s ease-in-out;
+    }
+    .hamburger {
+      width: 30px;
+      span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 5px;
+        background: var(--text-primary);
+        transition: 0.6s 0.4s ease-in-out;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 3px;
+        &:nth-of-type(2) {
+          top: 12px;
+        }
+        &:nth-of-type(3) {
+          top: 22px;
+        }
+      }
+    }
+    &.active {
+      .text {
+        color: #fff;
+        transition: 0.6s 0.4s ease-in-out;
+      }
+
+      .hamburger {
+        span {
+          background: #fff;
+          top: 14px;
+          transform: rotate(135deg);
+          transition: all 0.6s 0.05s ease-in-out;
+
+          &:nth-of-type(2) {
+            transform: rotate(0deg);
+            opacity: 0;
+            right: -30px;
+            transition: 0.16s ease-in-out;
+          }
+          &:nth-of-type(3) {
+            transition: all 0.6s 0.05s ease-in-out;
+            top: 14px;
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
-	header {
-		.menu {
-			display: none;
-		}
-		.header-list {
-			display: flex;
-		}
-		.btn {
-			display: block;
-		}
-	}
+  header {
+    .menu {
+      display: none;
+    }
+    .header-list {
+      display: flex;
+    }
+    .btn {
+      display: block;
+    }
+  }
 }

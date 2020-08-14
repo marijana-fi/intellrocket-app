@@ -1,15 +1,16 @@
 #section-quote {
-	background: url("/img/section-quote-bg-img.jpg") center;
-	margin-top: 100px;
-	h3 {
-		color: #fff;
-		margin-bottom: 20px;
-	}
+  background: url("/img/section-quote-bg-img.jpg") center;
+  padding: 100px 0;
+  margin-bottom: 120px;
+  h3 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 992) {
-	#section-quote {
-		h3 {
-			margin-bottom: 0;
-		}
-	}
+  #section-quote {
+    h3 {
+      margin-bottom: 0;
+    }
+  }
 }

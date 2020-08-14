@@ -1,20 +1,21 @@
 #section-hero {
-	height: 90vh;
-	.container {
-		height: 100%;
+  height: 100vh;
 
-		.img-wrap {
-			display: none;
-		}
-	}
+  .container {
+    height: 100%;
+
+    .img-wrap {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 992px) {
-	#section-hero {
-		.container {
-			.img-wrap {
-				display: block;
-			}
-		}
-	}
+  #section-hero {
+    .container {
+      .img-wrap {
+        display: block;
+      }
+    }
+  }
 }
