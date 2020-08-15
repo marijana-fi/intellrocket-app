@@ -28,6 +28,7 @@
 }
 
 .theme-toggle-wrapper {
+  cursor: pointer;
   display: flex;
   position: fixed;
   transform: rotate(-90deg);
@@ -35,7 +36,7 @@
   z-index: 10;
   left: 20px;
   justify-content: space-between;
-  background-color: #e8e8e8;
+  background: #e8e8e8;
   border-radius: 20px;
 
   input[type="checkbox"] {

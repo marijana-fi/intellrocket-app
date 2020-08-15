@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./section-digital.scss";
-import { Waypoint } from "react-waypoint";
+
 import OpenImage from "../open-image/OpenImage";
 
 const SectionDigital = () => {
-  const [isVisible, setIsVisible] = useState(false);
   return (
     <section id="section-digital" className="margin-b">
       <div className="container ">

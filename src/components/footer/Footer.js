@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.scss";
 import Button from "../button/Button";
 
 const Footer = ({ isLight }) => {
+  const [email, setEmail] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   return (
     <footer>
       <div className="container">
@@ -72,7 +80,7 @@ const Footer = ({ isLight }) => {
               </li>
             </ul>
           </div>
-          <div className="col-10 col-sm-6 col-md-6 col-lg-3">
+          <div className="col-10 col-sm-6 col-md-5 col-lg-3">
             <h4 className="footer-item">Follow Us</h4>
             <ul className="social-list d-flex align-items-center">
               <li className="social-list-item">
@@ -115,9 +123,21 @@ const Footer = ({ isLight }) => {
               </li>
             </ul>
             <h4 className="footer-item"> Newsletter</h4>
-            <div className="footer-email d-flex justify-content-between">
-              <input type="email" placeholder="Enter your email" />
-              <Button name="round" />
+            <div>
+              <form action="" className="d-flex justify-content-between" onSubmit={handleSubmit}>
+                <div className="footer-email">
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder=" "
+                    onChange={handleChange}
+                    value={email}
+                  />
+                  <label htmlFor="email">Enter your email</label>
+                </div>
+                <Button name="round" />
+              </form>
             </div>
           </div>
         </div>

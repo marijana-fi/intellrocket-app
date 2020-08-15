@@ -18,14 +18,14 @@ function App() {
   };
   return (
     <div className={isLight ? "App" : "App dark"}>
-      <div className="theme-toggle-wrapper">
+      <button className="theme-toggle-wrapper">
         <input type="checkbox" id="checkbox" onChange={() => toggleTheme()} />
         <label className="theme-toggle" htmlFor="checkbox">
           <div className="toggle"></div>
           <span>Dark</span>
           <span>Light</span>
         </label>
-      </div>
+      </button>
       <Header isLight={isLight} />
       <SectionHero />
       <SectionDigital />
