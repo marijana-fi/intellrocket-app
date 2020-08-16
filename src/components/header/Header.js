@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.scss";
 import Button from "../button/Button";
+import classnames from "classnames";
 
 const Header = ({ isLight }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -36,13 +37,16 @@ const Header = ({ isLight }) => {
           </div>
           <div className="col-6 col-sm-8 d-flex align-items-center justify-content-end">
             <div
-              id={windowWidth <= 992 ? "mobile-overlay" : "navigation"}
-              className={isMenuOpen ? "menu-open" : ""}
+              className={classnames(
+                "navigation",
+                { "menu-open": isMenuOpen },
+                { "mobile-overlay": windowWidth <= 992 }
+              )}
             >
               <nav>
                 <ul className={isMenuOpen ? "header-list open" : "header-list"}>
                   <li className="header-item">
-                    <a href="/home" className="underline">
+                    <a href="/home" className="underline  ">
                       Home
                     </a>
                   </li>
@@ -55,18 +59,18 @@ const Header = ({ isLight }) => {
                     </a>
                   </li>
                   <li className="header-item">
-                    <a href="/services" className="underline">
+                    <a href="/services" className="underline text-slide-in">
                       Services
                     </a>
                   </li>
                   <li className="header-item">
-                    <a href="/work" className="underline">
+                    <a href="/work" className="underline text-slide-in">
                       Work
                     </a>
                   </li>
                   {windowWidth <= 992 ? (
                     <li className="header-item">
-                      <a href="/work" className="underline">
+                      <a href="/work" className="underline text-slide-in">
                         Get a Quote
                       </a>
                     </li>
@@ -75,12 +79,12 @@ const Header = ({ isLight }) => {
                   )}
                 </ul>
                 <div className="social-items">
-                  <a href="/">
+                  <a href="/" className="text-slide-in">
                     <span className="social-icon">
                       <img src="img/social-fb-icon.svg" alt="" />
                     </span>
                   </a>
-                  <a href="/">
+                  <a href="/" className="text-slide-in">
                     <span className="social-icon">
                       <img src="img/social-linkedin-icon.svg" alt="" />
                     </span>

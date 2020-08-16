@@ -5,12 +5,12 @@ header {
     display: inline-block;
     width: 180px;
   }
-  #navigation {
+  .navigation {
     .social-items {
       display: none;
     }
   }
-  #mobile-overlay {
+  .mobile-overlay {
     background: #000;
     position: fixed;
     z-index: 3;
@@ -32,7 +32,7 @@ header {
         display: flex;
         overflow: hidden;
         a {
-          transform: translateY(0);
+          transform: translateY(100%);
           transition: all 0.3s;
           opacity: 1;
         }
@@ -43,7 +43,7 @@ header {
         overflow: hidden;
         a {
           display: block;
-          transform: translateY(50%);
+          transform: translateY(0);
           transition: all 0.4s;
           color: #fff;
           font-size: 1.375rem;
@@ -58,7 +58,7 @@ header {
           overflow: hidden;
           a {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(100%);
             transition: all 0.4s 0.9s cubic-bezier(0, 0.5, 1, 1);
           }
           .underline {
