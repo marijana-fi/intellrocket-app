@@ -1,5 +1,6 @@
 #section-quote {
-  background: url("/img/section-quote-bg-img.jpg") center;
+  background: url("/img/section-quote-bg-img.jpg") center center no-repeat;
+  background-size: auto;
   padding: 100px 0;
   margin-bottom: 120px;
   h3 {
@@ -7,7 +8,7 @@
     margin-bottom: 20px;
   }
 }
-@media (min-width: 992) {
+@media (min-width: 992px) {
   #section-quote {
     h3 {
       margin-bottom: 0;

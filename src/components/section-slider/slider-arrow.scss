@@ -1,0 +1,7 @@
+.slider-arrow {
+  background: var(--background);
+  line-height: 1;
+  &.prev {
+    transform: scaleX(-1);
+  }
+}

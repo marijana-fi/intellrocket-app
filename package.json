@@ -8,11 +8,14 @@
 		"@testing-library/user-event": "^7.2.1",
 		"bootstrap": "^4.5.2",
 		"classnames": "^2.2.6",
+		"gsap": "file:gsap-bonus.tgz",
 		"node-sass": "^4.14.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.2",
-		"react-waypoint": "^9.0.3"
+		"react-slick": "^0.27.9",
+		"react-waypoint": "^9.0.3",
+		"slick-carousel": "^1.8.1"
 	},
 	"scripts": {
 		"start": "react-scripts start node-sass --watch scss -o css",
