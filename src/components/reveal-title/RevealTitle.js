@@ -1,13 +1,13 @@
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import "./reveal-text.scss";
 
 import React, { useRef, useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
+import "./reveal-title.scss";
 
 gsap.registerPlugin(SplitText);
 
-const RevealText = (props) => {
+const RevealTitle = (props) => {
   const splitText = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [childSplit, setChildSplit] = useState(false);
@@ -31,24 +31,26 @@ const RevealText = (props) => {
 
   const CustomTag = `${props.tag}`;
 
-  const animateText = (params) => {
+  const animateTitle = (params) => {
     gsap.from(childSplit.lines, {
-      duration: 0.8,
+      duration: 1,
       yPercent: 100,
+
       ease: "strong.inOut",
       stagger: 0.1,
+      delay: 0.4,
     });
   };
 
   return (
     <>
-      <Waypoint onEnter={animateText}>
-        <CustomTag ref={splitText} className="reveal-text">
-          {props.text}
+      <Waypoint onEnter={animateTitle}>
+        <CustomTag ref={splitText} className="reveal-title">
+          {props.title}
         </CustomTag>
       </Waypoint>
     </>
   );
 };
 
-export default RevealText;
+export default RevealTitle;

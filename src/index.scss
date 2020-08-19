@@ -16,6 +16,11 @@
   animation: text-slide-in 0.6s forwards;
   animation-delay: 0.6s;
 }
+.btn-slide-in {
+  opacity: 0;
+  animation: text-slide-in 0.8s forwards cubic-bezier(0, 0.5, 0.5, 1);
+  animation-delay: 0.8s;
+}
 
 @keyframes text-slide-in {
   0% {

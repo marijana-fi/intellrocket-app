@@ -1,7 +1,8 @@
 import React from "react";
 import "./section-digital.scss";
-
 import OpenImage from "../open-image/OpenImage";
+import RevealTitle from "../reveal-title/RevealTitle";
+import RevealText from "../reveal-text/RevealText";
 
 const SectionDigital = () => {
   return (
@@ -10,11 +11,12 @@ const SectionDigital = () => {
         <div className="row justify-content-between flex-lg-row flex-column-reverse">
           <div className="col-10 col-lg-5 d-flex align-items-center ">
             <div className="text-wrap">
-              <h2>We Deliver Breathtaking Digital Products</h2>
-              <p>
-                We are a creative tech company that develops user journeys and provide a memorable
-                user experience. We create enduring relationships between brands and their clients.
-              </p>
+              <RevealTitle tag="h2" title="We Deliver Breathtaking Digital Products" />
+              <RevealText
+                tag="p"
+                text="We are a creative tech company that develops user journeys and provide a memorable
+                user experience. We create enduring relationships between brands and their clients."
+              />
             </div>
           </div>
           <div className="col-12 col-lg-6">
