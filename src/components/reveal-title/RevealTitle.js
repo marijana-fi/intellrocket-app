@@ -9,9 +9,10 @@ gsap.registerPlugin(SplitText);
 
 const RevealTitle = (props) => {
   const splitText = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isListItem, setIsListItem] = useState(false);
   const [childSplit, setChildSplit] = useState(false);
   const [parentSplit, setParentSplit] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
   useEffect(() => {
     let child = new SplitText(splitText.current, {
@@ -27,24 +28,27 @@ const RevealTitle = (props) => {
     });
 
     setParentSplit(parent);
+    if (props.tag === "li") {
+      setIsListItem(true);
+    }
   }, []);
 
   const CustomTag = `${props.tag}`;
 
   const animateTitle = (params) => {
-    gsap.from(childSplit.lines, {
-      duration: 1,
-      yPercent: 100,
-
-      ease: "strong.inOut",
-      stagger: 0.1,
-      delay: 0.4,
-    });
+    if (shouldAnimate) {
+      gsap.from(childSplit.lines, {
+        duration: 1,
+        yPercent: 100,
+        ease: "strong.inOut",
+        stagger: 0.1,
+      });
+    }
   };
 
   return (
     <>
-      <Waypoint onEnter={animateTitle}>
+      <Waypoint onEnter={animateTitle} onLeave={() => setShouldAnimate(false)}>
         <CustomTag ref={splitText} className="reveal-title">
           {props.title}
         </CustomTag>

@@ -4,9 +4,17 @@
     margin: 0;
   }
 }
-.split-parent {
-  overflow: hidden;
+.text-split-parent {
 }
-.split-child {
+.text-split-child {
   display: inline-block;
+}
+.reveal-text {
+  .text-split-parent,
+  .text-split-child {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-weight: 400;
+  }
 }

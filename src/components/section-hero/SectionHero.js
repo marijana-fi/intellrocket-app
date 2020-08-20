@@ -9,7 +9,6 @@ gsap.registerPlugin(MorphSVGPlugin);
 
 const SectionHero = () => {
   const start = useRef(null);
-  const end = useRef(null);
 
   useEffect(() => {
     gsap.to(start.current, 5, {

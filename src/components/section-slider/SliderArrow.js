@@ -1,10 +1,55 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./slider-arrow.scss";
+import { gsap } from "gsap";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+
+gsap.registerPlugin(DrawSVGPlugin);
 
 function SliderArrow(props) {
   const { type, ...rest } = props;
+  const circleNext = useRef(null);
+  const lineNext = useRef(null);
+  const arrowNext = useRef(null);
+  const [once, setOnce] = useState(false);
+  const [tl, setTl] = useState(null);
+
+  useEffect(() => {
+    let tl = gsap.timeline();
+    setTl(tl);
+  }, []);
+
+  const animateCircle = (params) => {
+    if (once) {
+      tl.play();
+      return;
+    }
+    tl.set(circleNext.current, { visibility: "visible" })
+      .set(lineNext.current, {
+        visibility: "visible",
+      })
+      .set(arrowNext.current, { visibility: "visible" });
+
+    tl.fromTo(circleNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" })
+      .fromTo(lineNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" }, 0)
+      .fromTo(arrowNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" }, 0);
+  };
+
+  const handleLeave = (params) => {
+    tl.reverse();
+  };
+
+  const handleEnter = (params) => {
+    animateCircle();
+    setOnce(true);
+  };
+
   return (
-    <button className={type === "next" ? "slider-arrow" : "slider-arrow prev"} {...rest}>
+    <button
+      className={type === "next" ? "slider-arrow" : "slider-arrow prev"}
+      {...rest}
+      onMouseEnter={() => handleEnter()}
+      onMouseLeave={() => handleLeave()}
+    >
       <svg
         version="1.2"
         baseProfile="tiny"
@@ -15,48 +60,47 @@ function SliderArrow(props) {
         height="50px"
         viewBox="0 0 50 50"
       >
-        {" "}
         <path
           fill="none"
           stroke="#888888"
           strokeMiterlimit="10"
           d="M18.416,24.5L32.584,24.5"
-          className="XVpfmXCG_0"
-        ></path>{" "}
+        ></path>
         <path
           fill="none"
           stroke="#888888"
           strokeMiterlimit="10"
           d="M27.529,19.541L32.488,24.5L27.529,29.459"
-          className="XVpfmXCG_1"
-        ></path>{" "}
+        ></path>
         <path
+          ref={lineNext}
+          id="line-next"
           fill="none"
           stroke="#888888"
           strokeMiterlimit="10"
           d="M18.416,24.5L32.584,24.5"
-          className="XVpfmXCG_4"
-        ></path>{" "}
+        ></path>
         <path
+          ref={arrowNext}
+          id="arrow-next"
           fill="none"
           stroke="#888888"
           strokeMiterlimit="10"
           d="M27.529,19.541L32.488,24.5L27.529,29.459"
-          className="XVpfmXCG_5"
-        ></path>{" "}
+        ></path>
         <path
           fill="none"
           stroke="#888888"
           strokeMiterlimit="10"
           d="M4.844999999999999,24.363A20,20 0,1,1 44.845,24.363A20,20 0,1,1 4.844999999999999,24.363"
-          className="XVpfmXCG_2"
-        ></path>{" "}
+        ></path>
         <path
+          id="circle-next"
+          ref={circleNext}
           fill="none"
           strokeMiterlimit="10"
           d="M4.844999999999999,24.363A20,20 0,1,1 44.845,24.363A20,20 0,1,1 4.844999999999999,24.363"
-          className="XVpfmXCG_3"
-        ></path>{" "}
+        ></path>
       </svg>
     </button>
   );

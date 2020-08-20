@@ -9,21 +9,21 @@ gsap.registerPlugin(SplitText);
 
 const RevealText = (props) => {
   const splitText = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [childSplit, setChildSplit] = useState(false);
   const [parentSplit, setParentSplit] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
   useEffect(() => {
     let child = new SplitText(splitText.current, {
       type: "lines",
-      linesClass: "split-child",
+      linesClass: "text-split-child",
     });
 
     setChildSplit(child);
 
     let parent = new SplitText(splitText.current, {
       type: "lines",
-      linesClass: "split-parent",
+      linesClass: "text-split-parent",
     });
 
     setParentSplit(parent);
@@ -32,17 +32,21 @@ const RevealText = (props) => {
   const CustomTag = `${props.tag}`;
 
   const animateText = (params) => {
-    gsap.from(childSplit.lines, {
-      duration: 0.8,
-      yPercent: 100,
-      ease: "strong.inOut",
-      stagger: 0.1,
-    });
+    if (shouldAnimate) {
+      gsap.from(childSplit.lines, {
+        duration: 0.8,
+        opacity: 0,
+        y: 50,
+        ease: "power1",
+        stagger: 0.05,
+        delay: 0.7,
+      });
+    }
   };
 
   return (
     <>
-      <Waypoint onEnter={animateText}>
+      <Waypoint onEnter={animateText} onLeave={() => setShouldAnimate(false)}>
         <CustomTag ref={splitText} className="reveal-text">
           {props.text}
         </CustomTag>

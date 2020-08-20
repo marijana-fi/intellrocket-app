@@ -27,7 +27,7 @@
   .slider-text-wrap {
     width: 50%;
     position: absolute;
-    padding: 20px;
+    padding: 40px 20px;
     bottom: 0;
     left: 0;
     h4,
@@ -36,11 +36,12 @@
     }
     h4 {
       text-transform: initial;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       font-size: 1.5rem;
     }
     .text-desc-wrap {
       display: flex;
+      // overflow: hidden;
       align-items: center;
       .line {
         width: 50px;
@@ -62,6 +63,25 @@
       }
       .slider-text-desc {
         position: relative;
+        div {
+          color: #fff;
+        }
+      }
+      .slider-text-hover {
+        position: absolute;
+
+        left: 80px;
+        div {
+          .bottom-char {
+            opacity: 0;
+            transform: translateY(60%);
+            color: red;
+            background: linear-gradient(to right, #f91824, #f92d73);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
       }
     }
   }

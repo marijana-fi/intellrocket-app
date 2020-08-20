@@ -10,3 +10,13 @@
 .split-child {
   display: inline-block;
 }
+
+li {
+  .split-parent,
+  .split-child {
+    color: var(--text-light);
+  }
+  .split-parent {
+    margin-bottom: 10px;
+  }
+}

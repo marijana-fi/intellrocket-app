@@ -1,6 +1,14 @@
 .slider-arrow {
   background: var(--background);
   line-height: 1;
+  #circle-next,
+  #arrow-next,
+  #line-next {
+    visibility: hidden;
+    stroke: #000;
+    stroke-width: 2px;
+  }
+
   &.prev {
     transform: scaleX(-1);
   }

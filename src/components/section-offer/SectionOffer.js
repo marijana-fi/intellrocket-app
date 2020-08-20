@@ -7,13 +7,14 @@ const SectionOffer = () => {
     <section id="section-offer" className="margin-b">
       <div className="container">
         <div className="row">
-          {offerData.map((data) => (
+          {offerData.map((data, i) => (
             <CardOffer
               key={data.number}
               title={data.title}
               desc={data.desc}
               order={data.number}
               list={data.list}
+              index={i}
             />
           ))}
         </div>
