@@ -1,6 +1,20 @@
 header {
   padding: 10px 0;
   z-index: 10;
+  .toggler {
+    position: absolute;
+    overflow: hidden;
+    top: 15px;
+    left: 15px;
+  }
+  &.mobile-open {
+    .theme-toggle-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.3s;
+      transition-delay: 0.7s;
+    }
+  }
   .logo {
     display: inline-block;
     width: 180px;
@@ -36,6 +50,9 @@ header {
           transition: all 0.3s;
           opacity: 1;
         }
+      }
+      .theme-toggle-wrapper {
+        transform: rotate(0);
       }
     }
     .header-list {

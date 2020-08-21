@@ -31,7 +31,7 @@ function SliderArrow(props) {
 
     tl.fromTo(circleNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" })
       .fromTo(lineNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" }, 0)
-      .fromTo(arrowNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" }, 0);
+      .fromTo(arrowNext.current, { drawSVG: 0 }, { duration: 0.5, drawSVG: "100%" }, 0.2);
   };
 
   const handleLeave = (params) => {

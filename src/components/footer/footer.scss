@@ -4,6 +4,9 @@ footer {
     width: 180px;
     margin-bottom: 40px;
   }
+  h4 {
+    line-height: 1.8;
+  }
   a,
   li {
     color: var(--text-light);
@@ -14,7 +17,7 @@ footer {
     }
   }
   .social-list {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     .social-list-item {
       margin-right: 30px;
     }
@@ -59,6 +62,20 @@ footer {
   }
   .round {
     margin-right: 0;
+
+    &::after,
+    &::before {
+      transform: rotate(-90deg);
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: rotate(-90deg);
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
 
     &:hover {
       transform: scale(1);

@@ -35,50 +35,6 @@
 .h-100 {
   height: 100%;
 }
-.theme-toggle-wrapper {
-  cursor: pointer;
-  display: flex;
-  position: fixed;
-  transform: rotate(-90deg);
-  top: 50%;
-  z-index: 10;
-  left: 20px;
-  justify-content: space-between;
-  background: #e8e8e8;
-  border-radius: 20px;
-
-  input[type="checkbox"] {
-    opacity: 0;
-    position: absolute;
-    &:checked + label .toggle {
-      transform: translateX(0);
-    }
-  }
-  .theme-toggle {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding: 5px 10px;
-    span {
-      display: inline-block;
-      color: #000;
-      z-index: 9;
-    }
-    .toggle {
-      background: #fff;
-      transform: translateX(100%);
-      position: absolute;
-      width: 50px;
-      height: 24px;
-      top: 2px;
-      left: 0;
-      box-shadow: -1px 0 4px rgba(23, 22, 26, 0.05);
-      border-radius: 20px;
-      transition: transform 0.2s;
-    }
-  }
-}
 
 * {
   box-sizing: border-box;

@@ -70,7 +70,7 @@ const SliderCard = ({ item }) => {
             {item.desc}
           </h5>
           <h5 className="slider-text-hover" ref={splitBottom}>
-            discover more
+            {item.hover}
           </h5>
         </div>
       </div>

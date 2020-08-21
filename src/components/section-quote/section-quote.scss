@@ -2,7 +2,7 @@
   background: url("/img/section-quote-bg-img.jpg") center center no-repeat;
   background-size: cover;
   padding: 100px 0;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   .reveal-title {
     margin-bottom: 20px;
     .split-child {
@@ -12,6 +12,7 @@
 }
 @media (min-width: 992px) {
   #section-quote {
+    margin-bottom: 120px;
     h3 {
       margin-bottom: 0;
     }

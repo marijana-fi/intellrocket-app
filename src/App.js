@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/header/Header";
 import SectionHero from "./components/section-hero/SectionHero";
 import SectionDigital from "./components/section-digital/SectionDigital";
@@ -9,6 +9,7 @@ import sliderBlogData from "./data/sliderBlogData";
 import sliderWorkData from "./data/sliderWorkData";
 import SectionQuote from "./components/section-quote/SectionQuote";
 import Footer from "./components/footer/Footer";
+import ToggleTheme from "./components/toggle-theme/ToggleTheme";
 
 function App() {
   const [isLight, setIsLight] = useState(true);
@@ -16,17 +17,10 @@ function App() {
   const toggleTheme = () => {
     setIsLight(!isLight);
   };
+
   return (
     <div className={isLight ? "App" : "App dark"}>
-      <button className="theme-toggle-wrapper">
-        <input type="checkbox" id="checkbox" onChange={() => toggleTheme()} />
-        <label className="theme-toggle" htmlFor="checkbox">
-          <div className="toggle"></div>
-          <span>Dark</span>
-          <span>Light</span>
-        </label>
-      </button>
-      <Header isLight={isLight} />
+      <Header isLight={isLight} toggleTheme={toggleTheme} />
       <SectionHero />
       <SectionDigital />
       <SectionOffer />

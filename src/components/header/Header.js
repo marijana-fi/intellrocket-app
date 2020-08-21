@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./header.scss";
 import Button from "../button/Button";
 import classnames from "classnames";
+import ToggleTheme from "../toggle-theme/ToggleTheme";
 
-const Header = ({ isLight }) => {
+const Header = ({ isLight, toggleTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -24,7 +25,10 @@ const Header = ({ isLight }) => {
   };
 
   return (
-    <header>
+    <header className={isMenuOpen ? "mobile-open" : ""}>
+      <div className="toggler">
+        <ToggleTheme toggleTheme={toggleTheme} />
+      </div>
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-6 col-sm-3">
@@ -46,7 +50,10 @@ const Header = ({ isLight }) => {
               <nav>
                 <ul className={isMenuOpen ? "header-list open" : "header-list"}>
                   <li className="header-item">
-                    <a href="/home" className="underline  ">
+                    <a
+                      href="/home"
+                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
+                    >
                       Home
                     </a>
                   </li>
@@ -59,18 +66,27 @@ const Header = ({ isLight }) => {
                     </a>
                   </li>
                   <li className="header-item">
-                    <a href="/services" className="underline text-slide-in">
+                    <a
+                      href="/services"
+                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
+                    >
                       Services
                     </a>
                   </li>
                   <li className="header-item">
-                    <a href="/work" className="underline text-slide-in">
+                    <a
+                      href="/work"
+                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
+                    >
                       Work
                     </a>
                   </li>
                   {windowWidth <= 992 ? (
                     <li className="header-item">
-                      <a href="/work" className="underline text-slide-in">
+                      <a
+                        href="/work"
+                        className={isMenuOpen ? "underline text-slide-in" : "underline"}
+                      >
                         Get a Quote
                       </a>
                     </li>
