@@ -34,7 +34,7 @@ const Header = ({ isLight, toggleTheme }) => {
           <div className="col-6 col-sm-3">
             <a href="/" title="Go to Home Page" className="logo">
               <img
-                src={!isLight ? "/img/intellrocket-logo-white.png" : "/img/intellrocket-logo.png"}
+                src={!isLight ? "img/intellrocket-logo-white.png" : "img/intellrocket-logo.png"}
                 alt=""
               />
             </a>

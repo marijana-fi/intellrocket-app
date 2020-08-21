@@ -18,7 +18,7 @@ const Footer = ({ isLight }) => {
           <div className="col-12 col-sm-6 col-lg-4 mb-5">
             <a href="/" className="logo">
               <img
-                src={!isLight ? "/img/intellrocket-logo-white.png" : "/img/intellrocket-logo.png"}
+                src={!isLight ? "img/intellrocket-logo-white.png" : "img/intellrocket-logo.png"}
                 alt="logo"
               />
             </a>

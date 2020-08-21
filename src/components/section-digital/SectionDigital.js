@@ -22,11 +22,11 @@ const SectionDigital = () => {
           <div className="col-12 col-lg-6">
             <div className="img-wrap d-flex justify-content-end">
               <div className="img-large d-flex">
-                <OpenImage url="/img/section-digital-img-01.jpg" customClass="right" />
+                <OpenImage url="img/section-digital-img-01.jpg" customClass="right" />
               </div>
 
               <div className="img-small">
-                <OpenImage url="/img/section-digital-img-02.jpg" customClass="right" />
+                <OpenImage url="img/section-digital-img-02.jpg" customClass="right" />
               </div>
             </div>
           </div>
