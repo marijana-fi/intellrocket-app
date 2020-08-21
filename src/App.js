@@ -9,10 +9,19 @@ import sliderBlogData from "./data/sliderBlogData";
 import sliderWorkData from "./data/sliderWorkData";
 import SectionQuote from "./components/section-quote/SectionQuote";
 import Footer from "./components/footer/Footer";
-import ToggleTheme from "./components/toggle-theme/ToggleTheme";
 
 function App() {
   const [isLight, setIsLight] = useState(true);
+
+  useEffect(() => {
+    const isLight = JSON.parse(localStorage.getItem("theme"));
+    console.log(isLight);
+    setIsLight(isLight);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(isLight));
+  }, [isLight]);
 
   const toggleTheme = () => {
     setIsLight(!isLight);

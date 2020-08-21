@@ -5,7 +5,7 @@
   #arrow-next,
   #line-next {
     visibility: hidden;
-    stroke: #000;
+    stroke: var(--text-primary);
     stroke-width: 2px;
   }
 

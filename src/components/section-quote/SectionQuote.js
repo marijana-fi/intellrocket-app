@@ -6,7 +6,6 @@ import RevealTitle from "../reveal-title/RevealTitle";
 
 const SectionQuote = () => {
   const [isVisible, setIsVisible] = useState(false);
-  console.log(isVisible);
   return (
     <section id="section-quote">
       <div className="container">

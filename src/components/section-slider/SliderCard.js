@@ -13,9 +13,12 @@ const SliderCard = ({ item }) => {
   const [splitBottomChar, setSplitBottomChar] = useState(null);
   const [tlTop, setTlTop] = useState(null);
 
+  const sliderRef = useRef(null);
+
   useEffect(() => {
     let tl = gsap.timeline();
     setTlTop(tl);
+
     const splitTopWord = new SplitText(splitTop.current, { type: "chars, words" });
     setSplitTopChar(splitTopWord);
     // hover
@@ -60,7 +63,12 @@ const SliderCard = ({ item }) => {
   };
 
   return (
-    <div id="slider-item" onMouseEnter={() => handleEnter()} onMouseLeave={() => handleLeave()}>
+    <div
+      id="slider-item"
+      onMouseEnter={() => handleEnter()}
+      onMouseLeave={() => handleLeave()}
+      ref={sliderRef}
+    >
       <img src={item.image} alt="" />
       <div className="slider-text-wrap">
         <h4>{item.title}</h4>
