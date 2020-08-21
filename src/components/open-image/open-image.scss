@@ -9,7 +9,7 @@
     left: 0;
     z-index: 100;
     transform: scaleX(0);
-    animation: over-slide-in 0.8s cubic-bezier(0, 0.5, 1, 1);
+    animation: over-slide-in 0.6s cubic-bezier(0, 0.5, 1, 1);
     &.right {
       transform-origin: right;
     }
