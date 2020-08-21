@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./toggle-theme.scss";
 
-function ToggleTheme({ toggleTheme }) {
+function ToggleTheme({ toggleTheme, isLight }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function ToggleTheme({ toggleTheme }) {
   }, []);
   return (
     <button className={windowWidth <= 992 ? "theme-toggle-wrapper mobile" : "theme-toggle-wrapper"}>
-      <input type="checkbox" id="checkbox" onChange={() => toggleTheme()} />
+      <input type="checkbox" id="checkbox" onChange={() => toggleTheme()} checked={!isLight} />
       <label className="theme-toggle" htmlFor="checkbox">
         <div className="toggle"></div>
         <span>Dark</span>

@@ -27,7 +27,7 @@ const Header = ({ isLight, toggleTheme }) => {
   return (
     <header className={isMenuOpen ? "mobile-open" : ""}>
       <div className="toggler">
-        <ToggleTheme toggleTheme={toggleTheme} />
+        <ToggleTheme toggleTheme={toggleTheme} isLight={isLight} />
       </div>
       <div className="container">
         <div className="row align-items-center justify-content-between">

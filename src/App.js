@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const isLight = JSON.parse(localStorage.getItem("theme"));
-    console.log(isLight);
+
     setIsLight(isLight);
   }, []);
 
