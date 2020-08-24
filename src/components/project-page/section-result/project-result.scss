@@ -5,9 +5,15 @@
 
     .text-split-parent {
       line-height: 1;
+      display: flex !important;
       .text-split-child {
         line-height: 1;
         color: red;
+        background: linear-gradient(to right, #f91824, #f92d73);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
         text-transform: initial;
         font-size: 1.5rem;
       }
