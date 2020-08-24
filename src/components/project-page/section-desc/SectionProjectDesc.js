@@ -1,0 +1,25 @@
+import React from "react";
+import projectsData from "../projectsData";
+import RevealTitle from "../../reveal-title/RevealTitle";
+import RevealText from "../../reveal-text/RevealText";
+
+function SectionProjectDesc() {
+  return (
+    <section id="section-project-desc" className="margin-b">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-lg-6 d-flex flex-column align-items-center mb-3 mb-lg-0">
+            <RevealTitle tag="h3" title="The Challenge" />
+            <RevealText tag="p" text={projectsData[0].challenge} />
+          </div>
+          <div className="col-12 col-lg-6 d-flex flex-column align-items-center">
+            <RevealTitle tag="h3" title="The Approach" />
+            <RevealText tag="p" text={projectsData[0].approach} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default SectionProjectDesc;

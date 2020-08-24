@@ -1,8 +1,8 @@
 import React from "react";
 import "./section-digital.scss";
-import OpenImage from "../open-image/OpenImage";
-import RevealTitle from "../reveal-title/RevealTitle";
-import RevealText from "../reveal-text/RevealText";
+import OpenImage from "../../open-image/OpenImage";
+import RevealTitle from "../../reveal-title/RevealTitle";
+import RevealText from "../../reveal-text/RevealText";
 
 const SectionDigital = () => {
   return (

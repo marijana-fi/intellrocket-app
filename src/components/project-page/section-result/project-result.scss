@@ -1,0 +1,22 @@
+#project-result {
+  h4 {
+    margin-bottom: 10px;
+
+    .text-split-parent {
+      line-height: 1;
+      .text-split-child {
+        line-height: 1;
+        color: red;
+        text-transform: initial;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .result-desc {
+    margin-right: 200px;
+  }
+  .info-wrap {
+    display: block;
+    margin-bottom: 80px;
+  }
+}

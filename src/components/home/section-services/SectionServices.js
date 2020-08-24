@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Button from "../button/Button";
+import Button from "../../button/Button";
 import "./section-services.scss";
-import OpenImage from "../open-image/OpenImage";
-import RevealText from "../reveal-text/RevealText";
+import OpenImage from "../../open-image/OpenImage";
+import RevealText from "../../reveal-text/RevealText";
 import { Waypoint } from "react-waypoint";
-import RevealTitle from "../reveal-title/RevealTitle";
+import RevealTitle from "../../reveal-title/RevealTitle";
 
 const SectionServices = () => {
   const [isVisible, setIsVisible] = useState(false);
