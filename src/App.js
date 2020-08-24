@@ -24,8 +24,8 @@ function App() {
   return (
     <div className={isLight ? "App" : "App dark"}>
       <Header isLight={isLight} toggleTheme={toggleTheme} />
-      <Home />
-      {/* <ProjectPage /> */}
+      {/* <Home /> */}
+      <ProjectPage />
       <Footer isLight={isLight} />
     </div>
   );

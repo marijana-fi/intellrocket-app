@@ -6,6 +6,7 @@ import ProjectIntro from "./section-project-intro/ProjectIntro";
 import SectionProjectDesc from "./section-desc/SectionProjectDesc";
 import ProjectResult from "./section-result/ProjectResult";
 import ProjectMobile from "./section-mobile/ProjectMobile";
+import ProjectProduct from "./section-product/ProjectProduct";
 
 function ProjectPage() {
   return (
@@ -13,8 +14,9 @@ function ProjectPage() {
       <ProjectIntro />
       <SectionProjectDesc />
       <ProjectMobile />
+      <ProjectProduct />
       <ProjectResult />
-      <SectionSlider title="More Projects" data={sliderWorkData} />
+      <SectionSlider title="More Projects" data={sliderWorkData} toFilter="reTyre" />
       <SectionQuote />
     </>
   );

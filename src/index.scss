@@ -70,6 +70,12 @@ button {
     margin-bottom: 240px;
   }
 }
+.margin-b-100 {
+  margin-bottom: 60px;
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
+}
 
 .underline {
   position: relative;

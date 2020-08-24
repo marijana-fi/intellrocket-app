@@ -9,9 +9,40 @@ const projectsData = [
       "Since we were dealing with creative and innovative tyre solutions, we found that the best way to approach the design is by letting the pictures and animations showcase the value of the products. The main idea was to allow visitors to find all the necessary information about the products thanks to the intuitive site navigation and create attractive visual experience that will make them stay long enough to truly understand the benefits of the products.",
     mobile:
       "A functional and clean mobile design is crucial for reaching all users and increasing the market for your products. Our websites are mobile-friendly and mobile responsive and allow our clients, like reTyre, to showcase their products or services on all devices.",
+    product: [
+      {
+        title: "Product Selection",
+        text:
+          "Showing the product selection on the homepage was our priority and we did it with an engaging animation displaying all the possible terrains and weather conditions in which reTyre products can enhance the user experience.",
+        img: "img/projects/retyre-product-selection.gif",
+      },
+      {
+        title: "Product Overview",
+        text:
+          "With new and creative products, it takes time for customers to accept them. Reading the product description may engage a few visitors but seeing how the product looks and what it does is a more effective way to present it. That’s why we have combined text and animations to showcase reTyre’s products, focusing on appearance and functionality.",
+        img: "img/projects/retyre-winter.gif",
+      },
+      {
+        title: "Application",
+        text:
+          "Explaining why these modular bicycle tyres are unique was always the primary goal of our web design. We found that simple graphic animation can point out all the product’s features in a quick, effective manner.",
+        img: "img/projects/retyre-application.gif",
+      },
+      {
+        title: "Product Landing Page",
+        text:
+          "Appealing photographs, useful animations and detailed product information focused on different applications of each item, are vital building blocks for product landing pages designed to draw the attention of the visitors and spike their interest in the products.",
+        img: "img/projects/retyre-Winter-Traveler.png",
+      },
+    ],
+    mockup: "img/projects/retyre-mockup.png",
+    home: "img/projects/retyre-home.jpg",
+    mobileImg: "img/projects/retyre-mobile-screens.png",
+    page: "img/projects/retyre-Winter-Traveler.png",
+    contact: "img/projects/retyre-contact-about-us-trail-rider.png",
     result:
       "The site has received a lot of praise from several sources. ReTyre's clients and partners were delighted with ours work. Also, all our clients and partners praised both the innovative product and ours Work. Visit the site to get the best impression.",
-    images: [{ mobile: "" }],
+
     resultData: [
       { label: "Date", info: "May 2019." },
       { label: "Client", info: "reTyre.co" },

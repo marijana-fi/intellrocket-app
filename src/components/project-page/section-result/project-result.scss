@@ -1,4 +1,5 @@
 #project-result {
+  margin-bottom: 40px;
   h4 {
     margin-bottom: 10px;
 
@@ -14,9 +15,37 @@
   }
   .result-desc {
     margin-right: 200px;
+    margin-bottom: 72px;
   }
   .info-wrap {
     display: block;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
+  }
+  .btn-wrap {
+    justify-content: center;
+    .btn {
+      padding: 12px 40px;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #project-result {
+    margin-bottom: 100px;
+    .info-wrap {
+      margin-bottom: 80px;
+    }
+    .btn-wrap {
+      justify-content: left;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #project-result {
+    margin-bottom: 150px;
   }
 }
