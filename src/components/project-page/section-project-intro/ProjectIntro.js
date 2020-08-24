@@ -3,9 +3,9 @@ import projectsData from "../projectsData";
 import RevealTitle from "../../reveal-title/RevealTitle";
 import RevealText from "../../reveal-text/RevealText";
 import Button from "../../button/Button";
+import "./project-intro.scss";
 
 function ProjectIntro() {
-  console.log(projectsData);
   return (
     <section id="project-intro" className="margin-b mt-5">
       <div className="container">

@@ -3,7 +3,7 @@ import SectionHero from "./section-hero/SectionHero";
 import SectionDigital from "./section-digital/SectionDigital";
 import SectionOffer from "./section-offer/SectionOffer";
 import SectionServices from "./section-services/SectionServices";
-import SectionQuote from "./section-quote/SectionQuote";
+import SectionQuote from "../section-quote/SectionQuote";
 import sliderBlogData from "./data/sliderBlogData";
 import SectionSlider from "../section-slider/SectionSlider";
 import sliderWorkData from "./data/sliderWorkData";

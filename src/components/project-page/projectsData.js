@@ -7,8 +7,11 @@ const projectsData = [
       "Good web design lets the product speak for itself. We had to find a way to achieve this, explaining along the way what reTyre is and how their products work. It’s never easy to design a website for a new product. The challenge is greater because you have to find the perfect balance between a clean, user-friendly design and content-rich guides that explain the purpose of the innovative products.",
     approach:
       "Since we were dealing with creative and innovative tyre solutions, we found that the best way to approach the design is by letting the pictures and animations showcase the value of the products. The main idea was to allow visitors to find all the necessary information about the products thanks to the intuitive site navigation and create attractive visual experience that will make them stay long enough to truly understand the benefits of the products.",
+    mobile:
+      "A functional and clean mobile design is crucial for reaching all users and increasing the market for your products. Our websites are mobile-friendly and mobile responsive and allow our clients, like reTyre, to showcase their products or services on all devices.",
     result:
       "The site has received a lot of praise from several sources. ReTyre's clients and partners were delighted with ours work. Also, all our clients and partners praised both the innovative product and ours Work. Visit the site to get the best impression.",
+    images: [{ mobile: "" }],
     resultData: [
       { label: "Date", info: "May 2019." },
       { label: "Client", info: "reTyre.co" },
