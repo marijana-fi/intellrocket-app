@@ -1,0 +1,51 @@
+#project-result {
+  margin-bottom: 40px;
+  h4 {
+    margin-bottom: 10px;
+
+    .text-split-parent {
+      line-height: 1;
+      .text-split-child {
+        line-height: 1;
+        color: red;
+        text-transform: initial;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .result-desc {
+    margin-right: 200px;
+    margin-bottom: 72px;
+  }
+  .info-wrap {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .btn-wrap {
+    justify-content: center;
+    .btn {
+      padding: 12px 40px;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #project-result {
+    margin-bottom: 100px;
+    .info-wrap {
+      margin-bottom: 80px;
+    }
+    .btn-wrap {
+      justify-content: left;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #project-result {
+    margin-bottom: 150px;
+  }
+}
