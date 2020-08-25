@@ -3,6 +3,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import ProjectPage from "./components/project-page/ProjectPage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isLight, setIsLight] = useState(true);
@@ -33,9 +35,18 @@ function App() {
     <>
       {isLoaded && (
         <div className={isLight ? "App" : "App dark"}>
-          <Header isLight={isLight} toggleTheme={toggleTheme} />
-          {/* <Home /> */}
-          <ProjectPage />
+          <Router>
+            <ScrollToTop />
+            <Header isLight={isLight} toggleTheme={toggleTheme} />
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/work">
+                <ProjectPage />
+              </Route>
+            </Switch>
+          </Router>
           <Footer isLight={isLight} />
         </div>
       )}

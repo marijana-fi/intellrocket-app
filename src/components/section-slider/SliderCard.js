@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./slider-card.scss";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 gsap.registerPlugin(SplitText);
 
@@ -63,26 +64,28 @@ const SliderCard = ({ item }) => {
   };
 
   return (
-    <div
-      id="slider-item"
-      onMouseEnter={() => handleEnter()}
-      onMouseLeave={() => handleLeave()}
-      ref={sliderRef}
-    >
-      <img src={item.image} alt="" />
-      <div className="slider-text-wrap">
-        <h4>{item.title}</h4>
-        <div className="text-desc-wrap">
-          <span className="line"></span>
-          <h5 className="slider-text-desc" ref={splitTop}>
-            {item.desc}
-          </h5>
-          <h5 className="slider-text-hover" ref={splitBottom}>
-            {item.hover}
-          </h5>
+    <Link to="/work">
+      <div
+        id="slider-item"
+        onMouseEnter={() => handleEnter()}
+        onMouseLeave={() => handleLeave()}
+        ref={sliderRef}
+      >
+        <img src={item.image} alt="" />
+        <div className="slider-text-wrap">
+          <h4>{item.title}</h4>
+          <div className="text-desc-wrap">
+            <span className="line"></span>
+            <h5 className="slider-text-desc" ref={splitTop}>
+              {item.desc}
+            </h5>
+            <h5 className="slider-text-hover" ref={splitBottom}>
+              {item.hover}
+            </h5>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
