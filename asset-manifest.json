@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/intellrocket-app/static/css/main.5ed9608c.chunk.css",
-    "main.js": "/intellrocket-app/static/js/main.83a08636.chunk.js",
-    "main.js.map": "/intellrocket-app/static/js/main.83a08636.chunk.js.map",
+    "main.js": "/intellrocket-app/static/js/main.9a218fc7.chunk.js",
+    "main.js.map": "/intellrocket-app/static/js/main.9a218fc7.chunk.js.map",
     "runtime-main.js": "/intellrocket-app/static/js/runtime-main.9da19f5d.js",
     "runtime-main.js.map": "/intellrocket-app/static/js/runtime-main.9da19f5d.js.map",
     "static/css/2.1c34b939.chunk.css": "/intellrocket-app/static/css/2.1c34b939.chunk.css",
     "static/js/2.2f7c2bb0.chunk.js": "/intellrocket-app/static/js/2.2f7c2bb0.chunk.js",
     "static/js/2.2f7c2bb0.chunk.js.map": "/intellrocket-app/static/js/2.2f7c2bb0.chunk.js.map",
     "index.html": "/intellrocket-app/index.html",
-    "precache-manifest.2aff8e88db41313cd01ac890106fc19e.js": "/intellrocket-app/precache-manifest.2aff8e88db41313cd01ac890106fc19e.js",
+    "precache-manifest.a212790e3f0490ee068a5e2ad2a4cad9.js": "/intellrocket-app/precache-manifest.a212790e3f0490ee068a5e2ad2a4cad9.js",
     "service-worker.js": "/intellrocket-app/service-worker.js",
     "static/css/2.1c34b939.chunk.css.map": "/intellrocket-app/static/css/2.1c34b939.chunk.css.map",
     "static/css/main.5ed9608c.chunk.css.map": "/intellrocket-app/static/css/main.5ed9608c.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.1c34b939.chunk.css",
     "static/js/2.2f7c2bb0.chunk.js",
     "static/css/main.5ed9608c.chunk.css",
-    "static/js/main.83a08636.chunk.js"
+    "static/js/main.9a218fc7.chunk.js"
   ]
 }

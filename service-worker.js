@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/intellrocket-app/precache-manifest.2aff8e88db41313cd01ac890106fc19e.js"
+  "/intellrocket-app/precache-manifest.a212790e3f0490ee068a5e2ad2a4cad9.js"
 );
 
 self.addEventListener('message', (event) => {
