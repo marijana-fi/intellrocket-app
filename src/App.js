@@ -6,6 +6,14 @@ import ProjectPage from "./components/project-page/ProjectPage";
 
 function App() {
   const [isLight, setIsLight] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+  var FontFaceObserver = require("fontfaceobserver");
+
+  var font = new FontFaceObserver("Open Sans");
+
+  font.load().then(function () {
+    setIsLoaded(true);
+  });
 
   useEffect(() => {
     const isLight = JSON.parse(localStorage.getItem("theme"));
@@ -22,12 +30,16 @@ function App() {
   };
 
   return (
-    <div className={isLight ? "App" : "App dark"}>
-      <Header isLight={isLight} toggleTheme={toggleTheme} />
-      {/* <Home /> */}
-      <ProjectPage />
-      <Footer isLight={isLight} />
-    </div>
+    <>
+      {isLoaded && (
+        <div className={isLight ? "App" : "App dark"}>
+          <Header isLight={isLight} toggleTheme={toggleTheme} />
+          {/* <Home /> */}
+          <ProjectPage />
+          <Footer isLight={isLight} />
+        </div>
+      )}
+    </>
   );
 }
 

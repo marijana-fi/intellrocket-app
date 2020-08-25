@@ -5,8 +5,6 @@ import "./reveal-text.scss";
 import React, { useRef, useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
 
-gsap.registerPlugin(SplitText);
-
 const RevealText = (props) => {
   const splitText = useRef(null);
   const [childSplit, setChildSplit] = useState(false);
