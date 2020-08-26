@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 gsap.registerPlugin(SplitText);
 
-const SliderCard = ({ item }) => {
+const SliderCard = ({ item, path }) => {
   const splitTop = useRef(null);
   const splitBottom = useRef(null);
   const [once, setOnce] = useState(false);
@@ -64,7 +64,7 @@ const SliderCard = ({ item }) => {
   };
 
   return (
-    <Link to="/work">
+    <Link to={`/intellrocket-app/${path}`}>
       <div
         id="slider-item"
         onMouseEnter={() => handleEnter()}

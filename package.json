@@ -2,7 +2,7 @@
 	"name": "intellrocket-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://marijana-fi.github.io/intellrocket-app",
+	"homepage": "http://marijana-fi.github.io/intellrocket-app/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
@@ -26,7 +26,7 @@
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
-		"start": "react-scripts start node-sass --watch scss -o css",
+		"start": "PORT=3000/intellrocket-app/ react-scripts start node-sass --watch scss -o css",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"

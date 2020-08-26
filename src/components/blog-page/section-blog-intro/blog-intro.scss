@@ -1,0 +1,42 @@
+#section-blog-intro {
+  padding: 100px 0;
+  height: 450px;
+
+  margin-top: -100px;
+  background: url("/intellrocket-app/img/blog-bg-image-01.jpg") center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:after {
+    content: "";
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    opacity: 0.4;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h5,
+  p {
+    font-size: 0.875rem;
+  }
+  .reveal-title {
+    position: relative;
+    z-index: 1;
+    div {
+      color: #fff;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #section-blog-intro {
+    min-height: 87vh;
+  }
+}

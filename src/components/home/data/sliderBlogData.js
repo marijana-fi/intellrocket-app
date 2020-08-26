@@ -1,10 +1,11 @@
 const sliderBlogData = [
   {
     image: "img/slider-blog-01.jpg",
-    title: "  5 Proven ways to reduce cart abandonment and make your customers purchase.",
+    title: "5 Proven ways to reduce cart abandonment and make your customers purchase.",
     desc: "ecommerce",
     hover: "read more",
   },
+
   {
     image: "img/slider-blog-02.jpg",
     title: "Customer Loyalty: 5 tips to gain more repeat customers",
@@ -21,6 +22,12 @@ const sliderBlogData = [
     image: "img/slider-blog-04.jpg",
     title: "Facebook Shop or WooCommerce Shop, How About Both?",
     desc: "ecommerce",
+    hover: "read more",
+  },
+  {
+    image: "img/slider-blog-05.jpg",
+    title: "5 Tips for Choosing the Best Technology for Your Startup",
+    desc: "development",
     hover: "read more",
   },
 ];

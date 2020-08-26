@@ -1,6 +1,7 @@
 header {
   padding: 10px 0;
   z-index: 10;
+  position: relative;
   .toggler {
     position: absolute;
     overflow: hidden;
@@ -23,7 +24,29 @@ header {
     .social-items {
       display: none;
     }
+    &.light-nav {
+      nav {
+        ul {
+          li {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+      + .menu {
+        .text {
+          color: #fff;
+        }
+        .hamburger {
+          span {
+            background: #fff;
+          }
+        }
+      }
+    }
   }
+
   .mobile-overlay {
     background: #000;
     position: fixed;

@@ -1,0 +1,17 @@
+#section-blog-list {
+  h3 {
+    font-size: 2.25rem;
+  }
+  .advice-wrap {
+    ol {
+      li {
+        color: var(--text-light);
+      }
+    }
+  }
+  .underline {
+    &::after {
+      background: var(--link-color);
+    }
+  }
+}

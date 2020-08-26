@@ -3,11 +3,13 @@
   --accent-color: linear-gradient(to right, #ff416c, #ff4b2b);
   --text-primary: #181b31;
   --text-light: #595959;
+  --link-color: #00f;
   background-color: var(--background);
   &.dark {
     --text-primary: #fff;
     --background: #1a191d;
     --text-light: #bdbdbe;
+    --link-color: #fff;
   }
 }
 
@@ -50,6 +52,9 @@
   color: var(--text-primary);
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
+  ::selection {
+    background: #fcb2bf;
+  }
 }
 
 body {
@@ -68,6 +73,10 @@ button {
   font-weight: 600;
   color: #fff;
   background: var(--accent-color);
+  &.comment {
+    font-size: 0.75rem;
+    width: 160px;
+  }
 }
 
 .margin-b {
@@ -82,7 +91,9 @@ button {
     margin-bottom: 100px;
   }
 }
-
+.external {
+  color: var(--link-color);
+}
 .underline {
   position: relative;
   &::after {
@@ -104,6 +115,13 @@ button {
       transition: transform 0.2s cubic-bezier(1, 0, 0, 1);
     }
   }
+}
+textarea {
+  width: 100%;
+  resize: none;
+}
+input {
+  background: transparent;
 }
 
 /* Typography  */
@@ -163,7 +181,9 @@ a {
   color: var(--text-primary);
   font-size: 1rem;
 }
-
+li {
+  font-family: "Open Sans", sans-serif;
+}
 ul {
   list-style-type: none;
 }

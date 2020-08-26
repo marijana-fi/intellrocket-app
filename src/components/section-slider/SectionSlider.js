@@ -8,7 +8,7 @@ import SliderArrow from "./SliderArrow";
 import { Waypoint } from "react-waypoint";
 import { gsap } from "gsap";
 
-const SectionSlider = ({ title, data, toFilter }) => {
+const SectionSlider = ({ title, data, toFilter, path }) => {
   const settings = {
     dots: false,
     arrows: false,
@@ -57,7 +57,7 @@ const SectionSlider = ({ title, data, toFilter }) => {
                   {data
                     .filter((item) => item.title !== toFilter)
                     .map((item) => (
-                      <SliderCard item={item} key={item.title} />
+                      <SliderCard item={item} key={item.title} path={path} />
                     ))}
                 </Slider>
               </div>

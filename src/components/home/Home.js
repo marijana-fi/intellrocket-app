@@ -14,9 +14,9 @@ function Home() {
       <SectionHero />
       <SectionDigital />
       <SectionOffer />
-      <SectionSlider title="Our Works" data={sliderWorkData} />
+      <SectionSlider title="Our Works" data={sliderWorkData} path="work" />
       <SectionServices />
-      <SectionSlider title="Our Blog" data={sliderBlogData} />
+      <SectionSlider title="Our Blog" data={sliderBlogData} path="blog" />
       <SectionQuote />
     </>
   );
