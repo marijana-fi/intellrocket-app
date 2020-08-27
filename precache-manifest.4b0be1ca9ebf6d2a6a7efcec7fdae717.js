@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58b1b35c49afbeee73bf5786adf82e94",
+    "revision": "4fb1f769547ead677c647577988b3757",
     "url": "/intellrocket-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intellrocket-app/static/css/2.1c34b939.chunk.css"
   },
   {
-    "revision": "076321c0d3b0e54ceac9",
+    "revision": "366ba6ff2484cbd82d7d",
     "url": "/intellrocket-app/static/css/main.dde8fb85.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intellrocket-app/static/js/2.89674d53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "076321c0d3b0e54ceac9",
-    "url": "/intellrocket-app/static/js/main.e168f3a2.chunk.js"
+    "revision": "366ba6ff2484cbd82d7d",
+    "url": "/intellrocket-app/static/js/main.4850eecc.chunk.js"
   },
   {
     "revision": "3b30ba79839aa619b110",
