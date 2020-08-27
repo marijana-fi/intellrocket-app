@@ -22,7 +22,7 @@ function ProjectProduct() {
         <div className="row">
           <div className="col-12 pt-lg-5">
             <RevealImage
-              src="/img/projects/retyre-contact-about.png"
+              src="/intellrocket-app/img/projects/retyre-contact-about.png"
               alt="contact, about page design"
             />
           </div>

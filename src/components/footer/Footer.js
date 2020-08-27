@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./footer.scss";
-import Button from "../button/Button";
+
+import { Link } from "react-router-dom";
+import CtaNews from "../cta-news/CtaNews";
 
 const Footer = ({ isLight }) => {
-  const [email, setEmail] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
-
   return (
     <footer>
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 col-sm-6 col-lg-4 mb-5">
-            <a href="/" className="logo">
+            <a href="/intellrocket-app/" className="logo">
               <img
-                src={!isLight ? "/img/intellrocket-logo-white.png" : "/img/intellrocket-logo.png"}
+                src={
+                  !isLight
+                    ? "/intellrocket-app/img/intellrocket-logo-white.png"
+                    : "/intellrocket-app/img/intellrocket-logo.png"
+                }
                 alt="logo"
               />
             </a>
@@ -33,25 +31,25 @@ const Footer = ({ isLight }) => {
             <h4>Pages</h4>
             <ul className="footer-list">
               <li className="footer-list-item">
-                <a href="/home" className="underline">
+                <Link to="/intellrocket-app/" className="underline">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="footer-list-item">
-                <a href="/about-us" className="underline">
+                <Link to="/intellrocket-app/about-us" className="underline">
                   About us
-                </a>
+                </Link>
               </li>
 
               <li className="footer-list-item">
-                <a href="/services" className="underline">
+                <Link to="/intellrocket-app/services" className="underline">
                   Services
-                </a>
+                </Link>
               </li>
               <li className="footer-list-item">
-                <a href="/work" className="underline">
+                <Link to="/intellrocket-app/work" className="underline">
                   Work
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,24 +57,24 @@ const Footer = ({ isLight }) => {
             <h4>Reach us</h4>
             <ul className="footer-list">
               <li className="footer-list-item">
-                <a href="/contact" className="underline">
+                <Link to="/intellrocket-app/contact" className="underline">
                   Contact us
-                </a>
+                </Link>
               </li>
               <li className="footer-list-item">
-                <a href="/careers" className="underline">
+                <Link to="/intellrocket-app/careers" className="underline">
                   Careers
-                </a>
+                </Link>
               </li>
               <li className="footer-list-item">
-                <a href="/blog" className="underline">
+                <Link to="/intellrocket-app/blog" className="underline">
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="footer-list-item">
-                <a href="/privacy" className="underline">
+                <Link to="/intellrocket-app/privacy" className="underline">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,38 +82,64 @@ const Footer = ({ isLight }) => {
             <h4 className="footer-item">Follow Us</h4>
             <ul className="social-list d-flex align-items-center">
               <li className="social-list-item">
-                <a href="/" className="social-icon" aria-label="Navigate to Facebook">
+                <a
+                  href="https://www.facebook.com/IntellRocket/"
+                  className="social-icon"
+                  aria-label="Navigate to Facebook"
+                >
                   <img
-                    src={isLight ? "img/social-fb-icon-dark.svg" : "img/social-fb-icon.svg"}
+                    src={
+                      isLight
+                        ? "/intellrocket-app/img/social-fb-icon-dark.svg"
+                        : "img/social-fb-icon.svg"
+                    }
                     alt="facebook"
                   />
                 </a>
               </li>
               <li className="social-list-item">
-                <a href="/" className="social-icon" aria-label="Navigate to Linkedin">
+                <a
+                  href="https://www.linkedin.com/company/intellrocket/"
+                  className="social-icon"
+                  aria-label="Navigate to Linkedin"
+                >
                   <img
                     src={
-                      isLight ? "img/social-linkedin-icon-dark.svg" : "img/social-linkedin-icon.svg"
+                      isLight
+                        ? "/intellrocket-app/img/social-linkedin-icon-dark.svg"
+                        : "img/social-linkedin-icon.svg"
                     }
                     alt="linkedin"
                   />
                 </a>
               </li>
               <li className="social-list-item">
-                <a href="/" className="social-icon" aria-label="Navigate to Twitter">
+                <a
+                  href="https://twitter.com/intellrocket"
+                  className="social-icon"
+                  aria-label="Navigate to Twitter"
+                >
                   <img
                     src={
-                      isLight ? "img/social-twitter-icon-dark.svg" : "img/social-twitter-icon.svg"
+                      isLight
+                        ? "/intellrocket-app/img/social-twitter-icon-dark.svg"
+                        : "img/social-twitter-icon.svg"
                     }
                     alt="twitter"
                   />
                 </a>
               </li>
               <li className="social-list-item">
-                <a href="/" className="social-icon" aria-label="Navigate to Dribbble">
+                <a
+                  href="https://dribbble.com/intellrocket/"
+                  className="social-icon"
+                  aria-label="Navigate to Dribbble"
+                >
                   <img
                     src={
-                      isLight ? "img/social-dribbble-icon-dark.svg" : "img/social-dribbble-icon.svg"
+                      isLight
+                        ? "/intellrocket-app/img/social-dribbble-icon-dark.svg"
+                        : "img/social-dribbble-icon.svg"
                     }
                     alt="dribbble"
                   />
@@ -123,22 +147,7 @@ const Footer = ({ isLight }) => {
               </li>
             </ul>
             <h4 className="footer-item"> Newsletter</h4>
-            <div>
-              <form action="" className="d-flex justify-content-between" onSubmit={handleSubmit}>
-                <div className="footer-email">
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    placeholder=" "
-                    onChange={handleChange}
-                    value={email}
-                  />
-                  <label htmlFor="email">Enter your email</label>
-                </div>
-                <Button name="round" />
-              </form>
-            </div>
+            <CtaNews />
           </div>
         </div>
       </div>
@@ -148,18 +157,18 @@ const Footer = ({ isLight }) => {
             <div className="col-12 ">
               <div className="copyright-wrap flex-column flex-md-row d-flex justify-content-between ">
                 <div className="copyright-links">
-                  <a href="/privacy" className="underline">
+                  <Link to="/intellrocket-app/privacy" className="underline">
                     Privacy Policy
-                  </a>
-                  <a href="/map" className="underline">
+                  </Link>
+                  <Link to="/intellrocket-app/site-map" className="underline">
                     Site map
-                  </a>
+                  </Link>
                 </div>
                 <h6>
                   ©2014 - 2020{" "}
-                  <a href="/" className="underline">
+                  <Link to="/intellrocket-app/" className="underline">
                     IntellRocket,{" "}
-                  </a>
+                  </Link>
                   All rights reserved
                 </h6>
               </div>

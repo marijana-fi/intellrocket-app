@@ -3,8 +3,9 @@ import "./header.scss";
 import Button from "../button/Button";
 import classnames from "classnames";
 import ToggleTheme from "../toggle-theme/ToggleTheme";
+import { Link } from "react-router-dom";
 
-const Header = ({ isLight, toggleTheme }) => {
+const Header = ({ isLight, toggleTheme, isBlog }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -32,17 +33,22 @@ const Header = ({ isLight, toggleTheme }) => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-6 col-sm-3">
-            <a href="/" title="Go to Home Page" className="logo">
+            <Link to="/intellrocket-app/" title="Go to Home Page" className="logo">
               <img
-                src={!isLight ? "/img/intellrocket-logo-white.png" : "/img/intellrocket-logo.png"}
+                src={
+                  !isLight || isBlog
+                    ? "/intellrocket-app/img/intellrocket-logo-white.png"
+                    : "/intellrocket-app/img/intellrocket-logo.png"
+                }
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="col-6 col-sm-8 d-flex align-items-center justify-content-end">
             <div
               className={classnames(
                 "navigation",
+                { "light-nav": isBlog },
                 { "menu-open": isMenuOpen },
                 { "mobile-overlay": windowWidth <= 992 }
               )}
@@ -50,57 +56,63 @@ const Header = ({ isLight, toggleTheme }) => {
               <nav>
                 <ul className={isMenuOpen ? "header-list open" : "header-list"}>
                   <li className="header-item">
-                    <a
-                      href="/home"
+                    <Link
+                      to="/intellrocket-app/"
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="header-item">
-                    <a
-                      href="/about-us"
+                    <Link
+                      to="/intellrocket-app/about-us"
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       About us
-                    </a>
+                    </Link>
                   </li>
                   <li className="header-item">
-                    <a
-                      href="/services"
+                    <Link
+                      to="/intellrocket-app/services"
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li className="header-item">
-                    <a
-                      href="/work"
+                    <Link
+                      to="/intellrocket-app/work"
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Work
-                    </a>
+                    </Link>
                   </li>
                   {windowWidth <= 992 ? (
                     <li className="header-item">
-                      <a
-                        href="/work"
+                      <Link
+                        to="/intellrocket-app/get-a-quote"
                         className={isMenuOpen ? "underline text-slide-in" : "underline"}
                       >
                         Get a Quote
-                      </a>
+                      </Link>
                     </li>
                   ) : (
                     <Button name="btn" label="Get a Quote" />
                   )}
                 </ul>
                 <div className="social-items">
-                  <a href="/" className="text-slide-in">
+                  <a
+                    href="https://www.linkedin.com/company/intellrocket/"
+                    className="text-slide-in"
+                  >
                     <span className="social-icon">
                       <img src="img/social-fb-icon.svg" alt="" />
                     </span>
                   </a>
-                  <a href="/" className="text-slide-in">
+                  <a
+                    href="https://www.linkedin.com/company/intellrocket/"
+                    className="text-slide-in"
+                  >
                     <span className="social-icon">
                       <img src="img/social-linkedin-icon.svg" alt="" />
                     </span>
