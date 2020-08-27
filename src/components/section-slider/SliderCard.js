@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import "./slider-card.scss";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(SplitText);
 

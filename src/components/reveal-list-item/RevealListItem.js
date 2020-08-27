@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
 import "./reveal-list-item.scss";
 

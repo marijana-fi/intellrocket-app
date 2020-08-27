@@ -27,9 +27,7 @@ function ProjectResult() {
           <div className="col-md-8 d-flex pt-3 mr-auto btn-wrap">
             <Waypoint onEnter={() => setIsVisible(true)}>
               <button className={isVisible ? "btn btn-slide-in" : "btn"}>
-                <a href={projectsData[0].url} target="_blank">
-                  Visit Website
-                </a>
+                <a href={projectsData[0].url}>Visit Website</a>
               </button>
             </Waypoint>
           </div>

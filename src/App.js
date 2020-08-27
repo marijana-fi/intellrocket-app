@@ -3,7 +3,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import ProjectPage from "./components/project-page/ProjectPage";
-import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogPage from "./components/blog-page/BlogPage";
 
@@ -60,10 +60,10 @@ function App() {
             <Route exact path="/intellrocket-app">
               <Home />
             </Route>
-            <Route path="/intellrocket-app/work">
+            <Route exact path="/intellrocket-app/work">
               <ProjectPage />
             </Route>
-            <Route path="/intellrocket-app/blog">
+            <Route exact path="/intellrocket-app/blog">
               <BlogPage />
             </Route>
           </Switch>
