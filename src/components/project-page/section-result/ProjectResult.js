@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import RevealTitle from "../../reveal-title/RevealTitle";
-import RevealText from "../../reveal-text/RevealText";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
+import RevealText from "../../utils/reveal-text/RevealText";
 import projectsData from "../projectsData";
 import "./project-result.scss";
 import { Waypoint } from "react-waypoint";

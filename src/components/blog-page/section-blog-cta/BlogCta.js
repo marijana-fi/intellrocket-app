@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import RevealTitle from "../../reveal-title/RevealTitle";
-import CtaNews from "../../cta-news/CtaNews";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
+import CtaNews from "../../utils/cta-news/CtaNews";
 import { Waypoint } from "react-waypoint";
 import "./blog-cta.scss";
 

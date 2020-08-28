@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Button from "../button/Button";
+import Button from "../utils/button/Button";
 import "./section-quote.scss";
 import { Waypoint } from "react-waypoint";
-import RevealTitle from "../reveal-title/RevealTitle";
+import RevealTitle from "../utils/reveal-title/RevealTitle";
 
 const SectionQuote = () => {
   const [isVisible, setIsVisible] = useState(false);

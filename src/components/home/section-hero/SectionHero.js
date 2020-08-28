@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import Button from "../../button/Button";
+import Button from "../../utils/button/Button";
+
 import "./section-hero.scss";
 import { gsap } from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-import RevealTitle from "../../reveal-title/RevealTitle";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
 gsap.registerPlugin(MorphSVGPlugin);
 
@@ -54,7 +55,7 @@ const SectionHero = () => {
                 </g>
               </svg>
               <figure className="clip-svg">
-                <img src="img/hero-image.jpg" alt="" />
+                <img src="/intellrocket-app/img/hero-image.jpg" alt="" />
               </figure>
             </div>
           </div>

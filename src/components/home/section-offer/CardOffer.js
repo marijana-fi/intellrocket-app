@@ -1,8 +1,8 @@
 import React from "react";
 import "./card-offer.scss";
-import RevealTitle from "../../reveal-title/RevealTitle";
-import RevealText from "../../reveal-text/RevealText";
-import RevealListItem from "../../reveal-list-item/RevealListItem";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
+import RevealText from "../../utils/reveal-text/RevealText";
+import RevealListItem from "../../utils/reveal-list-item/RevealListItem";
 
 const CardOffer = ({ order, title, desc, list, index }) => {
   return (

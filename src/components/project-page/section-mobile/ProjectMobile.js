@@ -1,8 +1,8 @@
 import React from "react";
-import RevealTitle from "../../reveal-title/RevealTitle";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import projectsData from "../projectsData";
-import RevealText from "../../reveal-text/RevealText";
-import RevealImage from "../reveal-image/RevealImage";
+import RevealText from "../../utils/reveal-text/RevealText";
+import RevealImage from "../../utils/reveal-image/RevealImage";
 import "./section-mobile.scss";
 
 function ProjectMobile() {

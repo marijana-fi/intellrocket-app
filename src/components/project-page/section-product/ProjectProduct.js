@@ -1,8 +1,8 @@
 import React from "react";
-import RevealTitle from "../../reveal-title/RevealTitle";
-import RevealText from "../../reveal-text/RevealText";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
+import RevealText from "../../utils/reveal-text/RevealText";
 import projectsData from "../projectsData";
-import RevealImage from "../reveal-image/RevealImage";
+import RevealImage from "../../utils/reveal-image/RevealImage";
 
 function ProjectProduct() {
   return (

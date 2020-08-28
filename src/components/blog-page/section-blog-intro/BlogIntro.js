@@ -1,7 +1,7 @@
 import React from "react";
 import blogsData from "../blogsData";
 import "./blog-intro.scss";
-import RevealTitle from "../../reveal-title/RevealTitle";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
 function BlogIntro() {
   return (

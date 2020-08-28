@@ -4,8 +4,10 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import ProjectPage from "./components/project-page/ProjectPage";
 import { Switch, Route, useLocation } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 import BlogPage from "./components/blog-page/BlogPage";
+import ScrollToTop from "./components/utils/ScrollToTop";
+import ContactPage from "./components/contact-page/ContactPage";
+import ServicesPage from "./components/services-page/ServicesPage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -65,6 +67,12 @@ function App() {
             </Route>
             <Route exact path="/intellrocket-app/blog">
               <BlogPage />
+            </Route>
+            <Route exact path="/intellrocket-app/services">
+              <ServicesPage />
+            </Route>
+            <Route exact path="/intellrocket-app/contact">
+              <ContactPage />
             </Route>
           </Switch>
           <Footer isLight={isLight} />

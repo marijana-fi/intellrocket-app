@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./header.scss";
-import Button from "../button/Button";
+import Button from "../utils/button/Button";
 import classnames from "classnames";
-import ToggleTheme from "../toggle-theme/ToggleTheme";
+import ToggleTheme from "../utils/toggle-theme/ToggleTheme";
 import { Link } from "react-router-dom";
 
 const Header = ({ isLight, toggleTheme, isBlog }) => {
@@ -33,7 +33,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-6 col-sm-3">
-            <Link to="/intellrocket-app/" title="Go to Home Page" className="logo">
+            <Link to="/intellrocket-app" title="Go to Home Page" className="logo">
               <img
                 src={
                   !isLight || isBlog
@@ -57,7 +57,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                 <ul className={isMenuOpen ? "header-list open" : "header-list"}>
                   <li className="header-item">
                     <Link
-                      to="/intellrocket-app/"
+                      to="/intellrocket-app"
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Home

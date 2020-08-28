@@ -1,30 +1,30 @@
 const sliderWorkData = [
   {
-    image: "img/slider-retyre.jpg",
+    image: "/intellrocket-app/img/slider-retyre.jpg",
     title: "reTyre",
     desc: "strategy web design wordpress",
     hover: "discover more",
   },
   {
-    image: "img/slider-valis.jpg",
+    image: "/intellrocket-app/img/slider-valis.jpg",
     title: "Vallis-Technologies",
     desc: "web design wordpress",
     hover: "discover more",
   },
   {
-    image: "img/slider-imt.jpg",
+    image: "/intellrocket-app/img/slider-imt.jpg",
     title: "Interface Masters Technologies",
     desc: "strategy web design wordpress",
     hover: "discover more",
   },
   {
-    image: "img/slider-alpha.jpg",
+    image: "/intellrocket-app/img/slider-alpha.jpg",
     title: "Alphaparking",
     desc: "web design wordpress",
     hover: "discover more",
   },
   {
-    image: "img/slider-fixbreakdown.jpg",
+    image: "/intellrocket-app/img/slider-fixbreakdown.jpg",
     title: "Fixbreakdown",
     desc: " strategy web design",
     hover: "discover more",

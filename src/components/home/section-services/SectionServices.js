@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Button from "../../button/Button";
+import Button from "../../utils/button/Button";
 import "./section-services.scss";
-import OpenImage from "../../open-image/OpenImage";
-import RevealText from "../../reveal-text/RevealText";
+import OpenImage from "../../utils/open-image/OpenImage";
+import RevealText from "../../utils/reveal-text/RevealText";
 import { Waypoint } from "react-waypoint";
-import RevealTitle from "../../reveal-title/RevealTitle";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
 const SectionServices = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +30,7 @@ const SectionServices = () => {
           </div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0">
             <div className="img-wrap">
-              <OpenImage url="img/section-services.jpg" customClass="left" />
+              <OpenImage url="/intellrocket-app/img/section-services.jpg" customClass="left" />
             </div>
           </div>
         </div>

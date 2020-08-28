@@ -1,0 +1,10 @@
+#service-list {
+  ul {
+    margin-top: 20px;
+    list-style: disc;
+    padding-inline-start: 30px;
+    li {
+      color: var(--text-light);
+    }
+  }
+}

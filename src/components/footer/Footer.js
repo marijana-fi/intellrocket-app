@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.scss";
 
 import { Link } from "react-router-dom";
-import CtaNews from "../cta-news/CtaNews";
+import CtaNews from "../utils/cta-news/CtaNews";
 
 const Footer = ({ isLight }) => {
   return (
@@ -10,7 +10,7 @@ const Footer = ({ isLight }) => {
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 col-sm-6 col-lg-4 mb-5">
-            <a href="/intellrocket-app/" className="logo">
+            <a href="/intellrocket-app" className="logo">
               <img
                 src={
                   !isLight
@@ -91,7 +91,7 @@ const Footer = ({ isLight }) => {
                     src={
                       isLight
                         ? "/intellrocket-app/img/social-fb-icon-dark.svg"
-                        : "img/social-fb-icon.svg"
+                        : "/intellrocket-app/img/social-fb-icon.svg"
                     }
                     alt="facebook"
                   />
@@ -107,7 +107,7 @@ const Footer = ({ isLight }) => {
                     src={
                       isLight
                         ? "/intellrocket-app/img/social-linkedin-icon-dark.svg"
-                        : "img/social-linkedin-icon.svg"
+                        : "/intellrocket-app/img/social-linkedin-icon.svg"
                     }
                     alt="linkedin"
                   />
@@ -123,7 +123,7 @@ const Footer = ({ isLight }) => {
                     src={
                       isLight
                         ? "/intellrocket-app/img/social-twitter-icon-dark.svg"
-                        : "img/social-twitter-icon.svg"
+                        : "/intellrocket-app/img/social-twitter-icon.svg"
                     }
                     alt="twitter"
                   />
@@ -139,7 +139,7 @@ const Footer = ({ isLight }) => {
                     src={
                       isLight
                         ? "/intellrocket-app/img/social-dribbble-icon-dark.svg"
-                        : "img/social-dribbble-icon.svg"
+                        : "/intellrocket-app/img/social-dribbble-icon.svg"
                     }
                     alt="dribbble"
                   />
