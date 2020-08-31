@@ -64,7 +64,8 @@ const SliderCard = ({ item, path }) => {
   };
 
   return (
-    <Link to={`/intellrocket-app/${path}`}>
+    <>
+      <Link to={`/intellrocket-app/${path}`} />
       <div
         id="slider-item"
         onMouseEnter={() => handleEnter()}
@@ -76,16 +77,20 @@ const SliderCard = ({ item, path }) => {
           <h4>{item.title}</h4>
           <div className="text-desc-wrap">
             <span className="line"></span>
-            <h5 className="slider-text-desc" ref={splitTop}>
-              {item.desc}
-            </h5>
+            <div className="slider-text-desc" ref={splitTop}>
+              {Array.isArray(item.desc) ? (
+                item.desc.map((el, i) => <span key={i}>{el} </span>)
+              ) : (
+                <h5>item.desc</h5>
+              )}
+            </div>
             <h5 className="slider-text-hover" ref={splitBottom}>
               {item.hover}
             </h5>
           </div>
         </div>
       </div>
-    </Link>
+    </>
   );
 };
 

@@ -8,6 +8,7 @@ import BlogPage from "./components/blog-page/BlogPage";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import ContactPage from "./components/contact-page/ContactPage";
 import ServicesPage from "./components/services-page/ServicesPage";
+import WorkPage from "./components/work-page/WorkPage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -62,7 +63,7 @@ function App() {
             <Route exact path="/intellrocket-app">
               <Home />
             </Route>
-            <Route exact path="/intellrocket-app/work">
+            <Route exact path="/intellrocket-app/work/retyre">
               <ProjectPage />
             </Route>
             <Route exact path="/intellrocket-app/blog">
@@ -70,6 +71,9 @@ function App() {
             </Route>
             <Route exact path="/intellrocket-app/services">
               <ServicesPage />
+            </Route>
+            <Route exact path="/intellrocket-app/work">
+              <WorkPage isLight={isLight} />
             </Route>
             <Route exact path="/intellrocket-app/contact">
               <ContactPage />

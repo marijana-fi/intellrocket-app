@@ -1,6 +1,6 @@
 .overlay {
   position: relative;
-  .over-white {
+  .over-first {
     width: 100%;
     height: 100%;
     background: var(--background);
@@ -8,13 +8,18 @@
     top: 0;
     left: 0;
     z-index: 100;
-    transform: scaleX(0);
-    animation: over-slide-in 0.6s cubic-bezier(0, 0.5, 1, 1);
+    transform: scaleX(1);
     &.right {
+      // animation: over-slide-in 0.5s cubic-bezier(0, 0.5, 1, 1);
       transform-origin: right;
     }
     &.left {
       transform-origin: left;
+    }
+    &.open {
+      transform: scaleX(0);
+      transition: all 0.5s cubic-bezier(0.6, 0, 0, 1);
+      transition-delay: 0.4s;
     }
   }
   .over {
@@ -25,10 +30,11 @@
     top: 0;
     left: 0;
     z-index: 99;
-    transition: all 0.6s cubic-bezier(0.6, 0, 0, 1);
-    transition-delay: 0.3s;
+    // transition-delay: 0.5s;
     &.right {
+      transition: all 0.6s cubic-bezier(0.6, 0, 0, 1);
       transform-origin: right;
+      opacity: 1;
     }
     &.left {
       transform-origin: left;
@@ -36,7 +42,7 @@
     &.open {
       transform: scaleX(0);
       transition: all 0.8s cubic-bezier(0.6, 0, 0, 1);
-      transition-delay: 0.4s;
+      transition-delay: 0.6s;
     }
   }
 }

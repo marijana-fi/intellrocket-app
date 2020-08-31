@@ -7,10 +7,12 @@ const OpenImage = ({ url, customClass }) => {
 
   return (
     <div>
-      <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="200px">
+      <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="300px">
         <div className="overlay">
           <img src={url} alt="" />
-          <div className={isVisible ? `over-white ${customClass}` : "over-white"}></div>
+          <div
+            className={isVisible ? `over-first ${customClass} open` : ` over-first ${customClass}`}
+          ></div>
           <div className={isVisible ? `over ${customClass} open` : `over ${customClass}`}></div>
         </div>
       </Waypoint>

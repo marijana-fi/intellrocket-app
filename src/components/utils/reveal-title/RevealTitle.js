@@ -7,9 +7,9 @@ import "./reveal-title.scss";
 
 gsap.registerPlugin(SplitText);
 
-const RevealTitle = (props) => {
+const RevealTitle = ({ title, tag, customClass }) => {
   const splitText = useRef(null);
-  const [isListItem, setIsListItem] = useState(false);
+  // const [isListItem, setIsListItem] = useState(false);
   const [childSplit, setChildSplit] = useState(false);
   const [parentSplit, setParentSplit] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(true);
@@ -23,17 +23,17 @@ const RevealTitle = (props) => {
     setChildSplit(child);
 
     let parent = new SplitText(splitText.current, {
-      type: "lines",
+      type: " lines",
       linesClass: "split-parent",
     });
 
     setParentSplit(parent);
-    if (props.tag === "li") {
-      setIsListItem(true);
-    }
+    // if (props.tag === "li") {
+    //   setIsListItem(true);
+    // }
   }, []);
 
-  const CustomTag = `${props.tag}`;
+  const CustomTag = `${tag}`;
 
   const animateTitle = (params) => {
     if (shouldAnimate) {
@@ -49,8 +49,8 @@ const RevealTitle = (props) => {
   return (
     <>
       <Waypoint onEnter={animateTitle} onLeave={() => setShouldAnimate(false)}>
-        <CustomTag ref={splitText} className="reveal-title">
-          {props.title}
+        <CustomTag ref={splitText} className={`reveal-title ${customClass}`}>
+          {title}
         </CustomTag>
       </Waypoint>
     </>

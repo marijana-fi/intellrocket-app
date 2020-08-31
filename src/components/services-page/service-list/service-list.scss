@@ -7,4 +7,24 @@
       color: var(--text-light);
     }
   }
+  section#section-list-item {
+    &:nth-of-type(2) {
+      .row {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .services-list-item {
+    box-sizing: border-box;
+    .overflow {
+      overflow: hidden;
+      margin-bottom: 30px;
+      h2 {
+        margin-bottom: 0;
+      }
+      .text-slide-in {
+        animation-delay: 0;
+      }
+    }
+  }
 }

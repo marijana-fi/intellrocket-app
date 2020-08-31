@@ -1,3 +1,64 @@
 #service-hero {
-  margin-top: 120px;
+  margin-top: 10px;
+  img {
+    margin-right: 0;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .img-wrap {
+    position: relative;
+    margin-bottom: 30px;
+    .img-small {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #service-hero {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  #service-hero {
+    margin-top: 120px;
+    .row {
+      flex-direction: column;
+    }
+    .img-wrap {
+      margin-bottom: 0;
+      height: 580px;
+      .img-large {
+        width: 55%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .img-small {
+        display: block;
+        position: absolute;
+        bottom: -24px;
+        width: 55%;
+        left: 0;
+
+        bottom: -20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #service-hero {
+    .img-wrap {
+      height: 800px;
+      .img-large {
+        width: 58%;
+      }
+      .img-small {
+        width: 58%;
+        bottom: 0;
+      }
+    }
+  }
 }

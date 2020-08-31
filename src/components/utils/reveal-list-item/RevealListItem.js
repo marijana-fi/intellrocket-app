@@ -9,8 +9,6 @@ gsap.registerPlugin(SplitText);
 const RevealListItem = (props) => {
   const [shouldAnimate, setShouldAnimate] = useState(true);
 
-  useEffect(() => {}, []);
-
   const CustomTag = `${props.tag}`;
 
   const animateListItem = (params) => {

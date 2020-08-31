@@ -13,14 +13,14 @@ const RevealText = (props) => {
 
   useEffect(() => {
     let child = new SplitText(splitText.current, {
-      type: "lines",
+      type: " lines",
       linesClass: "text-split-child",
     });
 
     setChildSplit(child);
 
     let parent = new SplitText(splitText.current, {
-      type: "lines",
+      type: " lines",
       linesClass: "text-split-parent",
     });
 
@@ -37,6 +37,7 @@ const RevealText = (props) => {
         y: 50,
         ease: "power1",
         stagger: 0.05,
+
         delay: 0.5,
       });
     }
