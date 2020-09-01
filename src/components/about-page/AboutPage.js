@@ -5,12 +5,14 @@ import aboutHeroData from "./aboutHeroData";
 import SectionSecondOverlap from "../utils/section-second-overlap/SectionSecondOverlap";
 import aboutVisionData from "./aboutVisionData";
 import AboutClients from "./about-clients/AboutClients";
+import TeamSection from "./team-section/TeamSection";
 function AboutPage() {
   return (
     <>
       <SharedSectionHero data={aboutHeroData} />
       <SectionSecondOverlap data={aboutVisionData} />
       <AboutClients />
+      <TeamSection />
       <SectionQuote />
     </>
   );

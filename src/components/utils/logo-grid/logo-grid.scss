@@ -1,0 +1,7 @@
+.client-logo {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}

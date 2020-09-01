@@ -50,7 +50,7 @@ header {
   .mobile-overlay {
     background: #000;
     position: fixed;
-    z-index: 3;
+    z-index: 100;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -155,7 +155,7 @@ header {
     display: none;
   }
   .menu {
-    z-index: 4;
+    z-index: 101;
     &:focus {
       outline: none;
     }

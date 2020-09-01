@@ -10,11 +10,11 @@ function SharedSectionHero({ data }) {
     <section id="service-hero" className="margin-b">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-8 mb-5">
+          <div className="col-12 col-lg-8 mb-lg-5">
             <RevealTitle tag="h1" title={data.title} />
             <RevealText tag="p" text={data.desc} />
           </div>
-          <div className="col-7 col-lg-12 offset-5 offset-lg-0">
+          <div className="col-12 col-lg-12 ">
             <div className="img-wrap">
               <div className="img-large">
                 <OpenImage url={data.urlFirst} customClass="right" />

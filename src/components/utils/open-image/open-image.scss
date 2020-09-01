@@ -8,7 +8,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 9;
     transform: scaleX(1);
     &.right {
       // animation: over-slide-in 0.5s cubic-bezier(0, 0.5, 1, 1);
@@ -30,7 +30,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 8;
     // transition-delay: 0.5s;
     &.right {
       transition: all 0.6s cubic-bezier(0.6, 0, 0, 1);

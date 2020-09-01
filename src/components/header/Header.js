@@ -58,6 +58,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app"
+                      onClick={handleMenuOpen}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Home
@@ -66,6 +67,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app/about-us"
+                      onClick={handleMenuOpen}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       About us
@@ -74,6 +76,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app/services"
+                      onClick={handleMenuOpen}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Services
@@ -82,6 +85,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app/work"
+                      onClick={handleMenuOpen}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Work
@@ -91,13 +95,14 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                     <li className="header-item">
                       <Link
                         to="/intellrocket-app/get-a-quote"
+                        onClick={handleMenuOpen}
                         className={isMenuOpen ? "underline text-slide-in" : "underline"}
                       >
                         Get a Quote
                       </Link>
                     </li>
                   ) : (
-                    <Button name="btn" label="Get a Quote" />
+                    <Button name="btn btn-static" label="Get a Quote" />
                   )}
                 </ul>
                 <div className="social-items">
@@ -106,7 +111,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                     className="text-slide-in"
                   >
                     <span className="social-icon">
-                      <img src="img/social-fb-icon.svg" alt="" />
+                      <img src="/intellrocket-app/img/social-fb-icon.svg" alt="" />
                     </span>
                   </a>
                   <a
@@ -114,7 +119,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                     className="text-slide-in"
                   >
                     <span className="social-icon">
-                      <img src="img/social-linkedin-icon.svg" alt="" />
+                      <img src="/intellrocket-app/img/social-linkedin-icon.svg" alt="" />
                     </span>
                   </a>
                 </div>

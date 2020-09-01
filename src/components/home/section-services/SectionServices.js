@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../../utils/button/Button";
 import "./section-services.scss";
 import OpenImage from "../../utils/open-image/OpenImage";
 import RevealText from "../../utils/reveal-text/RevealText";
-import { Waypoint } from "react-waypoint";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
 const SectionServices = () => {
-  const [isVisible, setIsVisible] = useState(false);
   return (
     <section id="section-services" className="margin-b">
       <div className="container">
@@ -20,12 +18,7 @@ const SectionServices = () => {
                 text="We know that only by working with you as partners we can understand your business
                 and find a perfect digital solution for you."
               />
-
-              <Waypoint onEnter={() => setIsVisible(true)}>
-                <div>
-                  <Button name={isVisible ? "btn btn-slide-in" : "btn"} label="Our Services" />
-                </div>
-              </Waypoint>
+              <Button name="btn" label="Our Services" animate="true" />
             </div>
           </div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0">

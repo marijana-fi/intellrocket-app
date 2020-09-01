@@ -5,7 +5,6 @@ import RevealTitle from "../reveal-title/RevealTitle";
 import RevealText from "../reveal-text/RevealText";
 
 const SectionSecondOverlap = ({ data }) => {
-  console.log(data.heading);
   return (
     <section id="section-second" className="margin-b">
       <div className="container ">

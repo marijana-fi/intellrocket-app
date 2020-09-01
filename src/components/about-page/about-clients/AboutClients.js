@@ -4,6 +4,7 @@ import RevealText from "../../utils/reveal-text/RevealText";
 import "./about-clients.scss";
 import testimonialData from "./testimonialData";
 import TestimonialCard from "./TestimonialCard";
+import LogoGrid from "../../utils/logo-grid/LogoGrid";
 
 function AboutClients() {
   return (
@@ -21,6 +22,7 @@ function AboutClients() {
             <TestimonialCard item={item} key={i} />
           ))}
         </div>
+        <LogoGrid />
       </div>
     </section>
   );

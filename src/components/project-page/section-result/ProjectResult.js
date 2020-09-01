@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import RevealText from "../../utils/reveal-text/RevealText";
 import projectsData from "../projectsData";
 import "./project-result.scss";
-import { Waypoint } from "react-waypoint";
+
+import Button from "../../utils/button/Button";
 
 function ProjectResult() {
-  const [isVisible, setIsVisible] = useState(false);
   return (
     <section id="project-result">
       <div className="container">
@@ -25,11 +25,7 @@ function ProjectResult() {
             );
           })}
           <div className="col-md-8 d-flex pt-3 mr-auto btn-wrap">
-            <Waypoint onEnter={() => setIsVisible(true)}>
-              <button className={isVisible ? "btn btn-slide-in" : "btn"}>
-                <a href={projectsData[0].url}>Visit Website</a>
-              </button>
-            </Waypoint>
+            <Button name="btn" label="Visit Website" animate="true" link={projectsData[0].url} />
           </div>
         </div>
       </div>

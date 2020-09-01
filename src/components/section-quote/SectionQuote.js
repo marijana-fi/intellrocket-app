@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../utils/button/Button";
 import "./section-quote.scss";
-import { Waypoint } from "react-waypoint";
+
 import RevealTitle from "../utils/reveal-title/RevealTitle";
 
 const SectionQuote = () => {
-  const [isVisible, setIsVisible] = useState(false);
   return (
     <section id="section-quote">
       <div className="container">
@@ -14,11 +13,7 @@ const SectionQuote = () => {
             <RevealTitle tag="h3" title="Let’s Make Something Beautiful Together" />
           </div>
           <div className="col-12 col-lg-3">
-            <Waypoint onEnter={() => setIsVisible(true)}>
-              <div>
-                <Button name={isVisible ? "btn btn-slide-in" : "btn"} label="Get a Quote" />
-              </div>
-            </Waypoint>
+            <Button name="btn" label="Get a Quote" animate="true" />
           </div>
         </div>
       </div>
