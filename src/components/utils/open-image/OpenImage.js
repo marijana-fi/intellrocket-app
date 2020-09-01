@@ -6,17 +6,15 @@ const OpenImage = ({ url, customClass }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div>
-      <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="300px">
-        <div className="overlay">
-          <img src={url} alt="" />
-          <div
-            className={isVisible ? `over-first ${customClass} open` : ` over-first ${customClass}`}
-          ></div>
-          <div className={isVisible ? `over ${customClass} open` : `over ${customClass}`}></div>
-        </div>
-      </Waypoint>
-    </div>
+    <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="300px">
+      <div className="overlay">
+        <img src={url} alt="" />
+        <div
+          className={isVisible ? `over-first ${customClass} open` : ` over-first ${customClass}`}
+        ></div>
+        <div className={isVisible ? `over ${customClass} open` : `over ${customClass}`}></div>
+      </div>
+    </Waypoint>
   );
 };
 

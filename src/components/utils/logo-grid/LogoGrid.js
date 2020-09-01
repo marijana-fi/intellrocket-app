@@ -16,6 +16,7 @@ function LogoGrid({ isLight }) {
         amount: 1.5,
         grid: grid,
         axis: "x",
+        from: "start",
       },
     });
   };

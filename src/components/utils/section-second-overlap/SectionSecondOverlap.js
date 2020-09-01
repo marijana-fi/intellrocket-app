@@ -1,22 +1,20 @@
 import React from "react";
-import "./section-digital.scss";
-import OpenImage from "../../utils/open-image/OpenImage";
-import RevealTitle from "../../utils/reveal-title/RevealTitle";
-import RevealText from "../../utils/reveal-text/RevealText";
+import "./section-second-overlap.scss";
+import OpenImage from "../open-image/OpenImage";
+import RevealTitle from "../reveal-title/RevealTitle";
+import RevealText from "../reveal-text/RevealText";
 
-const SectionDigital = () => {
+const SectionSecondOverlap = ({ data }) => {
+  console.log(data.heading);
   return (
-    <section id="section-digital" className="margin-b">
+    <section id="section-second" className="margin-b">
       <div className="container ">
         <div className="row justify-content-between flex-lg-row flex-column-reverse">
-          <div className="col-10 col-lg-5 d-flex align-items-center ">
+          <div className="col-12 col-lg-5 d-flex align-items-center ">
             <div className="text-wrap">
-              <RevealTitle tag="h2" title="We Deliver Breathtaking Digital Products" />
-              <RevealText
-                tag="p"
-                text="We are a creative tech company that develops user journeys and provide a memorable
-                user experience. We create enduring relationships between brands and their clients."
-              />
+              {data.heading ? <h5 className="heading">{data.heading}</h5> : null}
+              <RevealTitle tag="h2" title={data.title} />
+              <RevealText tag="p" text={data.desc} />
             </div>
           </div>
           <div className="col-12 col-lg-6">
@@ -42,4 +40,4 @@ const SectionDigital = () => {
   );
 };
 
-export default SectionDigital;
+export default SectionSecondOverlap;

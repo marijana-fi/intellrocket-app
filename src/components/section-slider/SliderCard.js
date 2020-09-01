@@ -81,7 +81,7 @@ const SliderCard = ({ item, path }) => {
               {Array.isArray(item.desc) ? (
                 item.desc.map((el, i) => <span key={i}>{el} </span>)
               ) : (
-                <h5>item.desc</h5>
+                <h5>{item.desc}</h5>
               )}
             </div>
             <h5 className="slider-text-hover" ref={splitBottom}>

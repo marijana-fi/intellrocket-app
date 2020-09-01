@@ -9,7 +9,9 @@ function ServiceListItem({ title, list, desc, image }) {
     <section id="section-list-item" className="col-12">
       <div className="row">
         <div className="col-12 col-md-6 margin-b">
-          <img src={image} alt="" />
+          <Waypoint bottomOffset="150px" onEnter={() => setIsVisible(true)}>
+            <img src={image} alt="" className={isVisible ? "show" : "hidden"} />
+          </Waypoint>
         </div>
         <div className="col-12 col-md-6  margin-b align-self-center">
           <div className="services-list-item ">
