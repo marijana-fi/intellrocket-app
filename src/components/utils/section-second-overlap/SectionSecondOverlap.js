@@ -4,9 +4,9 @@ import OpenImage from "../open-image/OpenImage";
 import RevealTitle from "../reveal-title/RevealTitle";
 import RevealText from "../reveal-text/RevealText";
 
-const SectionSecondOverlap = ({ data }) => {
+const SectionSecondOverlap = ({ data, customClass }) => {
   return (
-    <section id="section-second" className="margin-b">
+    <section id="section-second" className={customClass ? `${customClass} margin-b` : "margin-b"}>
       <div className="container ">
         <div className="row justify-content-between flex-lg-row flex-column-reverse">
           <div className="col-12 col-lg-5 d-flex align-items-center ">

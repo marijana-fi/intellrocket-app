@@ -7,23 +7,18 @@ import "./logo-grid.scss";
 function LogoGrid({ isLight }) {
   const logoRef = useRef(null);
 
-  const grid = [1, 6];
+  // const grid = [1, 6];
 
   const animateLogo = () => {
-    gsap.to(logoRef.current, {
+    gsap.to(".client-logo", {
       duration: 0.4,
       opacity: 0.5,
-      stagger: {
-        amount: 1.5,
-        grid: grid,
-        axis: "x",
-        from: "start",
-      },
+      stagger: 0.15,
     });
   };
 
   return (
-    <Waypoint>
+    <Waypoint onEnter={() => animateLogo()}>
       <div className="row">
         {logoData.map((item, i) => (
           <div className="col-4 col-md-3 col-lg-2 mb-3" key={i} ref={logoRef}>

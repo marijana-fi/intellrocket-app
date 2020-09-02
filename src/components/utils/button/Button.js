@@ -3,7 +3,6 @@ import "./button.scss";
 import { Waypoint } from "react-waypoint";
 
 export default function Button({ name, label, animate, link }) {
-  console.log(animate);
   const [isVisible, setIsVisible] = useState(false);
   const animateBtn = () => {
     if (animate) {

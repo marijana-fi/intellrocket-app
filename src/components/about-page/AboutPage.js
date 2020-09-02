@@ -9,8 +9,8 @@ import TeamSection from "./team-section/TeamSection";
 function AboutPage() {
   return (
     <>
-      <SharedSectionHero data={aboutHeroData} />
-      <SectionSecondOverlap data={aboutVisionData} />
+      <SharedSectionHero data={aboutHeroData} customClass="rotate-title" />
+      <SectionSecondOverlap data={aboutVisionData} customClass="about-page" />
       <AboutClients />
       <TeamSection />
       <SectionQuote />

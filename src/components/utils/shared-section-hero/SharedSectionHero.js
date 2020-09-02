@@ -4,14 +4,21 @@ import RevealText from "../reveal-text/RevealText";
 import "./shared-section-hero.scss";
 
 import OpenImage from "../open-image/OpenImage";
+import RotateText from "../rotate-text/RotateText";
 
-function SharedSectionHero({ data }) {
+function SharedSectionHero({ data, customClass }) {
   return (
-    <section id="service-hero" className="margin-b">
+    <section id="shared-hero" className="margin-b">
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-8 mb-lg-5">
-            <RevealTitle tag="h1" title={data.title} />
+            <RevealTitle
+              tag="h1"
+              title={data.title}
+              customClass={customClass}
+              rotate={data.rotating}
+            />
+            {/* <RotateText tag="div" text={data.rotating} customClass="rotate-text" />; */}
             <RevealText tag="p" text={data.desc} />
           </div>
           <div className="col-12 col-lg-12 ">
