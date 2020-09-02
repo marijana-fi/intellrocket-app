@@ -58,7 +58,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app"
-                      onClick={handleMenuOpen}
+                      onClick={isMenuOpen ? handleMenuOpen : null}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Home
@@ -67,7 +67,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app/about-us"
-                      onClick={handleMenuOpen}
+                      onClick={isMenuOpen ? handleMenuOpen : null}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       About us
@@ -76,7 +76,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app/services"
-                      onClick={handleMenuOpen}
+                      onClick={isMenuOpen ? handleMenuOpen : null}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Services
@@ -85,7 +85,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                   <li className="header-item">
                     <Link
                       to="/intellrocket-app/work"
-                      onClick={handleMenuOpen}
+                      onClick={isMenuOpen ? handleMenuOpen : null}
                       className={isMenuOpen ? "underline text-slide-in" : "underline"}
                     >
                       Work
@@ -95,7 +95,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                     <li className="header-item">
                       <Link
                         to="/intellrocket-app/get-a-quote"
-                        onClick={handleMenuOpen}
+                        onClick={isMenuOpen ? handleMenuOpen : null}
                         className={isMenuOpen ? "underline text-slide-in" : "underline"}
                       >
                         Get a Quote

@@ -18,7 +18,7 @@ const RevealTitle = ({ title, tag, customClass, rotate = [] }) => {
   useEffect(() => {
     itemsRef.current = itemsRef.current.slice(0, rotate.length);
   }, [rotate]);
-  console.log(itemsRef);
+
   useEffect(() => {
     let child = new SplitText(splitText.current, {
       type: "lines",
@@ -53,7 +53,6 @@ const RevealTitle = ({ title, tag, customClass, rotate = [] }) => {
     //rotate-text
     const tl = gsap.timeline({ repeat: -1, delay: 0.5 });
     itemsRef.current.forEach((item, i) => {
-      console.log(item);
       tl.from(
         itemsRef.current[i],
         {
@@ -98,7 +97,7 @@ const RevealTitle = ({ title, tag, customClass, rotate = [] }) => {
           {title}
           <div className="rotate-text">
             {rotate.map((item, i) => (
-              <span ref={(el) => (itemsRef.current[i] = el)} className="rotating">
+              <span ref={(el) => (itemsRef.current[i] = el)} className="rotating" key={i}>
                 {item}
               </span>
             ))}

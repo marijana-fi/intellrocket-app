@@ -18,7 +18,6 @@ function SharedSectionHero({ data, customClass }) {
               customClass={customClass}
               rotate={data.rotating}
             />
-            {/* <RotateText tag="div" text={data.rotating} customClass="rotate-text" />; */}
             <RevealText tag="p" text={data.desc} />
           </div>
           <div className="col-12 col-lg-12 ">
