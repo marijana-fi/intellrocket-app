@@ -5,8 +5,9 @@ import "./about-clients.scss";
 import testimonialData from "./testimonialData";
 import TestimonialCard from "./TestimonialCard";
 import LogoGrid from "../../utils/logo-grid/LogoGrid";
+import aboutClientLogoData from "./aboutClientLogoData";
 
-function AboutClients() {
+function AboutClients({ isLight }) {
   return (
     <section id="about-clients" className="margin-b">
       <div className="container">
@@ -18,11 +19,12 @@ function AboutClients() {
               text="We’ve worked with some of the brightest Silicon Valley start-ups, as well as a range of established European businesses. We let our portfolio sing our praises for us."
             />
           </div>
+
           {testimonialData.map((item, i) => (
             <TestimonialCard item={item} key={i} />
           ))}
         </div>
-        <LogoGrid />
+        <LogoGrid isLight={isLight} data={aboutClientLogoData} />
       </div>
     </section>
   );

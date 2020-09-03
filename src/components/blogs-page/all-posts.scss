@@ -1,0 +1,24 @@
+#all-posts {
+  .info-wrap {
+    .post-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .date-line {
+      width: 30px;
+      height: 1px;
+      background-color: #000;
+    }
+    .date {
+      display: block;
+      color: var(--text-light-sec);
+      margin-left: 6px;
+      font-size: 0.75rem;
+    }
+    .post-intro {
+      p {
+        color: var(--text-light-sec);
+      }
+    }
+  }
+}

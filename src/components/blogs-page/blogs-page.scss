@@ -1,0 +1,12 @@
+.blogs-hero {
+  background: url("/intellrocket-app/img/blogs-hero.jpg") no-repeat;
+  height: 450px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -110px;
+  h1 {
+    color: #fff;
+  }
+}

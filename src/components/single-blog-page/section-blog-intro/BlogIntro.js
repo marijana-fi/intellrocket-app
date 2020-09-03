@@ -13,11 +13,11 @@ function BlogIntro() {
             <div className="intro-wrap d-flex ">
               <div className="author mr-3 mr-md-5">
                 <RevealTitle tag="h5" title="Author:" />
-                <RevealTitle tag="p" title={blogsData[0].author} />
+                <RevealTitle tag="span" title={blogsData[0].author} />
               </div>
               <div className="time">
                 <RevealTitle tag="h5" title="Published on:" />
-                <RevealTitle tag="p" title={blogsData[0].published} />
+                <RevealTitle tag="span" title={blogsData[0].published} />
               </div>
             </div>
           </div>

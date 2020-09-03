@@ -1,5 +1,8 @@
 .client-logo {
   opacity: 0;
+  &.opacity {
+    opacity: 0;
+  }
 
   &:hover {
     opacity: 1;

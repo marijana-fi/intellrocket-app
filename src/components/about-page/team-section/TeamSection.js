@@ -4,13 +4,14 @@ import RevealText from "../../utils/reveal-text/RevealText";
 import RevealSingleLine from "../../utils/reveal-single-line/RevealSingleLine";
 import Button from "../../utils/button/Button";
 import teamData from "./teamData";
-import { gsap, Bounce, Back } from "gsap";
+import { gsap, Back } from "gsap";
 import { Waypoint } from "react-waypoint";
 
 function TeamSection() {
   const circleInnerRef = useRef(null);
   const circleMiddleRef = useRef(null);
   const circleOuterRef = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
 
   const [tl, setTl] = useState(null);
 
@@ -20,40 +21,46 @@ function TeamSection() {
   }, []);
 
   const animateCircle = () => {
-    tl.fromTo(
-      circleInnerRef.current,
-      { opacity: 0, scale: 0, transformOrigin: "center" },
-      { opacity: 1, duration: 1, scale: 1, transformOrigin: "center", ease: Back.easeOut }
-    )
-      .fromTo(
-        circleMiddleRef.current,
+    if (shouldAnimate) {
+      tl.fromTo(
+        circleInnerRef.current,
         { opacity: 0, scale: 0, transformOrigin: "center" },
-        { opacity: 1, duration: 1, scale: 1, transformOrigin: "center", ease: Back.easeOut },
-        "-=0.8"
+        { opacity: 1, duration: 1, scale: 1, transformOrigin: "center", ease: Back.easeOut }
       )
-      .fromTo(
-        circleOuterRef.current,
-        { opacity: 0, scale: 0, transformOrigin: "center" },
-        { opacity: 1, duration: 1, scale: 1, transformOrigin: "center", ease: Back.easeOut },
-        "-=0.8"
-      )
-      .fromTo(
-        ".team",
-        {
-          opacity: 0,
-          scale: 0,
-        },
-        { opacity: 1, scale: 1, ease: Back.easeOut },
-        "-=0.8"
-      );
+        .fromTo(
+          circleMiddleRef.current,
+          { opacity: 0, scale: 0, transformOrigin: "center" },
+          { opacity: 1, duration: 1, scale: 1, transformOrigin: "center", ease: Back.easeOut },
+          "-=0.8"
+        )
+        .fromTo(
+          circleOuterRef.current,
+          { opacity: 0, scale: 0, transformOrigin: "center" },
+          { opacity: 1, duration: 1, scale: 1, transformOrigin: "center", ease: Back.easeOut },
+          "-=0.8"
+        )
+        .fromTo(
+          ".team",
+          {
+            opacity: 0,
+            scale: 0,
+          },
+          { opacity: 1, scale: 1, ease: Back.easeOut },
+          "-=0.8"
+        );
+    }
   };
 
   return (
     <section id="about-team" className="margin-b">
       <div className="container">
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-12 col-lg-6">
-            <Waypoint bottomOffset="200px" onEnter={() => animateCircle()}>
+            <Waypoint
+              bottomOffset="200px"
+              onEnter={() => animateCircle()}
+              onLeave={() => setShouldAnimate(false)}
+            >
               <div className="circle-wrap">
                 <div className="team">
                   {teamData.map((item, i) => (

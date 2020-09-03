@@ -6,12 +6,12 @@ import SectionSecondOverlap from "../utils/section-second-overlap/SectionSecondO
 import aboutVisionData from "./aboutVisionData";
 import AboutClients from "./about-clients/AboutClients";
 import TeamSection from "./team-section/TeamSection";
-function AboutPage() {
+function AboutPage({ isLight }) {
   return (
     <>
       <SharedSectionHero data={aboutHeroData} customClass="rotate-title" />
       <SectionSecondOverlap data={aboutVisionData} customClass="about-page" />
-      <AboutClients />
+      <AboutClients isLight={isLight} />
       <TeamSection />
       <SectionQuote />
     </>

@@ -4,7 +4,6 @@ import RevealText from "../reveal-text/RevealText";
 import "./shared-section-hero.scss";
 
 import OpenImage from "../open-image/OpenImage";
-import RotateText from "../rotate-text/RotateText";
 
 function SharedSectionHero({ data, customClass }) {
   return (

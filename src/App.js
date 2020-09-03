@@ -4,15 +4,17 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import ProjectPage from "./components/project-page/ProjectPage";
 import { Switch, Route, useLocation } from "react-router-dom";
-import BlogPage from "./components/blog-page/BlogPage";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import ContactPage from "./components/contact-page/ContactPage";
 import ServicesPage from "./components/services-page/ServicesPage";
 import WorkPage from "./components/work-page/WorkPage";
 import AboutPage from "./components/about-page/AboutPage";
+import SingleBlogPage from "./components/single-blog-page/SingleBlogPage";
+import BlogsPage from "./components/blogs-page/BlogsPage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
+
   const location = useLocation();
   useEffect(() => {
     setPath(location.pathname);
@@ -43,7 +45,7 @@ function App() {
   }, [isLight]);
 
   useEffect(() => {
-    if (path === "/intellrocket-app/blog") {
+    if (path === "/intellrocket-app/blog" || path === "/intellrocket-app/blog/single") {
       setIsBlog(true);
     } else {
       setIsBlog(false);
@@ -67,17 +69,20 @@ function App() {
             <Route exact path="/intellrocket-app/work/retyre">
               <ProjectPage />
             </Route>
-            <Route exact path="/intellrocket-app/blog">
-              <BlogPage />
+            <Route exact path="/intellrocket-app/blog/single">
+              <SingleBlogPage />
             </Route>
             <Route exact path="/intellrocket-app/about-us">
-              <AboutPage />
+              <AboutPage isLight={isLight} />
             </Route>
             <Route exact path="/intellrocket-app/services">
               <ServicesPage />
             </Route>
             <Route exact path="/intellrocket-app/work">
               <WorkPage isLight={isLight} />
+            </Route>
+            <Route exact path="/intellrocket-app/blog">
+              <BlogsPage />
             </Route>
             <Route exact path="/intellrocket-app/contact">
               <ContactPage />

@@ -16,7 +16,7 @@ function ContactForm({ btnLabel, message, text }) {
         <label htmlFor="radio">
           <span>
             I have read and agree with{" "}
-            <a href="" className="underline">
+            <a href="/" className="underline">
               privacy policy
             </a>
           </span>
@@ -69,7 +69,7 @@ function ContactForm({ btnLabel, message, text }) {
           <p className="mb-4">Your email address will not be publicly visible.</p>
         )}
 
-        <Button name="btn comment" label={btnLabel} />
+        <Button name="btn comment btn-static" label={btnLabel} />
       </div>
     </form>
   );

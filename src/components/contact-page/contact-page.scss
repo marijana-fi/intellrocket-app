@@ -42,7 +42,7 @@
   #contact-page {
     margin-top: 100px;
     .text-wrap {
-      margin-bottom: 140px;
+      margin-bottom: 160px;
     }
     .form-wrap {
       .name-wrap {
@@ -63,8 +63,11 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #contact-page {
+    .text-wrap {
+      margin-bottom: 240px;
+    }
     .form-wrap {
       .name-wrap {
         grid-column: 1/2;

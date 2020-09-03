@@ -21,9 +21,15 @@
   h1 {
     font-size: 2rem;
   }
+  h5 {
+    margin-bottom: 4px;
+  }
   h5,
-  p {
+  span {
     font-size: 0.875rem;
+  }
+  span {
+    display: block;
   }
   .reveal-title {
     position: relative;

@@ -7,7 +7,7 @@ import BlogList from "./section-blog-list/BlogList";
 import BlogCta from "./section-blog-cta/BlogCta";
 import BlogComment from "./section-blog-comment/BlogComment";
 
-function BlogPage() {
+function SingleBlogPage() {
   return (
     <>
       <BlogIntro />
@@ -24,4 +24,4 @@ function BlogPage() {
   );
 }
 
-export default BlogPage;
+export default SingleBlogPage;

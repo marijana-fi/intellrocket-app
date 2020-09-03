@@ -13,7 +13,7 @@ export default function Button({ name, label, animate, link }) {
   return (
     <Waypoint onEnter={animateBtn}>
       {link ? (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <button className={isVisible ? `${name} btn-slide-in` : `${name} btn-hidden `}>
             {label}
           </button>

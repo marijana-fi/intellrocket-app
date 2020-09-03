@@ -30,8 +30,7 @@ function ContactPage() {
             <Waypoint>
               <div className="col-12 col-md-8">
                 <div className={isVisible ? "show" : "hidden"}>
-                  <ContactForm/>
-                  {/*<ContactForm btnLabel="Send" message="privacy" text="Message" />*/}
+                  <ContactForm btnLabel="Send" message="privacy" text="Message" />
                 </div>
               </div>
             </Waypoint>
@@ -70,7 +69,7 @@ function ContactPage() {
           </Waypoint>
         </div>
       </section>
-      <SectionQuote/>
+      <SectionQuote />
     </>
   );
 }

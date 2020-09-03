@@ -7,7 +7,7 @@ import "./reveal-title.scss";
 
 gsap.registerPlugin(SplitText);
 
-const RevealTitle = ({ title, tag, customClass, rotate = [] }) => {
+const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
   const splitText = useRef(null);
   const itemsRef = useRef([]);
 
