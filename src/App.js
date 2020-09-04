@@ -11,6 +11,7 @@ import WorkPage from "./components/work-page/WorkPage";
 import AboutPage from "./components/about-page/AboutPage";
 import SingleBlogPage from "./components/single-blog-page/SingleBlogPage";
 import BlogsPage from "./components/blogs-page/BlogsPage";
+import QuotePage from "./components/quote-page/QuotePage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -86,6 +87,9 @@ function App() {
             </Route>
             <Route exact path="/intellrocket-app/contact">
               <ContactPage />
+            </Route>
+            <Route exact path="/intellrocket-app/get-a-quote">
+              <QuotePage />
             </Route>
           </Switch>
           <Footer isLight={isLight} />

@@ -102,7 +102,9 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                       </Link>
                     </li>
                   ) : (
-                    <Button name="btn btn-static" label="Get a Quote" />
+                    <Link to="/intellrocket-app/get-a-quote">
+                      <Button name="btn btn-static" label="Get a Quote" />
+                    </Link>
                   )}
                 </ul>
                 <div className="social-items">

@@ -7,8 +7,6 @@ import "./logo-grid.scss";
 function LogoGrid({ isLight, data, customClass = "" }) {
   const logoRef = useRef(null);
 
-  // const grid = [1, 6];
-
   const animateLogo = () => {
     if (customClass === "opacity") {
       gsap.to(".opacity", {

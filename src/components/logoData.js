@@ -35,6 +35,36 @@ const logoData = [
     dark: "/intellrocket-app/img/client-logos/alucommerce-light.png",
     url: "https://alucommerce.rs/en/",
   },
+  {
+    name: "Aspecto",
+    light: "/intellrocket-app/img/client-logos/aspecto-light.png",
+    dark: "/intellrocket-app/img/client-logos/aspecto-dark.png",
+    url: "https://aspecto.ch/",
+  },
+  {
+    name: "Kindernay",
+    light: "/intellrocket-app/img/client-logos/kindernay-light.png",
+    dark: "/intellrocket-app/img/client-logos/kindernay-dark.png",
+    url: "https://kindernay.com/",
+  },
+  {
+    name: "Bonex",
+    light: "/intellrocket-app/img/client-logos/bonex-light.png",
+    dark: "/intellrocket-app/img/client-logos/bonex-light.png",
+    url: "https://bonexing.org/en/",
+  },
+  {
+    name: "Inreact",
+    light: "/intellrocket-app/img/client-logos/inreact-light.png",
+    dark: "/intellrocket-app/img/client-logos/inreact-light.png",
+    url: "https://inreact.worldsecuresystems.com/",
+  },
+  {
+    name: "just-medical",
+    light: "/intellrocket-app/img/client-logos/Just-Medical-light.png",
+    dark: "/intellrocket-app/img/client-logos/Just-Medical-light.png",
+    url: "https://www.just-medical.ch/",
+  },
 ];
 
 export default logoData;

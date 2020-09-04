@@ -1,0 +1,40 @@
+#project-details {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .details-wrap {
+    display: grid;
+    gap: 10px;
+    label {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #project-details {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #project-details {
+    .details-wrap {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 20px;
+      column-gap: 40px;
+    }
+    .budget-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+
+      input {
+        grid-column: 1/2;
+      }
+    }
+  }
+}

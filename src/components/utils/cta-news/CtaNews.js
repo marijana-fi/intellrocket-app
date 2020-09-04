@@ -4,6 +4,7 @@ import "./cta-news.scss";
 
 function CtaNews() {
   const [email, setEmail] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -12,16 +13,16 @@ function CtaNews() {
   };
   return (
     <form action="" className="d-flex justify-content-between" onSubmit={handleSubmit}>
-      <div className="news-email">
+      <div className="news-email input-wrapper">
         <input
           type="email"
-          id="email"
+          id="email-news"
           required
           placeholder=" "
           onChange={handleChange}
           value={email}
         />
-        <label htmlFor="email">Enter your email</label>
+        <label htmlFor="email-news">Enter your email</label>
       </div>
       <Button name="round" />
     </form>

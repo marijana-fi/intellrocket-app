@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./button.scss";
 import { Waypoint } from "react-waypoint";
 
-export default function Button({ name, label, animate, link }) {
+export default function Button({ name, label, animate, link, handleClick }) {
   const [isVisible, setIsVisible] = useState(false);
   const animateBtn = () => {
     if (animate) {
@@ -19,7 +19,10 @@ export default function Button({ name, label, animate, link }) {
           </button>
         </a>
       ) : (
-        <button className={isVisible ? `${name} btn-slide-in` : `${name} btn-hidden `}>
+        <button
+          onClick={handleClick}
+          className={isVisible ? `${name} btn-slide-in` : `${name} btn-hidden `}
+        >
           {label}
         </button>
       )}

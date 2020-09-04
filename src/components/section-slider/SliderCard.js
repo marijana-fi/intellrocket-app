@@ -22,6 +22,7 @@ const SliderCard = ({ item, path }) => {
 
     const splitTopWord = new SplitText(splitTop.current, { type: "chars, words" });
     setSplitTopChar(splitTopWord);
+
     // hover
     const splitBottomWord = new SplitText(splitBottom.current, {
       type: "chars, words",
@@ -65,7 +66,11 @@ const SliderCard = ({ item, path }) => {
 
   return (
     <>
-      <Link to={`/intellrocket-app/${path}`}>
+      <Link
+        to={`/intellrocket-app/${path}`}
+        onFocus={() => handleEnter()}
+        onBlur={() => handleLeave()}
+      >
         <div
           id="slider-item"
           onMouseEnter={() => handleEnter()}

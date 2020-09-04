@@ -3,6 +3,7 @@ import SectionSlider from "../section-slider/SectionSlider";
 import sliderBlogData from "../home/data/sliderBlogData";
 import "./blogs-page.scss";
 import AllPosts from "./AllPosts";
+import BlogCta from "../single-blog-page/section-blog-cta/BlogCta";
 
 function BlogsPage() {
   return (
@@ -12,6 +13,7 @@ function BlogsPage() {
       </div>
       <SectionSlider title="Recommended posts" data={sliderBlogData} />
       <AllPosts />
+      <BlogCta />
     </>
   );
 }

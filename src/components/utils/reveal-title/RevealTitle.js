@@ -33,9 +33,6 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
     });
 
     setParentSplit(parent);
-    // if (props.tag === "li") {
-    //   setIsListItem(true);
-    // }
   }, []);
 
   const CustomTag = `${tag}`;

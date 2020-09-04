@@ -8,7 +8,7 @@ function BlogCta() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <section id="section-blog-cta" className="margin-b-100">
+    <section id="section-blog-cta" className="margin-b">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-8 d-flex flex-column align-items-center">

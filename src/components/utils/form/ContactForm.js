@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../button/Button";
 import "./contact-form.scss";
+import InputField from "../../quote-page/project-details-form/InputField";
 
 function ContactForm({ btnLabel, message, text }) {
   const [email, setEmail] = useState("");
@@ -34,8 +35,7 @@ function ContactForm({ btnLabel, message, text }) {
   };
   return (
     <form action="" className="form-wrap" onSubmit={handleSubmit}>
-      <div className="name-wrap">
-        {" "}
+      <div className="input-wrapper">
         <input
           type="text"
           id="name"
@@ -46,7 +46,8 @@ function ContactForm({ btnLabel, message, text }) {
         />
         <label htmlFor="name">Name*</label>
       </div>
-      <div className="email-wrap">
+      {/* <InputField type="text" label="Name*" id="name" customClass="name-wrap" isRequired /> */}
+      <div className="email-wrap input-wrapper">
         <input
           type="email"
           id="email"
@@ -57,7 +58,7 @@ function ContactForm({ btnLabel, message, text }) {
         />
         <label htmlFor="email">Email</label>
       </div>
-      <div className="comment-wrap">
+      <div className="comment-wrap input-wrapper">
         <textarea name="" id="comment" cols="30" rows="8" placeholder=" "></textarea>
         <label htmlFor="comment">{text}</label>
       </div>

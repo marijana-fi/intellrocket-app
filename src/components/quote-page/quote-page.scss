@@ -1,0 +1,25 @@
+#quote-page {
+  margin-top: 20px;
+  .text-wrap {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  #quote-page {
+    margin-top: 60px;
+    .text-wrap {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #quote-page {
+    margin-top: 100px;
+    .text-wrap {
+      margin-bottom: 100px;
+    }
+  }
+}
