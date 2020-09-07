@@ -65,6 +65,66 @@ const logoData = [
     dark: "/intellrocket-app/img/client-logos/Just-Medical-light.png",
     url: "https://www.just-medical.ch/",
   },
+  {
+    name: "recom",
+    light: "/intellrocket-app/img/client-logos/recom.png",
+    dark: "/intellrocket-app/img/client-logos/recom-dark.png",
+    url: "http://www.recom.link/",
+  },
+  {
+    name: "studio baza",
+    light: "/intellrocket-app/img/client-logos/baza.png",
+    dark: "/intellrocket-app/img/client-logos/baza-dark.png",
+    url: "http://www.studiobaza.rs/",
+  },
+  {
+    name: "Roche",
+    light: "/intellrocket-app/img/client-logos/roche-light.png",
+    dark: "/intellrocket-app/img/client-logos/roche-dark.png",
+    url: "https://www.roche.com/",
+  },
+  {
+    name: "Sintemma",
+    light: "/intellrocket-app/img/client-logos/sintema.png",
+    dark: "/intellrocket-app/img/client-logos/sintema-dark.png",
+    url: "https://sintemma.com/",
+  },
+  {
+    name: "smart visualizer",
+    light: "/intellrocket-app/img/client-logos/Smart-Visualizer-light.png",
+    dark: "/intellrocket-app/img/client-logos/Smart-Visualizer-dark.png",
+    url: "https://www.svisualizer.com/#/login",
+  },
+  {
+    name: "transportlog",
+    light: "/intellrocket-app/img/client-logos/Transportlog-light.png",
+    dark: "/intellrocket-app/img/client-logos/Transportlog-dark.png",
+    url: "https://transportlog.org.rs/en/",
+  },
+  {
+    name: "Vila Jugovo",
+    light: "/intellrocket-app/img/client-logos/Vila-Jugovo-light.png",
+    dark: "/intellrocket-app/img/client-logos/Vila-Jugovo-dark.png",
+    url: "https://vilajugovos.rs/en/",
+  },
+  {
+    name: "Vallis Technologies",
+    light: "/intellrocket-app/img/client-logos/vallis-light.png",
+    dark: "/intellrocket-app/img/client-logos/vallis-dark.png",
+    url: "https://vallis-technologies.com/eng/",
+  },
+  {
+    name: "Biologist",
+    light: "/intellrocket-app/img/client-logos/Biologist-light.png",
+    dark: "/intellrocket-app/img/client-logos/Biologist-dark.png",
+    url: "https://biologist.rs/en/",
+  },
+  {
+    name: "Profesional Medic",
+    light: "/intellrocket-app/img/client-logos/profesional-medic-light.png",
+    dark: "/intellrocket-app/img/client-logos/profesional-medic-light.png",
+    url: "https://profesionalmedic.com/en/",
+  },
 ];
 
 export default logoData;

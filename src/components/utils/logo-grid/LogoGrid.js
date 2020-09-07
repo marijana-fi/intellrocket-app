@@ -26,7 +26,7 @@ function LogoGrid({ isLight, data, customClass = "" }) {
     <Waypoint onEnter={() => animateLogo()}>
       <div className="row">
         {data.map((item, i) => (
-          <div className="col-4 col-md-3 col-lg-2 mb-3" key={i} ref={logoRef}>
+          <div className="col-4 col-md-3 col-lg-2 mb-5" key={i} ref={logoRef}>
             <div className={`${customClass} client-logo`}>
               <a href={item.url} target="_blank" rel="noopener noreferrer">
                 <img src={isLight ? item.light : item.dark} alt={`${item.name} logo`} />

@@ -4,10 +4,31 @@ import Button from "../utils/button/Button";
 import classnames from "classnames";
 import ToggleTheme from "../utils/toggle-theme/ToggleTheme";
 import { Link } from "react-router-dom";
+import useDocumentScrollThrottled from "../utils/useDocumentScrollThrottled";
 
 const Header = ({ isLight, toggleTheme, isBlog }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [shouldShowShadow, setShouldShowShadow] = useState(false);
+  const [shouldHideHeader, setShouldHideHeader] = useState(false);
+
+  const MINIMUM_SCROLL = 0;
+  const TIMEOUT_DELAY = 0;
+
+  useDocumentScrollThrottled((callbackData) => {
+    const { previousScrollTop, currentScrollTop } = callbackData;
+    const isScrolledDown = previousScrollTop < currentScrollTop;
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+    setShouldShowShadow(currentScrollTop > 2);
+    setTimeout(() => {
+      setShouldHideHeader(isScrolledDown && isMinimumScrolled);
+    }, TIMEOUT_DELAY);
+  });
+
+  const hiddenStyle = shouldHideHeader ? "hidden" : "";
+  const shadowStyle = shouldShowShadow ? "shadow" : "";
+
+  const openMenu = isMenuOpen ? "mobile-open" : "";
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -26,7 +47,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
   };
 
   return (
-    <header className={isMenuOpen ? "mobile-open" : ""}>
+    <header className={`${openMenu} ${hiddenStyle} ${shadowStyle}`}>
       <div className="toggler">
         <ToggleTheme toggleTheme={toggleTheme} isLight={isLight} />
       </div>
@@ -44,7 +65,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
               />
             </Link>
           </div>
-          <div className="col-6 col-sm-8 d-flex align-items-center justify-content-end">
+          <div className="col-6 col-sm-8 nav-mobile d-flex align-items-center justify-content-end">
             <div
               className={classnames(
                 "navigation",

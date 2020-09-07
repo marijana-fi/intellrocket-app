@@ -73,7 +73,7 @@ function ProjectDetailsForm() {
           </div>
           <div className="row">
             <div className="col-12 d-flex justify-content-end">
-              <Button name="btn btn-static" label="Submit" />
+              <Button name="btn btn-static width-150" label="Submit" />
             </div>
           </div>
         </div>
