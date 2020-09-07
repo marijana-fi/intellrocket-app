@@ -1,0 +1,31 @@
+#job-list {
+  margin-bottom: 140px;
+  h3 {
+    font-size: 1.5rem;
+  }
+  .job-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--input-text);
+    padding-bottom: 20px;
+    .info-wrap {
+      margin-bottom: 30px;
+      h4 {
+        text-transform: unset;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #job-list {
+    margin-bottom: 220px;
+    .job-wrap {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Button from "../utils/button/Button";
 import "./section-quote.scss";
 
 import RevealTitle from "../utils/reveal-title/RevealTitle";
+import { Link } from "react-router-dom";
 
 const SectionQuote = () => {
   return (
@@ -13,7 +14,9 @@ const SectionQuote = () => {
             <RevealTitle tag="h3" title="Let’s Make Something Beautiful Together" />
           </div>
           <div className="col-12 col-lg-3">
-            <Button name="btn" label="Get a Quote" animate="true" />
+            <Link to="/intellrocket-app/get-a-quote">
+              <Button name="btn" label="Get a Quote" animate="true" />
+            </Link>
           </div>
         </div>
       </div>

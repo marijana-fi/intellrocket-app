@@ -1,0 +1,14 @@
+#career-culture {
+  text-align: center;
+  .text-wrap {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  #career-culture {
+    .text-wrap {
+      margin-bottom: 80px;
+    }
+  }
+}

@@ -124,6 +124,22 @@ form {
         display: none;
       }
     }
+    &.label-visible {
+      input,
+      textarea {
+        margin-top: 15px;
+      }
+      label {
+        position: relative;
+        top: unset;
+        left: unset;
+        color: var(--text-primary);
+        font-size: 1rem;
+        span {
+          color: #db4c4c;
+        }
+      }
+    }
   }
 }
 

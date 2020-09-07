@@ -6,10 +6,10 @@ import ContactForm from "../utils/form/ContactForm";
 import SectionQuote from "../section-quote/SectionQuote";
 import RevealTitle from "../utils/reveal-title/RevealTitle";
 import RevealText from "../utils/reveal-text/RevealText";
+import InfoCard from "../utils/info-card/InfoCard";
 
 function ContactPage() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isCardVisible, setIsCardVisible] = useState(false);
   return (
     <>
       <section id="contact-page">
@@ -51,22 +51,12 @@ function ContactPage() {
               </div>
             </Waypoint>
           </div>
-          <Waypoint bottomOffset="200px" onEnter={() => setIsCardVisible(true)}>
-            <div className={isCardVisible ? "show" : "hidden"}>
-              <div className="row margin-b d-flex">
-                {contactData.map((item, i) => {
-                  return (
-                    <div className="col-12 col-md-6 col-xl-4 mb-4" key={i}>
-                      <div className="info-card d-flex flex-column align-items-center">
-                        <img src={item.img} alt="" />
-                        <p className="info-text">{item.info}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </Waypoint>
+
+          <div className="row margin-b d-flex">
+            {contactData.map((item, i) => {
+              return <InfoCard item={item} i={i} />;
+            })}
+          </div>
         </div>
       </section>
       <SectionQuote />

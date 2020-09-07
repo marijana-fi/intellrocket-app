@@ -1,25 +1,28 @@
 #quote-page {
-  padding-top: 20px;
+  padding-top: 70px;
   .text-wrap {
     margin-bottom: 40px;
     text-align: center;
+    p {
+      color: var(--input-text);
+    }
   }
 }
 
 @media (min-width: 768px) {
   #quote-page {
-    padding-top: 60px;
+    padding-top: 120px;
     .text-wrap {
-      margin-bottom: 60px;
+      margin-bottom: 90px;
     }
   }
 }
 
 @media (min-width: 992px) {
   #quote-page {
-    padding-top: 100px;
+    padding-top: 180px;
     .text-wrap {
-      margin-bottom: 100px;
+      margin-bottom: 120px;
     }
   }
 }

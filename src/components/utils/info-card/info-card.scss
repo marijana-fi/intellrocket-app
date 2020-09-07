@@ -1,0 +1,23 @@
+.info-card {
+  height: 100%;
+  padding: 60px 30px;
+  opacity: 0;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.07);
+  &.card-culture {
+    img {
+      margin-bottom: 30px;
+    }
+  }
+  img {
+    width: min-content;
+    margin-bottom: 55px;
+  }
+  h4 {
+    margin-bottom: 30px;
+    text-transform: unset;
+    font-size: 1.5rem;
+  }
+  .info-text {
+    text-align: center;
+  }
+}

@@ -4,10 +4,21 @@
     .split-parent:nth-of-type(2) {
       float: left;
     }
+    &.rotate-career {
+      .split-parent:nth-of-type(2) {
+        float: unset;
+        .rotate-text {
+          span {
+            margin-left: 0;
+          }
+        }
+      }
+    }
   }
   .rotate-text {
     position: relative;
     height: 65px;
+
     span {
       visibility: hidden;
       font-size: 2.25rem;
