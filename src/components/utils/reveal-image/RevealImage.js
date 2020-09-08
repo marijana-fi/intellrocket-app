@@ -7,7 +7,7 @@ function RevealImage({ src, alt }) {
 
   return (
     <div id="reveal-image">
-      <Waypoint bottomOffset="200px" onEnter={() => setIsVisible(true)}>
+      <Waypoint bottomOffset="400px" onEnter={() => setIsVisible(true)}>
         <img src={src} alt={alt} className={isVisible ? "show" : ""} />
       </Waypoint>
     </div>

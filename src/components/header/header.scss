@@ -14,6 +14,22 @@ header {
   }
   &.shadow {
     background: var(--background);
+    .navigation {
+      nav {
+        ul {
+          li {
+            a {
+              color: var(--text-primary) !important;
+              &.underline {
+                &::after {
+                  background-color: var(--text-primary) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .toggler {
     position: absolute;
@@ -43,6 +59,11 @@ header {
           li {
             a {
               color: #fff;
+              &.underline {
+                &::after {
+                  background-color: #fff;
+                }
+              }
             }
           }
         }

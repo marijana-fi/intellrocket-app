@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import projectsData from "../projectsData";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
@@ -7,7 +7,7 @@ import "./section-project-desc.scss";
 import RevealImage from "../../utils/reveal-image/RevealImage";
 import RevealText from "../../utils/reveal-text/RevealText";
 
-function SectionProjectDesc() {
+const SectionProjectDesc = () => {
   return (
     <section id="section-project-desc" className="margin-b">
       <div className="container">
@@ -29,6 +29,6 @@ function SectionProjectDesc() {
       </div>
     </section>
   );
-}
+};
 
 export default SectionProjectDesc;

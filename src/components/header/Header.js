@@ -27,7 +27,6 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
 
   const hiddenStyle = shouldHideHeader ? "hidden" : "";
   const shadowStyle = shouldShowShadow ? "shadow" : "";
-
   const openMenu = isMenuOpen ? "mobile-open" : "";
 
   useEffect(() => {
@@ -57,7 +56,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
             <Link to="/intellrocket-app" title="Go to Home Page" className="logo">
               <img
                 src={
-                  !isLight || isBlog
+                  !isLight || (isBlog && !shouldShowShadow)
                     ? "/intellrocket-app/img/intellrocket-logo-white.png"
                     : "/intellrocket-app/img/intellrocket-logo.png"
                 }

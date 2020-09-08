@@ -5,11 +5,9 @@ import Button from "../../utils/button/Button";
 
 function JobForm() {
   const [value, setValue] = useState("");
-  console.log(value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
   };
   return (
     <div className="col-12 col-lg-5">
