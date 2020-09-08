@@ -14,6 +14,7 @@ import BlogsPage from "./components/blogs-page/BlogsPage";
 import QuotePage from "./components/quote-page/QuotePage";
 import CareerPage from "./components/career-page/CareerPage";
 import JobPage from "./components/job-page/JobPage";
+import ToggleTheme from "./components/utils/toggle-theme/ToggleTheme";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -64,6 +65,8 @@ function App() {
         <div className={isLight ? "App" : "App dark"}>
           <ScrollToTop />
           <Header isLight={isLight} toggleTheme={toggleTheme} isBlog={isBlog} />
+          <ToggleTheme toggleTheme={toggleTheme} isLight={isLight} />
+
           <Switch>
             <Route exact path="/intellrocket-app">
               <Home isLight={isLight} toggleTheme={toggleTheme} />

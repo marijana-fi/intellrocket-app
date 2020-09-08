@@ -9,9 +9,8 @@ import sliderWorkData from "./data/sliderWorkData";
 import SectionSecondOverlap from "../utils/section-second-overlap/SectionSecondOverlap";
 
 import digitalHomeData from "./digitalHomeData";
-import ToggleTheme from "../utils/toggle-theme/ToggleTheme";
 
-function Home({ toggleTheme, isLight }) {
+function Home() {
   const childReference = useRef(null);
 
   const handleScroll = (params) => {
@@ -19,7 +18,6 @@ function Home({ toggleTheme, isLight }) {
   };
   return (
     <>
-      <ToggleTheme toggleTheme={toggleTheme} isLight={isLight} />
       <SectionHero handleScroll={handleScroll} />
       <SectionSecondOverlap data={digitalHomeData} ref={childReference} />
       <SectionOffer />
