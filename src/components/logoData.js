@@ -55,8 +55,8 @@ const logoData = [
   },
   {
     name: "Inreact",
-    light: "/intellrocket-app/img/client-logos/inreact-light.png",
-    dark: "/intellrocket-app/img/client-logos/inreact-light.png",
+    light: "/intellrocket-app/img/client-logos/inreact.png",
+    dark: "/intellrocket-app/img/client-logos/inreact.png",
     url: "https://inreact.worldsecuresystems.com/",
   },
   {

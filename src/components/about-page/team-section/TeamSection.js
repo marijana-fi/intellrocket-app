@@ -6,6 +6,7 @@ import Button from "../../utils/button/Button";
 import teamData from "./teamData";
 import { gsap, Back } from "gsap";
 import { Waypoint } from "react-waypoint";
+import { Link } from "react-router-dom";
 
 function TeamSection() {
   const circleInnerRef = useRef(null);
@@ -115,7 +116,9 @@ international. Our creative and ambitious team
 speaks the universal language of technology."
               />
             </div>
-            <Button name="btn" label="Join The Team" animate="true" />
+            <Link to="/intellrocket-app/careers">
+              <Button name="btn" label="Join The Team" animate="true" />
+            </Link>
           </div>
         </div>
       </div>
