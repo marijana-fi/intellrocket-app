@@ -17,7 +17,6 @@ import JobPage from "./components/job-page/JobPage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
-
   const location = useLocation();
   useEffect(() => {
     setPath(location.pathname);
@@ -32,7 +31,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   var FontFaceObserver = require("fontfaceobserver");
   var font = new FontFaceObserver("Open Sans");
-
+  // console.log(path?.substring(18));
   font.load().then(function () {
     setIsLoaded(true);
   });
@@ -67,7 +66,7 @@ function App() {
           <Header isLight={isLight} toggleTheme={toggleTheme} isBlog={isBlog} />
           <Switch>
             <Route exact path="/intellrocket-app">
-              <Home />
+              <Home isLight={isLight} toggleTheme={toggleTheme} />
             </Route>
             <Route exact path="/intellrocket-app/work/retyre">
               <ProjectPage />

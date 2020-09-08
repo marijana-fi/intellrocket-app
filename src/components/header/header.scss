@@ -150,7 +150,7 @@ header {
     align-items: center;
     .header-item {
       display: inline-block;
-      margin-right: 30px;
+      margin-right: 24px;
       position: relative;
       overflow: hidden;
       a {
@@ -238,6 +238,9 @@ header {
 
 @media (min-width: 992px) {
   header {
+    .toggler {
+      display: none;
+    }
     .menu {
       display: none;
     }

@@ -35,7 +35,7 @@ function ContactPage() {
               </div>
             </Waypoint>
             <Waypoint topOffset="200px" onEnter={() => setIsVisible(true)}>
-              <div className="col-12 col-md-4 mb-5">
+              <div className="col-12 col-md-4 mb-5 mb-md-0">
                 <div className={isVisible ? "show" : "hidden"}>
                   <h3>Working Hours</h3>
                   <ul>
@@ -54,7 +54,7 @@ function ContactPage() {
 
           <div className="row margin-b d-flex">
             {contactData.map((item, i) => {
-              return <InfoCard item={item} i={i} />;
+              return <InfoCard item={item} key={i} />;
             })}
           </div>
         </div>

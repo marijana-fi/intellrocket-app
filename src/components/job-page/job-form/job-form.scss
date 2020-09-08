@@ -2,4 +2,25 @@
   padding: 30px;
   border: 1px solid #eee;
   border-radius: 5px;
+  .upload {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    margin-bottom: 10px;
+    height: 25px;
+    width: 300px;
+    color: var(--text-light);
+    input {
+      cursor: pointer;
+      display: block;
+
+      top: 0;
+      left: 0;
+    }
+  }
+  small {
+    color: var(--text-light);
+    margin-top: 15px;
+    display: block;
+  }
 }

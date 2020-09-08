@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./info-card.scss";
 import { Waypoint } from "react-waypoint";
 import { gsap } from "gsap";

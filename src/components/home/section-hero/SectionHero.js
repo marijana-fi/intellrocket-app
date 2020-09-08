@@ -8,7 +8,7 @@ import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
 gsap.registerPlugin(MorphSVGPlugin);
 
-const SectionHero = () => {
+const SectionHero = ({ handleScroll }) => {
   const start = useRef(null);
 
   useEffect(() => {
@@ -25,14 +25,14 @@ const SectionHero = () => {
   });
 
   return (
-    <section id="section-hero" className="margin-b">
+    <section id="section-hero" className="margin-b-100">
       <div className="container d-flex align-items-center">
         <div className="row align-items-center h-100">
           <div className="col-12 col-lg-6 ">
             <RevealTitle tag="h1" title="We Build Amazing Mobile and Web Experiences" />
 
             <div className="explore d-flex align-items-center btn-slide-in">
-              <Button name="round" label="" />
+              <Button name="round" label="" handleClick={handleScroll} />
               <span>Explore</span>
             </div>
           </div>

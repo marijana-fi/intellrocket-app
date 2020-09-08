@@ -12,7 +12,7 @@ function CtaNews() {
     setEmail(e.target.value);
   };
   return (
-    <form action="" className="d-flex justify-content-between" onSubmit={handleSubmit}>
+    <form action="" className="d-flex align-items-center" onSubmit={handleSubmit}>
       <div className="news-email input-wrapper">
         <input
           type="email"

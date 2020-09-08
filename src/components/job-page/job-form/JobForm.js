@@ -1,44 +1,62 @@
-import React from "react";
-import InputField from "../../quote-page/project-details-form/InputField";
+import React, { useState } from "react";
 import "./job-form.scss";
+import CheckmarkInput from "../../utils/checkmark-input/CheckmarkInput";
+import Button from "../../utils/button/Button";
 
 function JobForm() {
+  const [value, setValue] = useState("");
+  console.log(value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  };
   return (
-    <div className="col-12 col-md-5">
+    <div className="col-12 col-lg-5">
       <div id="job-form-wrap">
         <h2>Apply for this position</h2>
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <div className="input-wrapper label-visible mb-4">
             <label htmlFor="name">
-              Full Name <span>*</span>
+              Full Name <span className="asterisk">*</span>
             </label>
-            <input type="tel" name="" id="name" />
+            <input
+              type="tel"
+              name=""
+              id="name"
+              required
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
           </div>
           <div className="input-wrapper label-visible mb-4">
             <label htmlFor="email">
-              Email <span>*</span>
+              Email <span className="asterisk">*</span>
             </label>
-            <input type="tel" name="" id="email" />
+            <input type="tel" name="" id="email" required />
           </div>
           <div className="input-wrapper label-visible mb-4">
             <label htmlFor="phone">
-              Phone <span>*</span>
+              Phone <span className="asterisk">*</span>
             </label>
-            <input type="tel" name="" id="phone" />
+            <input type="tel" name="" id="phone" required />
           </div>
           <div className="input-wrapper label-visible mb-4">
             <label htmlFor="phone">
-              Cover Letter <span>*</span>
+              Cover Letter <span className="asterisk">*</span>
             </label>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
+            <textarea name="" id="" cols="30" rows="5" required></textarea>
           </div>
           <div className="input-wrapper label-visible mb-4">
-            <span className="icon"></span>
-            <label htmlFor="file">
-              Upload CV/Resume <span>*</span>
+            <label htmlFor="app-file" className="upload">
+              <span className="icon"></span>
+              Upload CV/Resume <span className="asterisk">*</span>
             </label>
-            <input type="file" name="" id="file" />
+            <input type="file" name="" id="app-file" accept=".pdf, .doc, .docx" required />
+            <small>Allowed Type(s): .pdf, .doc, .docx</small>
           </div>
+          <CheckmarkInput />
+          <Button name="btn btn-static" label="Submit" />
         </form>
       </div>
     </div>

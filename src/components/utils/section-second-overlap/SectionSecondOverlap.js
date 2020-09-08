@@ -3,10 +3,17 @@ import "./section-second-overlap.scss";
 import OpenImage from "../open-image/OpenImage";
 import RevealTitle from "../reveal-title/RevealTitle";
 import RevealText from "../reveal-text/RevealText";
+import { forwardRef } from "react";
 
-const SectionSecondOverlap = ({ data, customClass }) => {
+const SectionSecondOverlap = forwardRef((props, ref) => {
+  const { data, customClass } = props;
+
   return (
-    <section id="section-second" className={customClass ? `${customClass} margin-b` : "margin-b"}>
+    <section
+      ref={ref}
+      id="section-second"
+      className={customClass ? `${customClass} margin-b` : "margin-b"}
+    >
       <div className="container ">
         <div className="row justify-content-between flex-lg-row flex-column-reverse">
           <div className="col-12 col-lg-5 d-flex align-items-center ">
@@ -24,7 +31,6 @@ const SectionSecondOverlap = ({ data, customClass }) => {
                   customClass="right"
                 />
               </div>
-
               <div className="img-small">
                 <OpenImage
                   url="/intellrocket-app/img/section-digital-img-02.jpg"
@@ -37,6 +43,6 @@ const SectionSecondOverlap = ({ data, customClass }) => {
       </div>
     </section>
   );
-};
+});
 
 export default SectionSecondOverlap;

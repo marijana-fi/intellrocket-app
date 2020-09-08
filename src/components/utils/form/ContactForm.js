@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../button/Button";
 import "./contact-form.scss";
-import InputField from "../../quote-page/project-details-form/InputField";
+import CheckmarkInput from "../checkmark-input/CheckmarkInput";
 
 function ContactForm({ btnLabel, message, text }) {
   const [email, setEmail] = useState("");
@@ -10,23 +10,6 @@ function ContactForm({ btnLabel, message, text }) {
     e.preventDefault();
   };
 
-  const privacy = () => {
-    return (
-      <div className="privacy-wrap">
-        <p>Privacy Policy*</p>
-        <label htmlFor="radio">
-          <span>
-            I have read and agree with{" "}
-            <a href="/" className="underline">
-              privacy policy
-            </a>
-          </span>
-          <input type="radio" id="radio" />
-          <span className="checkmark"></span>
-        </label>
-      </div>
-    );
-  };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -35,7 +18,7 @@ function ContactForm({ btnLabel, message, text }) {
   };
   return (
     <form action="" className="form-wrap" onSubmit={handleSubmit}>
-      <div className="input-wrapper">
+      <div className="name-wrapper align-items-stretch input-wrapper">
         <input
           type="text"
           id="name"
@@ -65,7 +48,7 @@ function ContactForm({ btnLabel, message, text }) {
 
       <div className="submit margin-b-100 d-flex justify-content-between">
         {message === "privacy" ? (
-          privacy()
+          <CheckmarkInput contact="true" />
         ) : (
           <p className="mb-4">Your email address will not be publicly visible.</p>
         )}

@@ -49,42 +49,44 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
 
     //rotate-text
     const tl = gsap.timeline({ repeat: -1, delay: 0.5 });
-    itemsRef.current.forEach((item, i) => {
-      tl.from(
-        itemsRef.current[i],
-        {
-          duration: 0.5,
-          rotateX: -95,
-          autoAlpha: 0,
-          ease: "expo.out",
-          y: 35,
-        },
-        "-=0.1"
-      )
-        .to(
+    if (shouldAnimate) {
+      itemsRef.current.forEach((item, i) => {
+        tl.from(
           itemsRef.current[i],
           {
             duration: 0.5,
-            rotateX: 0,
-            autoAlpha: 1,
-            ease: "expo.out",
-            y: 0,
-          },
-          "-=.1"
-        )
-        .to(
-          itemsRef.current[i],
-          {
-            duration: 0.5,
-            rotateX: 95,
+            rotateX: -95,
             autoAlpha: 0,
             ease: "expo.out",
-            y: -30,
-            delay: 2,
+            y: 35,
           },
-          "-=.1"
-        );
-    });
+          "-=0.1"
+        )
+          .to(
+            itemsRef.current[i],
+            {
+              duration: 0.5,
+              rotateX: 0,
+              autoAlpha: 1,
+              ease: "expo.out",
+              y: 0,
+            },
+            "-=.1"
+          )
+          .to(
+            itemsRef.current[i],
+            {
+              duration: 0.5,
+              rotateX: 95,
+              autoAlpha: 0,
+              ease: "expo.out",
+              y: -30,
+              delay: 2,
+            },
+            "-=.1"
+          );
+      });
+    }
   };
 
   return (
