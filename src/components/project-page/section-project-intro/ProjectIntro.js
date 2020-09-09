@@ -24,7 +24,7 @@ function ProjectIntro() {
               <RevealText tag="p" text={projectsData[0].desc} />
             </div>
             <div className="explore d-flex align-items-center btn-slide-in">
-              <Button name="round" label="" handleClick={handleScroll} />
+              <Button name="round" label="" handleClick={handleScroll} aria="explore" />
               <span>Explore</span>
             </div>
           </div>

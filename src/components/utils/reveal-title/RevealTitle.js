@@ -39,9 +39,10 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
 
   const animateTitle = (params) => {
     if (shouldAnimate) {
-      gsap.from(childSplit.lines, {
+      gsap.to(childSplit.lines, {
         duration: 1,
-        yPercent: 100,
+        opacity: 1,
+        y: 0,
         ease: "strong.inOut",
         stagger: 0.1,
       });

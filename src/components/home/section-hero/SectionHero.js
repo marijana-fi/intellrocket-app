@@ -32,7 +32,7 @@ const SectionHero = ({ handleScroll }) => {
             <RevealTitle tag="h1" title="We Build Amazing Mobile and Web Experiences" />
 
             <div className="explore d-flex align-items-center btn-slide-in">
-              <Button name="round" label="" handleClick={handleScroll} />
+              <Button name="round" label="" handleClick={handleScroll} aria="explore" />
               <span>Explore</span>
             </div>
           </div>

@@ -180,11 +180,13 @@ button {
   color: #fff;
   background: var(--accent-color);
   &.comment {
-    // font-size: 0.75rem;
     width: 160px;
   }
 }
 
+.underline-bar {
+  color: var(--link-color);
+}
 .margin-b {
   margin-bottom: 80px;
   @media (min-width: 992px) {

@@ -16,6 +16,18 @@
       transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1),
         left 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 100%;
+      left: 100%;
+      background: #555;
+      z-index: 99;
+      transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1),
+        right 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+    }
     img {
       opacity: 0;
       transform: translateX(-10px) translateZ(0);
@@ -28,6 +40,20 @@
         right: 0;
         bottom: 0;
         left: 100%;
+      }
+      img {
+        transition: opacity 0.05s 0.4s, transform 0.4s ease-out 0.4s;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+  &.left {
+    figure {
+      &::before {
+        right: 100%;
+        bottom: 0;
+        left: 0;
       }
       img {
         transition: opacity 0.05s 0.4s, transform 0.4s ease-out 0.4s;

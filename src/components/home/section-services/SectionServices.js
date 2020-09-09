@@ -4,6 +4,7 @@ import "./section-services.scss";
 import OpenImage from "../../utils/open-image/OpenImage";
 import RevealText from "../../utils/reveal-text/RevealText";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
+import { Link } from "react-router-dom";
 
 const SectionServices = () => {
   return (
@@ -18,7 +19,9 @@ const SectionServices = () => {
                 text="We know that only by working with you as partners we can understand your business
                 and find a perfect digital solution for you."
               />
-              <Button name="btn" label="Our Services" animate="true" />
+              <Link to="/intellrocket-app/services">
+                <Button name="btn" label="Our Services" animate="true" />
+              </Link>
             </div>
           </div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0">

@@ -31,10 +31,10 @@ const RevealText = (props) => {
 
   const animateText = (params) => {
     if (shouldAnimate) {
-      gsap.from(childSplit.lines, {
+      gsap.to(childSplit.lines, {
         duration: 0.6,
-        opacity: 0,
-        y: 50,
+        opacity: 1,
+        y: 0,
         ease: "power1",
         stagger: 0.05,
 

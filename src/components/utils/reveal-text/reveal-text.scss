@@ -8,7 +8,9 @@
   display: inline-block;
 }
 .text-split-child {
+  transform: translateY(50%);
   display: inline-block;
+  opacity: 0;
 }
 .reveal-text {
   .text-split-parent,
