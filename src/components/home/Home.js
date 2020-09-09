@@ -17,15 +17,17 @@ function Home() {
     childReference.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <>
-      <SectionHero handleScroll={handleScroll} />
-      <SectionSecondOverlap data={digitalHomeData} ref={childReference} />
-      <SectionOffer />
-      <SectionSlider title="Our Works" data={sliderWorkData} path="work/retyre" />
-      <SectionServices />
-      <SectionSlider title="Our Blog" data={sliderBlogData} path="blog/single" />
-      <SectionQuote />
-    </>
+    <main>
+      <div id="#main">
+        <SectionHero handleScroll={handleScroll} />
+        <SectionSecondOverlap data={digitalHomeData} ref={childReference} />
+        <SectionOffer />
+        <SectionSlider title="Our Works" data={sliderWorkData} path="work/retyre" />
+        <SectionServices />
+        <SectionSlider title="Our Blog" data={sliderBlogData} path="blog/single" />
+        <SectionQuote />
+      </div>
+    </main>
   );
 }
 

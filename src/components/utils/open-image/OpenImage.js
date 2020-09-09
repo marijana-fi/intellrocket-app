@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import "./open-image.scss";
 
-const OpenImage = ({ url, customClass }) => {
+const OpenImage = ({ url, customClass, title = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (

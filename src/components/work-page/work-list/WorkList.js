@@ -26,7 +26,7 @@ function WorkList() {
             return (
               <div key={i} className="col-12 col-md-6 img-wrap ">
                 <Link to="work/retyre">
-                  <OpenImage url={item.image} customClass="right" />
+                  <OpenImage url={item.image} customClass="right" title={item.title} />
                   <RevealSingleLine tag="h4" text={item.title} customClass="underline" />
 
                   <RevealText tag="p" text={item.desc.join(", ")} />

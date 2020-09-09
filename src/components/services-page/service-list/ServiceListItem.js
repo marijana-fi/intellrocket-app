@@ -3,14 +3,14 @@ import RevealText from "../../utils/reveal-text/RevealText";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import { Waypoint } from "react-waypoint";
 
-function ServiceListItem({ title, list, desc, image }) {
+function ServiceListItem({ title = "", list, desc, image }) {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <section id="section-list-item" className="col-12">
       <div className="row">
         <div className="col-12 col-md-6 margin-b">
           <Waypoint bottomOffset="150px" onEnter={() => setIsVisible(true)}>
-            <img src={image} alt="" className={isVisible ? "show" : "hidden"} />
+            <img src={image} alt={title} className={isVisible ? "show" : "hidden"} />
           </Waypoint>
         </div>
         <div className="col-12 col-md-6  margin-b align-self-center">

@@ -24,7 +24,7 @@ function CtaNews() {
         />
         <label htmlFor="email-news">Enter your email</label>
       </div>
-      <Button name="round" />
+      <Button name="round" aria="subscribe to newsletter" />
     </form>
   );
 }

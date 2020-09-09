@@ -14,9 +14,17 @@ function ToggleTheme({ toggleTheme, isLight }) {
     };
   }, []);
   return (
-    <button className={windowWidth <= 992 ? "theme-toggle-wrapper mobile" : "theme-toggle-wrapper"}>
-      <input type="checkbox" id="checkbox" onChange={() => toggleTheme()} checked={!isLight} />
-      <label className="theme-toggle" htmlFor="checkbox">
+    <button
+      className={windowWidth <= 992 ? "theme-toggle-wrapper mobile" : "theme-toggle-wrapper"}
+      aria-label="change theme"
+    >
+      <input
+        type="checkbox"
+        id="toggle-checkbox"
+        onChange={() => toggleTheme()}
+        checked={!isLight}
+      />
+      <label className="theme-toggle" htmlFor="toggle-checkbox">
         <div className="toggle"></div>
         <span>Dark</span>
         <span>Light</span>

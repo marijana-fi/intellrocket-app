@@ -50,6 +50,9 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
       <div className="toggler">
         <ToggleTheme toggleTheme={toggleTheme} isLight={isLight} />
       </div>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-6 col-sm-3">
@@ -133,7 +136,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                     className="text-slide-in"
                   >
                     <span className="social-icon">
-                      <img src="/intellrocket-app/img/social-fb-icon.svg" alt="" />
+                      <img src="/intellrocket-app/img/social-fb-icon.svg" alt="go to facebook" />
                     </span>
                   </a>
                   <a
@@ -141,7 +144,10 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                     className="text-slide-in"
                   >
                     <span className="social-icon">
-                      <img src="/intellrocket-app/img/social-linkedin-icon.svg" alt="" />
+                      <img
+                        src="/intellrocket-app/img/social-linkedin-icon.svg"
+                        alt="go to linkedin"
+                      />
                     </span>
                   </a>
                 </div>

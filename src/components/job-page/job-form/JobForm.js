@@ -28,22 +28,22 @@ function JobForm() {
             />
           </div>
           <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="email">
+            <label htmlFor="job-email">
               Email <span className="asterisk">*</span>
             </label>
-            <input type="tel" name="" id="email" required />
+            <input type="tel" name="" id="job-email" required />
           </div>
           <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="phone">
+            <label htmlFor="job-phone">
               Phone <span className="asterisk">*</span>
             </label>
-            <input type="tel" name="" id="phone" required />
+            <input type="tel" name="" id="job-phone" required />
           </div>
           <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="phone">
+            <label htmlFor="job-cover">
               Cover Letter <span className="asterisk">*</span>
             </label>
-            <textarea name="" id="" cols="30" rows="5" required></textarea>
+            <textarea name="" id="job-cover" cols="30" rows="5" required></textarea>
           </div>
           <div className="input-wrapper label-visible mb-4">
             <label htmlFor="app-file" className="upload">

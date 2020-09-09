@@ -77,7 +77,7 @@ const SliderCard = ({ item, path }) => {
           onMouseLeave={() => handleLeave()}
           ref={sliderRef}
         >
-          <img src={item.image} alt="" />
+          <img src={item.image} alt={item.title} />
           <div className="slider-text-wrap">
             <h4>{item.title}</h4>
             <div className="text-desc-wrap">

@@ -22,10 +22,10 @@ function SharedSectionHero({ data, customClass }) {
           <div className="col-12 col-lg-12 ">
             <div className="img-wrap">
               <div className="img-large">
-                <OpenImage url={data.urlFirst} customClass="right" />
+                <OpenImage url={data.urlFirst} customClass="right" title="" />
               </div>
               <div className="img-small">
-                <OpenImage url={data.urlSecond} customClass="right" />
+                <OpenImage url={data.urlSecond} customClass="right" title="" />
               </div>
             </div>
           </div>

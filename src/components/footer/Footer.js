@@ -72,7 +72,7 @@ const Footer = ({ isLight }) => {
                 </Link>
               </li>
               <li className="footer-list-item">
-                <Link to="/intellrocket-app/privacy" className="underline">
+                <Link to="/intellrocket-app/privacy-policy" className="underline">
                   Privacy Policy
                 </Link>
               </li>
@@ -157,7 +157,7 @@ const Footer = ({ isLight }) => {
             <div className="col-12 ">
               <div className="copyright-wrap flex-column flex-md-row d-flex justify-content-between ">
                 <div className="copyright-links">
-                  <Link to="/intellrocket-app/privacy" className="underline">
+                  <Link to="/intellrocket-app/privacy-policy" className="underline">
                     Privacy Policy
                   </Link>
                   <Link to="/intellrocket-app/site-map" className="underline">

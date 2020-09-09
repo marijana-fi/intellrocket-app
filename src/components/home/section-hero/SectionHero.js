@@ -15,8 +15,8 @@ const SectionHero = ({ handleScroll }) => {
     gsap.to(start.current, 5, {
       morphSVG: {
         shape: start.current,
-        // type: "rotational",
-        shapeIndex: 1.1,
+        type: "rotational",
+        shapeIndex: 1,
       },
       repeat: -1,
       yoyo: true,

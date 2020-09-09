@@ -15,6 +15,7 @@ import QuotePage from "./components/quote-page/QuotePage";
 import CareerPage from "./components/career-page/CareerPage";
 import JobPage from "./components/job-page/JobPage";
 import ToggleTheme from "./components/utils/toggle-theme/ToggleTheme";
+import PrivacyPage from "./components/privacy-page/PrivacyPage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -100,6 +101,9 @@ function App() {
             </Route>
             <Route exact path="/intellrocket-app/careers/marketing-manager">
               <JobPage />
+            </Route>
+            <Route exact path="/intellrocket-app/privacy-policy">
+              <PrivacyPage />
             </Route>
           </Switch>
           <Footer isLight={isLight} />
