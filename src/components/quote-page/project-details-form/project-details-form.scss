@@ -5,6 +5,9 @@
   .details-wrap {
     display: grid;
     gap: 10px;
+    &.error {
+      gap: 30px;
+    }
     label {
       font-size: 1rem;
     }
@@ -26,6 +29,9 @@
       grid-template-rows: repeat(3, 1fr);
       row-gap: 20px;
       column-gap: 40px;
+      &.error {
+        row-gap: 30px;
+      }
     }
     .budget-wrap {
       display: grid;

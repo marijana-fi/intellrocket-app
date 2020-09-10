@@ -46,6 +46,7 @@ function SliderArrow(props) {
   return (
     <button
       className={type === "next" ? "slider-arrow" : "slider-arrow prev"}
+      area-label={type === "next" ? "go to next slide" : "go to previous slide"}
       {...rest}
       onMouseEnter={() => handleEnter()}
       onMouseLeave={() => handleLeave()}

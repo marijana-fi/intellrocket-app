@@ -2,58 +2,63 @@ import React, { useState } from "react";
 import "./job-form.scss";
 import CheckmarkInput from "../../utils/checkmark-input/CheckmarkInput";
 import Button from "../../utils/button/Button";
+import { useForm } from "react-hook-form";
+import JobInputField from "./JobInputField";
 
 function JobForm() {
-  const [value, setValue] = useState("");
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
   return (
     <div className="col-12 col-lg-5">
       <div id="job-form-wrap">
         <h2>Apply for this position</h2>
-        <form action="" onSubmit={handleSubmit}>
-          <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="name">
-              Full Name <span className="asterisk">*</span>
-            </label>
-            <input
-              type="tel"
-              name=""
-              id="name"
-              required
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            />
-          </div>
-          <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="job-email">
-              Email <span className="asterisk">*</span>
-            </label>
-            <input type="tel" name="" id="job-email" required />
-          </div>
-          <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="job-phone">
-              Phone <span className="asterisk">*</span>
-            </label>
-            <input type="tel" name="" id="job-phone" required />
-          </div>
-          <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="job-cover">
-              Cover Letter <span className="asterisk">*</span>
-            </label>
-            <textarea name="" id="job-cover" cols="30" rows="5" required></textarea>
-          </div>
-          <div className="input-wrapper label-visible mb-4">
-            <label htmlFor="app-file" className="upload">
-              <span className="icon"></span>
-              Upload CV/Resume <span className="asterisk">*</span>
-            </label>
-            <input type="file" name="" id="app-file" accept=".pdf, .doc, .docx" required />
-            <small>Allowed Type(s): .pdf, .doc, .docx</small>
-          </div>
-          <CheckmarkInput />
+        <form action="" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+          <JobInputField
+            type="text"
+            id="job-name"
+            label="Full name"
+            name="name"
+            errors={errors}
+            ref={register({ required: "This field is required." })}
+          />
+          <JobInputField
+            type="email"
+            id="job-email"
+            label="Email"
+            name="email"
+            errors={errors}
+            ref={register({ required: "This field is required." })}
+          />
+          <JobInputField
+            type="tel"
+            id="job-phone"
+            label="Phone"
+            name="phone"
+            errors={errors}
+            ref={register({ required: "This field is required." })}
+          />
+          <JobInputField
+            type="text"
+            id="job-cover"
+            label="Cover Letter"
+            name="cover"
+            textarea="true"
+            errors={errors}
+            ref={register({ required: "This field is required." })}
+          />
+          <JobInputField
+            type="file"
+            customClass="upload"
+            id="job-file"
+            label=" Upload CV/Resume"
+            name="upload"
+            file="true"
+            errors={errors}
+            ref={register({ required: "This field is required." })}
+          />
+
+          <CheckmarkInput errors={errors} ref={register({ required: "This field is required." })} />
           <Button name="btn btn-static" label="Submit" />
         </form>
       </div>

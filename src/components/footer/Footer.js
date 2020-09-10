@@ -1,10 +1,11 @@
 import React from "react";
 import "./footer.scss";
-
 import { Link } from "react-router-dom";
 import CtaNews from "../utils/cta-news/CtaNews";
+import { navPagesData } from "./footerData";
+import { footerContactData } from "./footerData";
 
-const Footer = ({ isLight }) => {
+const Footer = ({ isLight, path }) => {
   return (
     <footer>
       <div className="container">
@@ -30,52 +31,25 @@ const Footer = ({ isLight }) => {
           <div className="col-6 col-sm-6 mb-5 col-lg-2">
             <h4>Pages</h4>
             <ul className="footer-list">
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/" className="underline">
-                  Home
-                </Link>
-              </li>
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/about-us" className="underline">
-                  About us
-                </Link>
-              </li>
-
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/services" className="underline">
-                  Services
-                </Link>
-              </li>
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/work" className="underline">
-                  Work
-                </Link>
-              </li>
+              {navPagesData.map((item, i) => (
+                <li className="footer-list-item" key={i}>
+                  <Link to={item.link} className={item.link === path ? "current" : "underline"}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-6 col-sm-6 mb-5 col-lg-3">
             <h4>Reach us</h4>
             <ul className="footer-list">
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/contact" className="underline">
-                  Contact us
-                </Link>
-              </li>
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/careers" className="underline">
-                  Careers
-                </Link>
-              </li>
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/blog" className="underline">
-                  Blog
-                </Link>
-              </li>
-              <li className="footer-list-item">
-                <Link to="/intellrocket-app/privacy-policy" className="underline">
-                  Privacy Policy
-                </Link>
-              </li>
+              {footerContactData.map((item, i) => (
+                <li className="footer-list-item" key={i}>
+                  <Link to={item.link} className={item.link === path ? "current" : "underline"}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="col-10 col-sm-6 col-md-5 col-lg-3">

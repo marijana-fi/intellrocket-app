@@ -1,7 +1,3 @@
-// function sitemapData() {
-
-// }
-// export default sitemapData;
 export const sitemapPages = [
   { heading: "Home", sub: [], link: "/intellrocket-app" },
   { heading: "About us", sub: [], link: "/intellrocket-app/about-us" },

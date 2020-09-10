@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import projectsData from "../projectsData";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 

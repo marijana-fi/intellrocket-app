@@ -1,26 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../button/Button";
 import "./cta-news.scss";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 function CtaNews() {
-  const [email, setEmail] = useState("");
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
   return (
-    <form action="" className="d-flex align-items-center" onSubmit={handleSubmit}>
+    <form action="" className="d-flex align-items-center" onSubmit={handleSubmit(onSubmit)}>
       <div className="news-email input-wrapper">
         <input
           type="email"
           id="email-news"
-          required
+          name="email"
           placeholder=" "
-          onChange={handleChange}
-          value={email}
+          errors={errors}
+          ref={register({ required: "This field is required." })}
+        />
+        <ErrorMessage
+          errors={errors}
+          name="email"
+          render={({ message }) => <small className="error-text ">{message}</small>}
         />
         <label htmlFor="email-news">Enter your email</label>
       </div>

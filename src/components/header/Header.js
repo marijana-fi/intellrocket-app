@@ -5,8 +5,9 @@ import classnames from "classnames";
 import ToggleTheme from "../utils/toggle-theme/ToggleTheme";
 import { Link } from "react-router-dom";
 import useDocumentScrollThrottled from "../utils/useDocumentScrollThrottled";
+import { navPagesData } from "../footer/footerData";
 
-const Header = ({ isLight, toggleTheme, isBlog }) => {
+const Header = ({ isLight, toggleTheme, isBlog, path }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
@@ -28,6 +29,7 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
   const hiddenStyle = shouldHideHeader ? "hidden" : "";
   const shadowStyle = shouldShowShadow ? "shadow" : "";
   const openMenu = isMenuOpen ? "mobile-open" : "";
+  const slideNav = isMenuOpen ? "text-slide-in" : "";
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -78,42 +80,20 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
             >
               <nav>
                 <ul className={isMenuOpen ? "header-list open" : "header-list"}>
-                  <li className="header-item">
-                    <Link
-                      to="/intellrocket-app"
-                      onClick={isMenuOpen ? handleMenuOpen : null}
-                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className="header-item">
-                    <Link
-                      to="/intellrocket-app/about-us"
-                      onClick={isMenuOpen ? handleMenuOpen : null}
-                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
-                    >
-                      About us
-                    </Link>
-                  </li>
-                  <li className="header-item">
-                    <Link
-                      to="/intellrocket-app/services"
-                      onClick={isMenuOpen ? handleMenuOpen : null}
-                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
-                    >
-                      Services
-                    </Link>
-                  </li>
-                  <li className="header-item">
-                    <Link
-                      to="/intellrocket-app/work"
-                      onClick={isMenuOpen ? handleMenuOpen : null}
-                      className={isMenuOpen ? "underline text-slide-in" : "underline"}
-                    >
-                      Work
-                    </Link>
-                  </li>
+                  {navPagesData.map((item, i) => (
+                    <li className="header-item" key={i}>
+                      <Link
+                        to={item.link}
+                        onClick={isMenuOpen ? handleMenuOpen : null}
+                        className={
+                          item.link === path ? `current ${slideNav}` : `underline ${slideNav}`
+                        }
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+
                   {windowWidth <= 992 ? (
                     <li className="header-item">
                       <Link
@@ -125,9 +105,11 @@ const Header = ({ isLight, toggleTheme, isBlog }) => {
                       </Link>
                     </li>
                   ) : (
-                    <Link to="/intellrocket-app/get-a-quote">
-                      <Button name="btn btn-static" label="Get a Quote" />
-                    </Link>
+                    <li>
+                      <Link to="/intellrocket-app/get-a-quote">
+                        <Button name="btn btn-static" label="Get a Quote" />
+                      </Link>
+                    </li>
                   )}
                 </ul>
                 <div className="social-items">

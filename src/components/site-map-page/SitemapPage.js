@@ -12,15 +12,15 @@ function SitemapPage() {
             <h1>Sitemap</h1>
             <h2>Pages</h2>
             <ul className="map-list">
-              {sitemapPages?.map((item) => (
-                <li>
+              {sitemapPages?.map((item, i) => (
+                <li key={i}>
                   <a className="external underline" href={item.link}>
                     {item.heading}
                   </a>
                   {!!item.sub.length && (
                     <ul className="ml-4">
-                      {item.sub.map((el) => (
-                        <li>
+                      {item.sub.map((el, i) => (
+                        <li key={i}>
                           <a className="external underline" href={el.link}>
                             {el.heading}
                           </a>

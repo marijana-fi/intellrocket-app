@@ -26,7 +26,6 @@ function usePageViews() {
   }, [location]);
   return path;
 }
-
 function App() {
   const path = usePageViews();
   const [isBlog, setIsBlog] = useState(false);
@@ -34,14 +33,21 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   var FontFaceObserver = require("fontfaceobserver");
   var font = new FontFaceObserver("Open Sans");
-  // console.log(path?.substring(18));
+
   font.load().then(function () {
     setIsLoaded(true);
   });
 
   useEffect(() => {
-    const isLight = JSON.parse(localStorage.getItem("theme"));
+    if (!isLight) {
+      document.body.style.background = "#1a191d";
+    } else {
+      document.body.style.background = "#fff";
+    }
+  }, [isLight]);
 
+  useEffect(() => {
+    const isLight = JSON.parse(localStorage.getItem("theme"));
     setIsLight(isLight);
   }, []);
 
@@ -56,7 +62,6 @@ function App() {
       setIsBlog(false);
     }
   }, [path]);
-
   const toggleTheme = () => {
     setIsLight(!isLight);
   };
@@ -66,7 +71,7 @@ function App() {
       {isLoaded && (
         <div className={isLight ? "App" : "App dark"}>
           <ScrollToTop />
-          <Header isLight={isLight} toggleTheme={toggleTheme} isBlog={isBlog} />
+          <Header isLight={isLight} toggleTheme={toggleTheme} isBlog={isBlog} path={path} />
           <ToggleTheme toggleTheme={toggleTheme} isLight={isLight} />
 
           <Switch>
@@ -110,7 +115,7 @@ function App() {
               <SitemapPage />
             </Route>
           </Switch>
-          <Footer isLight={isLight} />
+          <Footer isLight={isLight} path={path} />
         </div>
       )}
     </>

@@ -3,15 +3,14 @@ import "./project-details-form.scss";
 import InputField from "./InputField";
 import Button from "../../utils/button/Button";
 import ProjectTopic from "../project-topic/ProjectTopic";
+import { useForm } from "react-hook-form";
 
 function ProjectDetailsForm() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <section id="project-details">
-      <form action="" onSubmit={handleSubmit}>
+      <form action="" onSubmit={handleSubmit(onSubmit)}>
         <div className="container">
           <ProjectTopic />
           <div className="row align-items-center margin-b-100">
@@ -19,28 +18,53 @@ function ProjectDetailsForm() {
               <h2>Project Details</h2>
             </div>
             <div className="col-12 col-md-6 col-lg-8">
-              <div className="details-wrap">
+              <div
+                className={
+                  Object.keys(errors).length === 0 ? "details-wrap " : "details-wrap error"
+                }
+              >
                 <InputField
                   type="text"
                   id="name"
-                  isRequired
+                  name="name"
                   label="Your name*"
                   customClass="name-wrap"
+                  errors={errors}
+                  ref={register({ required: "This field is required." })}
                 />
+
                 <InputField
                   type="email"
+                  name="Email"
                   id="email"
-                  isRequired
                   label="Email*"
+                  errors={errors}
                   customClass="email-wrap"
+                  ref={register({ required: "This field is required." })}
                 />
-                <InputField type="tel" id="phone" label="Phone" customClass="phone-wrap" />
-                <InputField type="text" id="company" label="Company" customClass="company-wrap" />
+                <InputField
+                  type="tel"
+                  id="phone"
+                  label="Phone"
+                  name="Phone"
+                  customClass="phone-wrap"
+                  ref={register}
+                />
+                <InputField
+                  type="text"
+                  id="company"
+                  name="Company"
+                  label="Company"
+                  customClass="company-wrap"
+                  ref={register}
+                />
                 <InputField
                   type="text"
                   id="website"
+                  name="Website"
                   label="URL of website"
                   customClass="website-wrap"
+                  ref={register}
                 />
               </div>
             </div>
@@ -51,7 +75,7 @@ function ProjectDetailsForm() {
             </div>
             <div className="col-12 col-md-6 col-lg-8 input-wrapper">
               <div className="budget-wrap">
-                <input type="text" placeholder="Your budget (€)" />
+                <input type="text" placeholder="Your budget (€)" name="budget" ref={register} />
               </div>
             </div>
           </div>

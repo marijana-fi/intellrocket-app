@@ -3,6 +3,7 @@
   border: 1px solid #eee;
   border-radius: 5px;
   .upload {
+    line-height: 1.9;
     cursor: pointer;
     position: absolute;
     display: block;
@@ -17,10 +18,12 @@
       top: 0;
       left: 0;
     }
-  }
-  small {
-    color: var(--text-light);
-    margin-top: 15px;
-    display: block;
+    .file-name {
+      margin-bottom: 0;
+    }
+    .upload-type {
+      color: var(--text-light);
+      display: block;
+    }
   }
 }

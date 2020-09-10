@@ -1,7 +1,9 @@
 import React from "react";
 import "./check-mark-input.scss";
+import { ErrorMessage } from "@hookform/error-message";
+import { forwardRef } from "react";
 
-const CheckmarkInput = ({ contact }) => {
+const CheckmarkInput = forwardRef(({ contact, errors }, ref) => {
   return (
     <div className="privacy-wrap">
       {contact ? <p>Privacy Policy*</p> : null}
@@ -19,11 +21,18 @@ const CheckmarkInput = ({ contact }) => {
             <span className="asterisk"> *</span>
           </span>
         )}
-        <input type="checkbox" id="radio" required />
+        <input ref={ref} type="checkbox" name="checkbox" id="radio" />
+        {errors ? (
+          <ErrorMessage
+            errors={errors}
+            name="checkbox"
+            render={({ message }) => <small className="error-text">{message}</small>}
+          />
+        ) : null}
         <span className="check-mark"></span>
       </label>
     </div>
   );
-};
+});
 
 export default CheckmarkInput;

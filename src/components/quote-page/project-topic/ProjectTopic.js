@@ -34,8 +34,8 @@ function ProjectTopic() {
           ))}
         </div>
       </div>
-      {additionalData.map((item) => (
-        <div className="row align-items-center margin-b-100">
+      {additionalData.map((item, i) => (
+        <div className="row align-items-center margin-b-100" key={i}>
           <div className="col-12 col-md-4">
             <h2>{item.name}</h2>
           </div>
