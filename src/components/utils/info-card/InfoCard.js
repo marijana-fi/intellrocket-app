@@ -14,7 +14,7 @@ function InfoCard({ item, customClass }) {
 
   return (
     <Waypoint bottomOffset="200px" onEnter={() => animateCard()}>
-      <div className="col-12 col-sm-6 col-md-4  col-xl-4 mb-4">
+      <div className="col-12 col-sm-6  col-xl-4 mb-4">
         <div className={`info-card ${customClass} d-flex flex-column align-items-center`}>
           <img src={item.img} alt="" />
           <h4>{item.title}</h4>

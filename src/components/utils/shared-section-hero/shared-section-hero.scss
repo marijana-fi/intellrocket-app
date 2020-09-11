@@ -1,9 +1,6 @@
 #shared-hero {
   padding-top: 90px;
   .rotate-title {
-    .split-parent:nth-of-type(2) {
-      float: left;
-    }
     &.rotate-career {
       .split-parent:nth-of-type(2) {
         float: unset;
@@ -18,7 +15,6 @@
   .rotate-text {
     position: relative;
     height: 65px;
-
     span {
       visibility: hidden;
       font-size: 2.25rem;
@@ -28,7 +24,6 @@
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-left: 10px;
       position: absolute;
       top: 0;
       left: 0;
@@ -50,12 +45,27 @@
   }
 }
 
+@media (min-width: 576px) {
+  #shared-hero {
+    .rotate-title {
+      .split-parent:nth-of-type(2) {
+        float: left;
+      }
+      .rotate-text {
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   #shared-hero {
     padding-top: 140px;
     .rotate-text {
       span {
-        font-size: 3.125rem;
+        font-size: 3.25rem;
       }
     }
   }
@@ -66,11 +76,7 @@
     .row {
       flex-direction: column;
     }
-    .rotate-text {
-      span {
-        font-size: 3.125rem;
-      }
-    }
+
     .img-wrap {
       margin-bottom: 0;
       height: 580px;
