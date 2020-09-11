@@ -26,7 +26,11 @@ const SectionServices = () => {
           </div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0">
             <div className="img-wrap">
-              <OpenImage url="/intellrocket-app/img/section-services.jpg" customClass="left" />
+              <OpenImage
+                url="/intellrocket-app/img/section-services.jpg"
+                // urlS="/intellrocket-app/img/section-services-small.jpg"
+                customClass="left"
+              />
             </div>
           </div>
         </div>

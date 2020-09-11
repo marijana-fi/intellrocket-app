@@ -17,7 +17,7 @@ export const sitemapPages = [
   { heading: "Contact Us", sub: [], link: "/intellrocket-app/contact" },
   {
     heading: "Careers",
-    sub: [{ heading: "Marketing Manager", link: "/intellrocket-app/career/marketing-manager" }],
+    sub: [{ heading: "Marketing Manager", link: "/intellrocket-app/careers/marketing-manager" }],
     link: "/intellrocket-app/careers",
   },
   { heading: "Blog", sub: [], link: "/intellrocket-app/blog" },
