@@ -16,7 +16,7 @@ const SectionHero = ({ handleScroll }) => {
       morphSVG: {
         shape: start.current,
         type: "rotational",
-        shapeIndex: 1.1,
+        shapeIndex: 1,
       },
       repeat: -1,
       yoyo: true,

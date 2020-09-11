@@ -132,13 +132,14 @@ header {
     .header-list {
       .header-item {
         overflow: hidden;
+        margin-bottom: 10px;
         a {
+          line-height: 1.2;
           display: inline-block;
           transform: translateY(0);
           transition: all 0.4s;
           color: #fff;
           font-size: 1.375rem;
-          line-height: 2;
           opacity: 0;
         }
       }

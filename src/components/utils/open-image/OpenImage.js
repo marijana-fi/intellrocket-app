@@ -6,7 +6,7 @@ const OpenImage = ({ url, customClass, title = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="480px">
+    <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="300px">
       <div className={isVisible ? `overlay ${customClass}` : "overlay"}>
         <figure>
           <img src={url} alt="" />

@@ -8,6 +8,7 @@
   --input-text: #888;
   --link-color: #00f;
   background-color: var(--background);
+  overflow: hidden;
   &.dark {
     --text-primary: #fff;
     --background: #1a191d;

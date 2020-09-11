@@ -13,7 +13,7 @@ function ServiceApproach() {
             <div className="col-md-6 offset-md-3" key={i}>
               <div className="list-item mb-5">
                 <RevealTitle tag="h3" title={item.title} />
-                <RevealText tag="p" text={item.text} />
+                <RevealText tag="p" text={item.text} borderBottom="true" />
               </div>
             </div>
           ))}

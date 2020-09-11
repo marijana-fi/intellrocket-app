@@ -48,6 +48,7 @@ const RevealText = (props) => {
       <Waypoint onEnter={animateText} onLeave={() => setShouldAnimate(false)}>
         <CustomTag ref={splitText} className="reveal-text">
           {props.text}
+          {props.borderBottom ? <span></span> : null}
         </CustomTag>
       </Waypoint>
     </>

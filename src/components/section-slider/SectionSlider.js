@@ -18,6 +18,15 @@ const SectionSlider = ({ title, data, toFilter, path }) => {
     rows: 1,
     adaptiveHeight: true,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const [sliderTl, setSliderTl] = useState(null);

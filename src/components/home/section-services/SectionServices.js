@@ -11,7 +11,7 @@ const SectionServices = () => {
     <section id="section-services" className="margin-b">
       <div className="container">
         <div className="row justify-content-between flex-lg-row flex-column-reverse">
-          <div className="col-10 col-lg-5 pb-3 d-flex align-items-center ">
+          <div className="col-12 col-lg-5 pb-3 d-flex align-items-center ">
             <div className="text-wrap">
               <RevealTitle tag="h2" title="We Deliver Amazing Products" />
               <RevealText
