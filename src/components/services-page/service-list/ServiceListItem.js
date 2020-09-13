@@ -18,11 +18,11 @@ function ServiceListItem({ title = "", list, desc, image }) {
             <RevealTitle tag="h2" title={title} />
             <RevealText tag="p" text={desc} />
             <Waypoint onEnter={() => setIsVisible(true)}>
-              <ul className={isVisible ? "text-slide-in" : "hidden"}>
+              <div className="list">
                 {list.map((item, i) => {
-                  return <RevealText key={i} tag="li" text={item} />;
+                  return <RevealText key={i} tag="ul" text={item} />;
                 })}
-              </ul>
+              </div>
             </Waypoint>
           </div>
         </div>

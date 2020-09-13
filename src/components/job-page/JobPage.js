@@ -14,7 +14,10 @@ function JobPage() {
             <h1 className="job-title">{jobData.jobTitle}</h1>
           </div>
           <div className="col-12 col-lg-7">
-            <h5 className="job-location">Job Location: Belgrade Job Type: Full Time</h5>
+            <div className="job-location d-flex ">
+              <h5 className="mr-3">Job Location: Belgrade </h5>
+              <h5>Job Type: Full Time</h5>
+            </div>
             <h3>Job brief</h3>
             <p className="brief">{jobData.jobBrief}</p>
             <h4 className="job-desc-title">{jobData.jobDescTitle}</h4>

@@ -1,6 +1,5 @@
 #service-list {
   ul {
-    margin-top: 20px;
     list-style: disc;
     padding-inline-start: 30px;
     li {
@@ -16,6 +15,9 @@
   }
   .services-list-item {
     box-sizing: border-box;
+    .list {
+      margin-top: 20px;
+    }
     .overflow {
       overflow: hidden;
       margin-bottom: 30px;

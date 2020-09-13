@@ -35,6 +35,14 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
     setParentSplit(parent);
   }, []);
 
+  useEffect(() => {
+    const handleResize = (params) => {
+      childSplit.revert();
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [childSplit]);
+
   const CustomTag = `${tag}`;
 
   const animateTitle = (params) => {
@@ -49,7 +57,7 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
     }
 
     //rotate-text
-    const tl = gsap.timeline({ repeat: -1, delay: 0.5 });
+    const tl = gsap.timeline({ repeat: -1, delay: 0.5, repeatDelay: 0 });
     if (shouldAnimate) {
       itemsRef.current.forEach((item, i) => {
         tl.from(
@@ -58,7 +66,7 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
             duration: 0.5,
             rotateX: -95,
             autoAlpha: 0,
-            ease: "expo.out",
+            ease: "circ.out",
             y: 35,
           },
           "-=0.1"
@@ -69,7 +77,7 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
               duration: 0.5,
               rotateX: 0,
               autoAlpha: 1,
-              ease: "expo.out",
+              ease: "circ.inOut",
               y: 0,
             },
             "-=.1"
@@ -80,7 +88,7 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
               duration: 0.5,
               rotateX: 95,
               autoAlpha: 0,
-              ease: "expo.out",
+              ease: "circ.in",
               y: -30,
               delay: 2,
             },
@@ -95,13 +103,15 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
       <Waypoint onEnter={animateTitle} onLeave={() => setShouldAnimate(false)}>
         <CustomTag ref={splitText} className={`reveal-title ${customClass}`}>
           {title}
-          <div className="rotate-text">
-            {rotate.map((item, i) => (
-              <span ref={(el) => (itemsRef.current[i] = el)} className="rotating" key={i}>
-                {item}
-              </span>
-            ))}
-          </div>
+          {rotate.length ? (
+            <div className="rotate-text">
+              {rotate.map((item, i) => (
+                <span ref={(el) => (itemsRef.current[i] = el)} className="rotating" key={i}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          ) : null}
         </CustomTag>
       </Waypoint>
     </>

@@ -27,14 +27,14 @@ function ContactPage() {
                attractive or new. If you need someone to consult or talk to you."
               />
             </div>
-            <Waypoint>
+            <Waypoint bottomOffset="20%" onEnter={() => setIsVisible(true)}>
               <div className="col-12 col-md-8">
                 <div className={isVisible ? "show" : "hidden"}>
                   <ContactForm btnLabel="Send" message="privacy" text="Message" />
                 </div>
               </div>
             </Waypoint>
-            <Waypoint topOffset="200px" onEnter={() => setIsVisible(true)}>
+            <Waypoint>
               <div className="col-12 col-md-4 mb-5 mb-md-0">
                 <div className={isVisible ? "show" : "hidden"}>
                   <h3>Working Hours</h3>

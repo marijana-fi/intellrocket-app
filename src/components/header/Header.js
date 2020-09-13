@@ -9,6 +9,7 @@ import { navPagesData } from "../footer/footerData";
 
 const Header = ({ isLight, toggleTheme, isBlog, path }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
@@ -28,14 +29,13 @@ const Header = ({ isLight, toggleTheme, isBlog, path }) => {
 
   const hiddenStyle = shouldHideHeader ? "hidden" : "";
   const shadowStyle = shouldShowShadow ? "shadow" : "";
-  const openMenu = isMenuOpen ? "mobile-open" : "";
-  const slideNav = isMenuOpen ? "text-slide-in" : "";
+  const openMenu = isMenuOpen && windowWidth <= 992 ? "mobile-open" : "";
+  const slideNav = isMenuOpen ? "" : "";
 
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
@@ -43,9 +43,19 @@ const Header = ({ isLight, toggleTheme, isBlog, path }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (windowWidth <= 992) {
+      setIsMobile(true);
+    }
+  }, [windowWidth]);
+
   const handleMenuOpen = () => {
     setMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "scroll";
+  }, [isMenuOpen]);
 
   return (
     <header className={`${openMenu} ${hiddenStyle} ${shadowStyle}`}>
@@ -79,7 +89,7 @@ const Header = ({ isLight, toggleTheme, isBlog, path }) => {
               )}
             >
               <nav>
-                <ul className={isMenuOpen ? "header-list open" : "header-list"}>
+                <ul className="header-list">
                   {navPagesData.map((item, i) => (
                     <li className="header-item" key={i}>
                       <Link
@@ -99,7 +109,7 @@ const Header = ({ isLight, toggleTheme, isBlog, path }) => {
                       <Link
                         to="/intellrocket-app/get-a-quote"
                         onClick={isMenuOpen ? handleMenuOpen : null}
-                        className={isMenuOpen ? "underline text-slide-in" : "underline"}
+                        className={`underline ${slideNav}`}
                       >
                         Get a Quote
                       </Link>
@@ -113,18 +123,12 @@ const Header = ({ isLight, toggleTheme, isBlog, path }) => {
                   )}
                 </ul>
                 <div className="social-items">
-                  <a
-                    href="https://www.linkedin.com/company/intellrocket/"
-                    className="text-slide-in"
-                  >
+                  <a href="https://www.linkedin.com/company/intellrocket/" className={slideNav}>
                     <span className="social-icon">
                       <img src="/intellrocket-app/img/social-fb-icon.svg" alt="go to facebook" />
                     </span>
                   </a>
-                  <a
-                    href="https://www.linkedin.com/company/intellrocket/"
-                    className="text-slide-in"
-                  >
+                  <a href="https://www.linkedin.com/company/intellrocket/" className={slideNav}>
                     <span className="social-icon">
                       <img
                         src="/intellrocket-app/img/social-linkedin-icon.svg"

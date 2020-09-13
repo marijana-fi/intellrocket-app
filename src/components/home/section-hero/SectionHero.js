@@ -13,13 +13,16 @@ const SectionHero = ({ handleScroll }) => {
 
   useEffect(() => {
     gsap.to(start.current, 5, {
-      morphSVG: {
-        shape: start.current,
-        // type: "rotational",
-        shapeIndex: 1,
-      },
+      duration: 4,
       repeat: -1,
       yoyo: true,
+      ease: "sine.inOut",
+      morphSVG: {
+        shape: start.current,
+        type: "rotational",
+        shapeIndex: [1.1],
+        origin: "0% 100%",
+      },
       delay: 0,
     });
   });

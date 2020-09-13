@@ -27,6 +27,14 @@ const RevealText = (props) => {
     setParentSplit(parent);
   }, []);
 
+  useEffect(() => {
+    function handleResize(e) {
+      console.log(e);
+    }
+    window.addEventListener("resize", handleResize);
+    return window.removeEventListener("resize", handleResize);
+  }, []);
+
   const CustomTag = `${props.tag}`;
 
   const animateText = (params) => {
@@ -35,19 +43,26 @@ const RevealText = (props) => {
         duration: 0.6,
         opacity: 1,
         y: 0,
-        ease: "power1",
+        ease: "sine.inOut",
         stagger: 0.05,
-
         delay: 0.5,
       });
     }
   };
 
+  useEffect(() => {
+    const handleResize = (params) => {
+      childSplit.revert();
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [childSplit]);
+
   return (
     <>
       <Waypoint onEnter={animateText} onLeave={() => setShouldAnimate(false)}>
         <CustomTag ref={splitText} className="reveal-text">
-          {props.text}
+          {CustomTag == "ul" ? <li>{props.text}</li> : props.text}
           {props.borderBottom ? <span></span> : null}
         </CustomTag>
       </Waypoint>

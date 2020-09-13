@@ -15,6 +15,7 @@ function SinglePost({ item, i, data }) {
   const innerHtml = markup.map((item) => {
     return { __html: item };
   });
+  console.log(item.title.rendered);
 
   return (
     <Waypoint bottomOffset="200px" onEnter={() => setIsVisible(true)}>

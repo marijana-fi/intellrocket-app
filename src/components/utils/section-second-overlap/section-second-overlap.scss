@@ -3,11 +3,13 @@
   .text-wrap {
     .heading {
       margin-bottom: 10px;
-      color: red;
-      background: var(--accent-color);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      .split-child {
+        color: red;
+        background: var(--accent-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
   .img-wrap {

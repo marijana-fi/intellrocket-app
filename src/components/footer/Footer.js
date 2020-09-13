@@ -11,7 +11,7 @@ const Footer = ({ isLight, path }) => {
       <div className="container">
         <div className="row mb-5">
           <div className="col-12 col-sm-6 col-lg-4 mb-5">
-            <a href="/intellrocket-app" className="logo">
+            <Link to="/intellrocket-app" className="logo">
               <img
                 src={
                   !isLight
@@ -20,7 +20,7 @@ const Footer = ({ isLight, path }) => {
                 }
                 alt="logo"
               />
-            </a>
+            </Link>
             <ul className="footer-contact">
               <li>Company name: IntellRocket Inc.</li>
               <li>Address: 2035 Sunset Lake Rd, Suite B-2, Newark, 19702 DE, USA</li>
@@ -28,8 +28,8 @@ const Footer = ({ isLight, path }) => {
               <li> Email: office@intellrocket.com</li>
             </ul>
           </div>
-          <div className="col-6 col-sm-6 mb-5 col-lg-2">
-            <h4>Pages</h4>
+          <div className="col-12 col-sm-6 mb-4 col-lg-2">
+            <h4 className="mb-4">Pages</h4>
             <ul className="footer-list">
               {navPagesData.map((item, i) => (
                 <li className="footer-list-item" key={i}>
@@ -40,8 +40,8 @@ const Footer = ({ isLight, path }) => {
               ))}
             </ul>
           </div>
-          <div className="col-6 col-sm-6 mb-5 col-lg-3">
-            <h4>Reach us</h4>
+          <div className="col-12 col-sm-6 mb-4 col-lg-3">
+            <h4 className="mb-4">Reach us</h4>
             <ul className="footer-list">
               {footerContactData.map((item, i) => (
                 <li className="footer-list-item" key={i}>

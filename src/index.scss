@@ -31,7 +31,11 @@
   opacity: 0;
   animation: text-slide-in 0.6s forwards;
   animation-delay: 0.6s;
+  &.close {
+    animation: text-slide-out 0.6s forwards;
+  }
 }
+
 .btn-slide-in {
   opacity: 0;
   animation: text-slide-in 0.8s forwards cubic-bezier(0, 0.5, 0.5, 1);
@@ -49,13 +53,26 @@
   }
 }
 
+@keyframes text-slide-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
 .hidden {
   opacity: 0;
 }
 .show {
   opacity: 0;
   animation: show 1s forwards;
+  animation-delay: 0.5s;
 }
+
 @keyframes show {
   0% {
     opacity: 0;
@@ -248,6 +265,23 @@ button {
       transform-origin: left center;
       transition: transform 0.2s cubic-bezier(1, 0, 0, 1);
     }
+  }
+}
+
+.split-title {
+  position: relative;
+  display: inline-block !important;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: var(--text-primary);
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.2s cubic-bezier(1, 0, 0, 1);
   }
 }
 

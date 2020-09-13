@@ -13,7 +13,7 @@
   &.mobile {
     position: relative;
     left: 0;
-    transform: rotate(0) translateY(100%);
+    transform: translateY(100%);
     opacity: 0;
     pointer-events: none;
 

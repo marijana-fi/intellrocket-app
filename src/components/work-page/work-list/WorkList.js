@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import RevealText from "../../utils/reveal-text/RevealText";
 import sliderWorkData from "../../home/data/sliderWorkData";
 import "./work-list.scss";
-
 import OpenImage from "../../utils/open-image/OpenImage";
 import { Link } from "react-router-dom";
 
-import RevealSingleLine from "../../utils/reveal-single-line/RevealSingleLine";
-
 function WorkList() {
+  const [isImgVisible, setIsImgVisible] = useState(false);
+  // console.log(isImgVisible);
+
   return (
     <section id="work-list" className="margin-b">
       <div className="container ">
@@ -26,10 +26,19 @@ function WorkList() {
             return (
               <div key={i} className="col-12 col-md-6 img-wrap ">
                 <Link to="work/retyre">
-                  <OpenImage url={item.image} customClass="right" title={item.title} />
-                  <RevealSingleLine tag="h4" text={item.title} customClass="underline" />
-
-                  <RevealText tag="p" text={item.desc.join(", ")} />
+                  <OpenImage
+                    setIsImgVisible={setIsImgVisible}
+                    isImgVisible={isImgVisible}
+                    url={item.image}
+                    customClass="right"
+                    title={item.title}
+                  />
+                  {isImgVisible ? (
+                    <>
+                      <RevealTitle tag="h2" title={item.title} customClass="split-title" />
+                      <RevealText tag="p" text={item.desc.join(", ")} />{" "}
+                    </>
+                  ) : null}
                 </Link>
               </div>
             );
