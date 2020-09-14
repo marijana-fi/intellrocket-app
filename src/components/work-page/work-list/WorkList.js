@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 
 function WorkList() {
   const [isImgVisible, setIsImgVisible] = useState(false);
-  // console.log(isImgVisible);
 
   return (
     <section id="work-list" className="margin-b">
@@ -28,7 +27,7 @@ function WorkList() {
                 <Link to="work/retyre">
                   <OpenImage
                     setIsImgVisible={setIsImgVisible}
-                    isImgVisible={isImgVisible}
+                    isWorkList="true"
                     url={item.image}
                     customClass="right"
                     title={item.title}

@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Waypoint } from "react-waypoint";
 import "./open-image.scss";
 
-const OpenImage = ({ url, customClass, title = "", isImgVisible, setIsImgVisible }) => {
+const OpenImage = ({ url, customClass, isWorkList, setIsImgVisible }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const imgVisible = isImgVisible || isVisible;
+
+  useEffect(() => {
+    if (isWorkList && isVisible) {
+      setIsImgVisible(true);
+    }
+  }, [isVisible, setIsImgVisible, isWorkList]);
 
   return (
-    <Waypoint
-      onEnter={() => (setIsImgVisible ? setIsImgVisible(true) : setIsVisible(true))}
-      bottomOffset="60%"
-    >
-      <div className={imgVisible ? `overlay ${customClass}` : "overlay"}>
+    <Waypoint onEnter={() => setIsVisible(true)} bottomOffset="56%">
+      <div className={isVisible ? `overlay ${customClass}` : "overlay"}>
         <figure>
           <img src={url} alt="" />
         </figure>
