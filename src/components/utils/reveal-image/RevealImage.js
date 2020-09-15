@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import "./reveal-image.scss";
 
-function RevealImage({ src, alt, noDelay }) {
+function RevealImage({ src, alt, noDelay, customClass = "" }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const notDelay = noDelay ? "no-delay" : null;
@@ -10,7 +10,7 @@ function RevealImage({ src, alt, noDelay }) {
   return (
     <div id="reveal-image">
       <Waypoint bottomOffset="40%" onEnter={() => setIsVisible(true)}>
-        <img src={src} alt={alt} className={isVisible ? `show ${notDelay}` : ""} />
+        <img src={src} alt={alt} className={isVisible ? `show ${notDelay} ${customClass}` : ""} />
       </Waypoint>
     </div>
   );

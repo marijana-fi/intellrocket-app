@@ -34,7 +34,6 @@ function LogoGrid({ isLight, data = [], customClass = "" }) {
       });
     }
   };
-
   return (
     <Waypoint onEnter={animateLogo} onLeave={() => setShouldAnimate(false)}>
       <div className="row">

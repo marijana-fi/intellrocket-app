@@ -1,0 +1,20 @@
+#support-faq {
+  .list-name {
+    opacity: 0;
+  }
+  .content-list {
+    .list-item {
+      opacity: 0;
+      cursor: pointer;
+      color: var(--text-light);
+      font-size: 1.125rem;
+      margin-bottom: 12px;
+      &.colorize {
+        background: var(--accent-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

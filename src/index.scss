@@ -94,6 +94,7 @@
 main {
   padding-top: 50px;
 }
+
 * {
   box-sizing: border-box;
   line-height: 1.3;
@@ -108,6 +109,12 @@ main {
   :focus {
     outline: 0;
   }
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #f91824, #f92d73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 form {

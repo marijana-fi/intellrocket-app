@@ -1,0 +1,33 @@
+#work-process {
+  .process-card {
+    padding: 50px 15px;
+    opacity: 0;
+    .step {
+      font-size: 42px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.2);
+    }
+    .step-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #eee;
+
+      h3 {
+        font-size: 1.375rem;
+        margin-bottom: 0;
+      }
+    }
+    p {
+      margin-top: 28px;
+    }
+    &:last-of-type {
+      .step-wrap {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+#maintenance-hero {
+  margin-top: 60px;
+  h1 {
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+#pick-plan {
+  h2 {
+    margin-bottom: 80px;
+  }
+  p.reveal-title {
+    margin-bottom: 30px;
+  }
+  .plan-card {
+    padding: 40px;
+    border-top: 2px solid #f91824;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.07);
+    .plan-desc {
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+    .additional {
+      margin-bottom: 40px;
+    }
+    .amount {
+      font-size: 2rem;
+      margin-bottom: 50px;
+      .slash {
+        font-size: 1.5rem;
+      }
+      .price-text {
+        text-transform: lowercase;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+#sample-2 {
+  h2 {
+    margin-bottom: 12px;
+  }
+}
+.sample-image {
+  #reveal-image {
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    line-height: 1.3;
+  }
+  .top-img {
+    margin-bottom: 28px;
+    margin-left: -25px;
+    width: 200px;
+  }
+  .bottom-img {
+    float: right;
+    width: 200px;
+    margin-top: 35px;
+    margin-right: 10px;
+  }
+}
+.sample-content {
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #maintenance-hero {
+    margin-top: 120px;
+  }
+  .sample-image {
+    #reveal-image {
+      img {
+        width: unset;
+      }
+    }
+  }
+}

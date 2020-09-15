@@ -1,0 +1,59 @@
+#support {
+  .support-card {
+    opacity: 0;
+  }
+  .title-wrap {
+    margin-bottom: 60px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  h4 {
+    text-transform: unset;
+    margin-bottom: 20px;
+  }
+  img {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .box-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    border: solid 1px #4caf50;
+    background-color: #f9f9ff;
+    padding: 30px 15px 0 15px;
+    ul {
+      li {
+        margin-bottom: 30px;
+        color: var(--text-light);
+        &:before {
+          content: "";
+          background: url("/intellrocket-app/img/maintenance/checkmark.png") center center no-repeat;
+          background-position-y: 7px;
+          width: 16px;
+          min-height: 20px;
+          margin-right: 9px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  #support {
+    .box-wrap {
+      padding: 50px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #support {
+    .box-wrap {
+      flex-direction: row;
+    }
+  }
+}

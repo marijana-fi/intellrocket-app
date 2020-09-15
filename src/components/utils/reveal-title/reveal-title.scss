@@ -3,6 +3,18 @@
     position: relative;
     margin: 0;
   }
+  &.colorize-text {
+    background: var(--accent-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    .split-child {
+      background: var(--accent-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
 .split-parent {
   overflow: hidden;
