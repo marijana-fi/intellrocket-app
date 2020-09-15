@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import projectsData from "../projectsData";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import RevealText from "../../utils/reveal-text/RevealText";
-import Button from "../../utils/button/Button";
 
 import "./project-intro.scss";
 import RevealImage from "../../utils/reveal-image/RevealImage";
+import ExploreButton from "../../explore-button/ExploreButton";
 
 function ProjectIntro() {
   const childReference = useRef(null);
@@ -23,10 +23,7 @@ function ProjectIntro() {
               <RevealTitle tag="h2" title={projectsData[0].title} />
               <RevealText tag="p" text={projectsData[0].desc} />
             </div>
-            <div className="explore d-flex align-items-center btn-slide-in">
-              <Button name="round" label="" handleClick={handleScroll} aria="explore" />
-              <span>Explore</span>
-            </div>
+            <ExploreButton handleScroll={handleScroll} />
           </div>
         </div>
         <div className="row">

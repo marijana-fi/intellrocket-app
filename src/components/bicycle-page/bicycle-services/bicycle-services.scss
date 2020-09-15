@@ -1,0 +1,39 @@
+#bicycle-services {
+  .reveal-title {
+    margin-bottom: 20px;
+  }
+  .reveal-text {
+    margin-bottom: 20px;
+  }
+  .img-wrap {
+    margin: 20px;
+    img {
+      max-width: 700px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #bicycle-services {
+    .img-wrap {
+      margin: 20px 0;
+      width: 50vw;
+      img {
+        max-width: 770px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #bicycle-services {
+    .services {
+      margin-bottom: 120px;
+    }
+    .mobile {
+      .accordion-item {
+        padding-left: 40px;
+      }
+    }
+  }
+}

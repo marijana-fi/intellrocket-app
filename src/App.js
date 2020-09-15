@@ -17,6 +17,7 @@ import JobPage from "./components/job-page/JobPage";
 import ToggleTheme from "./components/utils/toggle-theme/ToggleTheme";
 import PrivacyPage from "./components/privacy-page/PrivacyPage";
 import SitemapPage from "./components/site-map-page/SitemapPage";
+import BicyclePage from "./components/bicycle-page/BicyclePage";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -113,6 +114,9 @@ function App() {
             </Route>
             <Route exact path="/intellrocket-app/site-map">
               <SitemapPage />
+            </Route>
+            <Route exact path="/intellrocket-app/industries/bicycle">
+              <BicyclePage isLight={isLight} />
             </Route>
           </Switch>
           <Footer isLight={isLight} path={path} />

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import Button from "../../utils/button/Button";
 
 import "./section-hero.scss";
 import { gsap } from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
+import ExploreButton from "../../explore-button/ExploreButton";
 
 gsap.registerPlugin(MorphSVGPlugin);
 
@@ -34,16 +34,7 @@ const SectionHero = ({ handleScroll }) => {
           <div className="col-12 col-lg-6 ">
             <RevealTitle tag="h1" title="We Build Amazing Mobile and Web Experiences" />
 
-            <div className="explore d-flex align-items-center btn-slide-in">
-              <Button
-                name="round"
-                label=""
-                handleClick={handleScroll}
-                aria="explore"
-                // animate="true"
-              />
-              <span>Explore</span>
-            </div>
+            <ExploreButton handleScroll={handleScroll} />
           </div>
           <div className="col-lg-6 h-100 img-wrap">
             <svg id="Layer_4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075.88 846.77">
