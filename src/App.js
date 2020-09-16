@@ -19,6 +19,7 @@ import PrivacyPage from "./components/privacy-page/PrivacyPage";
 import SitemapPage from "./components/site-map-page/SitemapPage";
 import BicyclePage from "./components/bicycle-page/BicyclePage";
 import MaintenancePage from "./components/maintenance-page/MaintenancePage";
+import PricingPlan from "./components/pricing-plan/PricingPlan";
 
 function usePageViews() {
   const [path, setPath] = useState(null);
@@ -121,6 +122,9 @@ function App() {
             </Route>
             <Route exact path="/intellrocket-app/maintenance">
               <MaintenancePage isLight={isLight} />
+            </Route>
+            <Route exact path="/intellrocket-app/maintenance/pricing-plan">
+              <PricingPlan isLight={isLight} />
             </Route>
           </Switch>
           <Footer isLight={isLight} path={path} />

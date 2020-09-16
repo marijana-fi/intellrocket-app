@@ -16,8 +16,46 @@
   &.btn-static {
     opacity: 1;
   }
+  &.btn-secondary {
+    opacity: 1;
+    color: #f92d73;
+    background: none;
+    border: 1px solid #f92d73;
+    &:hover {
+      color: #fff;
+      background: var(--accent-color);
+    }
+  }
   &.width-150 {
     width: 150px;
+  }
+}
+
+.text-only {
+  background: transparent;
+  padding: 4px;
+  border: none;
+  color: var(--text-light);
+  margin: auto;
+  margin-bottom: 30px;
+  transform: translateY(0);
+  position: relative;
+  display: flex;
+  &::after {
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #888;
+    border-bottom: 2px solid #888;
+    position: absolute;
+    z-index: -1;
+    right: -15px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+
+  &:focus {
+    // transform: translateY(-1px) !important;
   }
 }
 

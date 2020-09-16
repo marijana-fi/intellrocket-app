@@ -1,11 +1,10 @@
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import "./reveal-text.scss";
-
 import React, { useRef, useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
 
-const RevealText = (props) => {
+const RevealText = ({ text, customClass = "", borderBottom, img, tag }) => {
   const splitText = useRef(null);
   const [childSplit, setChildSplit] = useState(false);
   const [parentSplit, setParentSplit] = useState(false);
@@ -28,14 +27,12 @@ const RevealText = (props) => {
   }, []);
 
   useEffect(() => {
-    function handleResize(e) {
-      console.log(e);
-    }
+    function handleResize(e) {}
     window.addEventListener("resize", handleResize);
     return window.removeEventListener("resize", handleResize);
   }, []);
 
-  const CustomTag = `${props.tag}`;
+  const CustomTag = `${tag}`;
 
   const animateText = (params) => {
     if (shouldAnimate) {
@@ -61,9 +58,10 @@ const RevealText = (props) => {
   return (
     <>
       <Waypoint onEnter={animateText} onLeave={() => setShouldAnimate(false)}>
-        <CustomTag ref={splitText} className="reveal-text">
-          {CustomTag == "ul" ? <li>{props.text}</li> : props.text}
-          {props.borderBottom ? <span></span> : null}
+        <CustomTag ref={splitText} className={`reveal-text ${customClass}`}>
+          {CustomTag === "ul" ? <li>{text}</li> : text}
+          {borderBottom ? <span></span> : null}
+          {img ? <img src="/intellrocket-app/img/pricing/arrow-pricing.png" alt="" /> : null}
         </CustomTag>
       </Waypoint>
     </>

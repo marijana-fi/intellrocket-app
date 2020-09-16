@@ -1,0 +1,93 @@
+#pricing-plan-hero {
+  margin-top: 200px;
+  h4.colorize-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .reveal-text {
+    color: var(--text-light);
+  }
+  .arrow-img-wrap {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    img {
+      display: none;
+    }
+    .text-split-child {
+      display: none;
+    }
+  }
+  .show-additional {
+    display: none;
+  }
+  .additional-cards {
+    display: none;
+
+    .plan-card-additional {
+      padding: 20px 40px;
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.07);
+      .title-additional {
+        display: flex;
+        align-items: center;
+        h3 {
+          text-transform: unset;
+          font-size: 1.5rem;
+          margin-bottom: 0;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .feature-wrap {
+    text-align: left;
+    padding: 35px 0;
+    border-bottom: solid 1px rgba(206, 212, 218, 0.2);
+    .feature-name {
+      text-transform: unset;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    .feature-list {
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        img {
+          margin-bottom: 0;
+          max-width: 16px;
+          width: 100%;
+        }
+        p {
+          color: var(--text-light);
+          margin-bottom: 0;
+          line-height: 1.3;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #pricing-plan-hero {
+    .show-additional {
+      display: flex;
+    }
+    .additional-cards {
+      display: flex;
+    }
+    .arrow-img-wrap {
+      img {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .text-split-child {
+        display: flex;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

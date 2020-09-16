@@ -9,6 +9,7 @@ import WorkProcess from "./work-process/WorkProcess";
 import Testimonials from "./testimonials/Testimonials";
 import SupportFaq from "./support-faq/SupportFaq";
 import ChoosePlan from "./choose-plan/ChoosePlan";
+import supportData from "./support-services/supportData";
 
 function MaintenancePage({ isLight }) {
   return (
@@ -17,7 +18,12 @@ function MaintenancePage({ isLight }) {
       <PickPlan isLight={isLight} />
       <SampleSection data={sampleData1} id="sample-1" isLight={isLight} />
       <SampleSection data={sampleData2} id="sample-2" isLight={isLight} />
-      <SupportServices isLight={isLight} />
+      <SupportServices
+        isLight={isLight}
+        box="true"
+        data={supportData}
+        title="Wordpress Support Services"
+      />
       <WorkProcess />
       <Testimonials isLight={isLight} />
       <SupportFaq isLight={isLight} />
