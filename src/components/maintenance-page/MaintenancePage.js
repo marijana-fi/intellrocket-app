@@ -8,18 +8,20 @@ import SupportServices from "./support-services/SupportServices";
 import WorkProcess from "./work-process/WorkProcess";
 import Testimonials from "./testimonials/Testimonials";
 import SupportFaq from "./support-faq/SupportFaq";
+import ChoosePlan from "./choose-plan/ChoosePlan";
 
 function MaintenancePage({ isLight }) {
   return (
     <div>
       <HeroSection />
       <PickPlan isLight={isLight} />
-      <SampleSection data={sampleData1} id="sample-1" />
-      <SampleSection data={sampleData2} id="sample-2" />
-      <SupportServices />
+      <SampleSection data={sampleData1} id="sample-1" isLight={isLight} />
+      <SampleSection data={sampleData2} id="sample-2" isLight={isLight} />
+      <SupportServices isLight={isLight} />
       <WorkProcess />
-      <Testimonials />
-      <SupportFaq />
+      <Testimonials isLight={isLight} />
+      <SupportFaq isLight={isLight} />
+      <ChoosePlan />
     </div>
   );
 }

@@ -5,7 +5,7 @@
     .step {
       font-size: 42px;
       font-weight: 700;
-      color: rgba(0, 0, 0, 0.2);
+      color: var(--work-step);
     }
     .step-wrap {
       display: flex;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 import { gsap } from "gsap";
 
-function AccordionList({ data, parent }) {
+function AccordionList({ data, parent, isLight }) {
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleToggle = (index) => {
@@ -10,7 +10,7 @@ function AccordionList({ data, parent }) {
     setActiveIndex(newIndex);
   };
 
-  const animateAccordion = (params) => {
+  const animateAccordion = () => {
     const tl = gsap.timeline();
 
     tl.to(
@@ -29,6 +29,7 @@ function AccordionList({ data, parent }) {
     <>
       {data.map((item, i) => (
         <Accordion
+          isLight={isLight}
           animateAccordion={animateAccordion}
           key={i}
           itemIndex={i}

@@ -22,7 +22,7 @@
     flex-direction: column;
     text-align: left;
     border: solid 1px #4caf50;
-    background-color: #f9f9ff;
+    background-color: var(--support-box-bg);
     padding: 30px 15px 0 15px;
     ul {
       li {

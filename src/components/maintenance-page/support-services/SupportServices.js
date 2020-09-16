@@ -6,7 +6,7 @@ import "./support-services.scss";
 import { gsap } from "gsap";
 import { Waypoint } from "react-waypoint";
 
-function SupportServices() {
+function SupportServices({ isLight }) {
   const animateCard = (params) => {
     const tl = gsap.timeline();
 
@@ -33,7 +33,7 @@ function SupportServices() {
           {supportData.map((item, i) => (
             <Waypoint bottomOffset="20%" onEnter={animateCard} key={i}>
               <div className="col-12 col-md-6 col-xl-4 text-center mb-5 support-card">
-                <img src={item.img} alt="" />
+                <img src={isLight ? item.img : item.imgDark} alt="" />
                 <h4>{item.title}</h4>
                 <p>{item.text}</p>
               </div>

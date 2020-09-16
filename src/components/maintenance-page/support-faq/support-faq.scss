@@ -1,19 +1,44 @@
 #support-faq {
+  .support-title {
+    h2.reveal-title {
+      margin-bottom: 0;
+    }
+  }
   .list-name {
     opacity: 0;
   }
   .content-list {
     .list-item {
+      margin-right: 4px;
+      display: inline-block;
+      align-items: center;
       opacity: 0;
       cursor: pointer;
       color: var(--text-light);
       font-size: 1.125rem;
       margin-bottom: 12px;
+      span {
+        font-size: 1rem;
+      }
       &.colorize {
         background: var(--accent-color);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #support-faq {
+    .content-list {
+      .list-item {
+        margin-right: 0;
+        display: block;
+        span {
+          display: none;
+        }
       }
     }
   }

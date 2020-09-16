@@ -5,7 +5,7 @@ import AccordionList from "../accordion/AccordionList";
 import { faqDataSecond } from "./faqData";
 import { faqData } from "./faqData";
 
-function Faq() {
+function Faq({ isLight }) {
   return (
     <section id="faq" className="margin-b-100">
       <div className="container">
@@ -14,10 +14,10 @@ function Faq() {
             <RevealTitle tag="h2" title="Frequently Asked Questions" />
           </div>
           <div className="col-12 col-lg-6 first">
-            <AccordionList data={faqData} parent=".first" />
+            <AccordionList data={faqData} parent=".first" isLight={isLight} />
           </div>
           <div className="col-12 col-lg-6 second">
-            <AccordionList data={faqDataSecond} parent=".second" />
+            <AccordionList data={faqDataSecond} parent=".second" isLight={isLight} />
           </div>
         </div>
       </div>

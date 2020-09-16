@@ -7,6 +7,8 @@
   --border-card: transparent;
   --input-text: #888;
   --link-color: #00f;
+  --work-step: rgba(0, 0, 0, 0.2);
+  --support-box-bg: #f9f9ff;
   background-color: var(--background);
   overflow: hidden;
   &.dark {
@@ -17,6 +19,8 @@
     --border-card: #d3d3d3;
     --input-text: #bdbdbe;
     --link-color: #fff;
+    --work-step: #fff;
+    --support-box-bg: #1a191d;
   }
 }
 

@@ -5,7 +5,7 @@ import RevealImage from "../utils/reveal-image/RevealImage";
 import { faqData } from "./faqData";
 import AccordionList from "../accordion/AccordionList";
 
-function BicycleBenefits() {
+function BicycleBenefits({ isLight }) {
   return (
     <section id="bicycle-benefits" className="margin-b-100">
       <div className="container">
@@ -18,7 +18,7 @@ function BicycleBenefits() {
             <RevealImage src="/intellrocket-app/img/bicycle/bicycle-benefits.png" />
           </div>
           <div className="col-12 col-lg-6">
-            <AccordionList data={faqData} parent="#bicycle-benefits" />
+            <AccordionList data={faqData} parent="#bicycle-benefits" isLight={isLight} />
           </div>
         </div>
       </div>

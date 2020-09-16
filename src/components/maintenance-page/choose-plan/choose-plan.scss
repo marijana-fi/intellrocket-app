@@ -1,0 +1,29 @@
+#choose-plan {
+  background: url("/intellrocket-app/img/maintenance/plan-bg.jpg") left no-repeat;
+  background-size: cover;
+  padding: 160px 0;
+  h4 {
+    font-size: 1rem;
+    line-height: 1.8;
+    .split-child {
+      line-height: 1.8;
+    }
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 60px;
+    font-size: 1.125rem;
+    .text-split-child {
+      font-size: 1.125rem;
+    }
+  }
+  h2,
+  h4,
+  p,
+  .split-child,
+  .text-split-child {
+    color: #fff;
+  }
+}

@@ -1,0 +1,28 @@
+#slider-testimonial {
+  .comment {
+    text-transform: unset;
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 1.375rem;
+  }
+  .current-slide {
+    margin-top: 30px;
+    .slider-line {
+      width: 60px;
+      height: 2px;
+      background-color: var(--text-primary);
+      display: inline-block;
+      margin: 0 20px;
+      margin-bottom: 5px;
+    }
+  }
+  .slider-arrow {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    &.prev {
+      left: 0;
+    }
+  }
+}

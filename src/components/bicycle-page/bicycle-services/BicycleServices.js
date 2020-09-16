@@ -6,9 +6,8 @@ import "./bicycle-services.scss";
 import AccordionList from "../../accordion/AccordionList";
 import { faqData } from "../faqData";
 import serviceData from "./serviceData";
-import { Waypoint } from "react-waypoint";
 
-function BicycleServices() {
+function BicycleServices({ isLight }) {
   return (
     <section id="bicycle-services" className="margin-b-100">
       <div className="container">
@@ -25,7 +24,7 @@ function BicycleServices() {
               text="Stay focused on your business, our team will take care of your website. We will provide you with an unique, extraordinary designed bicycle store, prepared for you to sell bikes online.s"
             />
 
-            <AccordionList data={serviceData} parent=".services" />
+            <AccordionList data={serviceData} parent=".services" isLight={isLight} />
           </div>
         </div>
         <div className="row align-items-center mobile">
@@ -33,7 +32,7 @@ function BicycleServices() {
             <RevealImage src="/intellrocket-app/img/bicycle/bicycle-mobile.png" />
           </div>
           <div className="col-12 col-lg-6">
-            <AccordionList data={faqData} parent=".mobile" />
+            <AccordionList data={faqData} parent=".mobile" isLight={isLight} />
           </div>
         </div>
       </div>
