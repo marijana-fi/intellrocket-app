@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/intellrocket-app/static/css/main.759f6562.chunk.css",
-    "main.js": "/intellrocket-app/static/js/main.842fd093.chunk.js",
-    "main.js.map": "/intellrocket-app/static/js/main.842fd093.chunk.js.map",
+    "main.css": "/intellrocket-app/static/css/main.bbe88164.chunk.css",
+    "main.js": "/intellrocket-app/static/js/main.3d1e917b.chunk.js",
+    "main.js.map": "/intellrocket-app/static/js/main.3d1e917b.chunk.js.map",
     "runtime-main.js": "/intellrocket-app/static/js/runtime-main.9da19f5d.js",
     "runtime-main.js.map": "/intellrocket-app/static/js/runtime-main.9da19f5d.js.map",
     "static/css/2.1c34b939.chunk.css": "/intellrocket-app/static/css/2.1c34b939.chunk.css",
-    "static/js/2.95630b14.chunk.js": "/intellrocket-app/static/js/2.95630b14.chunk.js",
-    "static/js/2.95630b14.chunk.js.map": "/intellrocket-app/static/js/2.95630b14.chunk.js.map",
+    "static/js/2.af337fbc.chunk.js": "/intellrocket-app/static/js/2.af337fbc.chunk.js",
+    "static/js/2.af337fbc.chunk.js.map": "/intellrocket-app/static/js/2.af337fbc.chunk.js.map",
     "index.html": "/intellrocket-app/index.html",
-    "precache-manifest.95db7be921d4dfe39264d5b06488cbe5.js": "/intellrocket-app/precache-manifest.95db7be921d4dfe39264d5b06488cbe5.js",
+    "precache-manifest.381317b21ea742fadf82904918ab3e06.js": "/intellrocket-app/precache-manifest.381317b21ea742fadf82904918ab3e06.js",
     "service-worker.js": "/intellrocket-app/service-worker.js",
     "static/css/2.1c34b939.chunk.css.map": "/intellrocket-app/static/css/2.1c34b939.chunk.css.map",
-    "static/css/main.759f6562.chunk.css.map": "/intellrocket-app/static/css/main.759f6562.chunk.css.map",
-    "static/js/2.95630b14.chunk.js.LICENSE.txt": "/intellrocket-app/static/js/2.95630b14.chunk.js.LICENSE.txt",
+    "static/css/main.bbe88164.chunk.css.map": "/intellrocket-app/static/css/main.bbe88164.chunk.css.map",
+    "static/js/2.af337fbc.chunk.js.LICENSE.txt": "/intellrocket-app/static/js/2.af337fbc.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/intellrocket-app/static/media/OpenSans-SemiBold.2595cae6.woff2",
     "static/media/slick-theme.css": "/intellrocket-app/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.9da19f5d.js",
     "static/css/2.1c34b939.chunk.css",
-    "static/js/2.95630b14.chunk.js",
-    "static/css/main.759f6562.chunk.css",
-    "static/js/main.842fd093.chunk.js"
+    "static/js/2.af337fbc.chunk.js",
+    "static/css/main.bbe88164.chunk.css",
+    "static/js/main.3d1e917b.chunk.js"
   ]
 }
