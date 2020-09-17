@@ -20,7 +20,7 @@ const aboutClientLogoData = [
   },
   {
     name: "Inspirock",
-    light: "/intellrocket-app/img/client-logos/inspirock-light.png",
+    light: "/intellrocket-app/img/client-logos/Inspirock.png",
     dark: "/intellrocket-app/img/client-logos/inspirock-dark.png",
     url: "https://www.inspirock.com/",
   },

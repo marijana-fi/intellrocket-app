@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import RevealTitle from "../utils/reveal-title/RevealTitle";
 import planCardData from "./planCardData";
 import PlanCard from "./PlanCard";
@@ -6,10 +6,10 @@ import LogoGrid from "../utils/logo-grid/LogoGrid";
 import maintenanceLogoData from "./maintenanceLogoData";
 import { Waypoint } from "react-waypoint";
 
-function PickPlan({ isLight }) {
+const PickPlan = forwardRef(({ isLight }, ref) => {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <section id="pick-plan" className="margin-b-100">
+    <section ref={ref} id="pick-plan" className="margin-b-100 pt-5">
       <div className="container">
         <div className="row text-center plan-card-wrap">
           <div className="col-12 col-md-8 m-auto">
@@ -28,6 +28,6 @@ function PickPlan({ isLight }) {
       </div>
     </section>
   );
-}
+});
 
 export default PickPlan;

@@ -19,12 +19,12 @@ function BicyclePage({ isLight }) {
     <div>
       <BicycleHero handleScroll={handleScroll} />
       <BicycleStore ref={childReference} />
-      <BicycleServices />
-      <BicycleBenefits />
+      <BicycleServices isLight={isLight} />
+      <BicycleBenefits isLight={isLight} />
       <SectionQuote />
       <SectionSlider title="Our Blog" data={sliderBlogData} path="blog/single" />
       <BicycleStack isLight={isLight} />
-      <Faq />
+      <Faq isLight={isLight} />
     </div>
   );
 }

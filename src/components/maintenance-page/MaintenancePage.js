@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroSection from "./HeroSection";
 import "./maintenance.scss";
 import PickPlan from "./PickPlan";
@@ -12,10 +12,16 @@ import ChoosePlan from "./choose-plan/ChoosePlan";
 import supportData from "./support-services/supportData";
 
 function MaintenancePage({ isLight }) {
+  const childReference = useRef(null);
+
+  const handleScroll = (params) => {
+    childReference.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
-      <HeroSection />
-      <PickPlan isLight={isLight} />
+      <HeroSection handleScroll={handleScroll} />
+      <PickPlan isLight={isLight} ref={childReference} />
       <SampleSection data={sampleData1} id="sample-1" isLight={isLight} />
       <SampleSection data={sampleData2} id="sample-2" isLight={isLight} />
       <SupportServices

@@ -4,7 +4,7 @@ import RevealTitle from "../utils/reveal-title/RevealTitle";
 import RevealText from "../utils/reveal-text/RevealText";
 import Button from "../utils/button/Button";
 
-function HeroSection() {
+function HeroSection({ handleScroll }) {
   return (
     <section id="maintenance-hero" className="margin-b">
       <div className="container">
@@ -15,7 +15,7 @@ function HeroSection() {
           <div className="col-12 col-lg-6">
             <RevealTitle tag="h1" title="WordPress Support and Maintenance Services" />
             <RevealText tag="p" text="Save time managing your Website" />
-            <Button name="btn" label="Choose your plan" animate="true" />
+            <Button name="btn" label="Choose your plan" animate="true" handleClick={handleScroll} />
           </div>
         </div>
       </div>
