@@ -9,7 +9,6 @@ import { Waypoint } from "react-waypoint";
 function WorkProcess() {
   const animateCard = (params) => {
     const tl = gsap.timeline();
-
     tl.to(
       ".process-card",
       {

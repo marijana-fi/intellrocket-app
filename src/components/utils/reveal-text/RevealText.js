@@ -4,7 +4,7 @@ import "./reveal-text.scss";
 import React, { useRef, useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
 
-const RevealText = ({ text, customClass = "", borderBottom, img, tag }) => {
+const RevealText = ({ text, customClass = "", borderBottom, img, tag, toggle }) => {
   const splitText = useRef(null);
   const [childSplit, setChildSplit] = useState(false);
   const [parentSplit, setParentSplit] = useState(false);

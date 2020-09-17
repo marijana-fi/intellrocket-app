@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import AccordionList from "../../accordion/AccordionList";
-import { supportFaqData } from "./supportFaqData";
+import { data } from "./supportFaqData";
 import "./support-faq.scss";
 import { gsap } from "gsap";
 import { Waypoint } from "react-waypoint";
@@ -12,8 +12,7 @@ function SupportFaq({ isLight }) {
   const contents = ["General", "Trust & Safety", "Services", "Billing", "Support"];
 
   const handleClick = (index) => {
-    const newIndex = activeIndex === index ? -1 : index;
-    setActiveIndex(newIndex);
+    setActiveIndex(index);
   };
 
   const animateItem = (params) => {
@@ -45,7 +44,7 @@ function SupportFaq({ isLight }) {
         <div className="row text-center margin-b-100">
           <div className="col-12 col-md-8 support-title m-auto">
             <RevealTitle tag="p" title="Testimonials" customClass="colorize-text mb-4" />
-            <RevealTitle tag="h2" title="Have Questions? We Have Answers!" />
+            <RevealTitle tag="h2" title="Have Questions?" titleSecond="We Have Answers!" />
           </div>
         </div>
         <div className="row">
@@ -66,7 +65,7 @@ function SupportFaq({ isLight }) {
             </Waypoint>
           </div>
           <div className="col-md-7 faq-list">
-            <AccordionList data={supportFaqData} parent=".faq-list" isLight={isLight} />
+            <AccordionList data={data[activeIndex]} parent=".faq-list" isLight={isLight} />
           </div>
         </div>
       </div>

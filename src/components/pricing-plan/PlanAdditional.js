@@ -10,7 +10,10 @@ function PlanAdditional({ item, showFeature }) {
           <img src={item.img} alt="" />
           <h3>{item.title}</h3>
         </div>
-        {showFeature ? featuresBasicData.map((item, i) => <Feature item={item} key={i} />) : null}
+
+        {featuresBasicData.map((item, i) => (
+          <Feature item={item} key={i} showFeature={showFeature} />
+        ))}
       </div>
     </div>
   );

@@ -4,26 +4,34 @@ import { featuresBasicData } from "./featuresData";
 import Feature from "./Feature";
 import "./plan-card.scss";
 
-function PlanCard({ item, isLight }) {
-  const { title, image, amount, popular } = item;
+function PlanCard({ item, isLight, isAnnually }) {
+  const { title, image, amount, popular, annually, save } = item;
   const [showFeature, setShowFeature] = useState(false);
 
   const handleClick = (params) => {
     setShowFeature(!showFeature);
   };
+  const featureLabel = showFeature ? "Hide all features" : "Show all features";
+  const openCard = showFeature ? "open" : "";
   return (
     <div className="col-12 col-md-6 mb-5 col-lg-4">
-      <div className=" plan-card text-center">
+      <div className={`${openCard} plan-card text-center`}>
         <h3 className="plan-name">{title}</h3>
         <img src={image} alt="" />
         <h4 className="amount">
-          {amount}
+          {isAnnually ? annually : amount}
           <span>/ per month</span>
         </h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+        {isAnnually ? <p className="save-amount">save {save}</p> : null}
 
-        <Button name="text-only" label="Show all features" handleClick={handleClick} />
-        {showFeature ? featuresBasicData.map((item, i) => <Feature item={item} key={i} />) : null}
+        <p className="plan-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+        </p>
+
+        <Button name="text-only" label={featureLabel} handleClick={handleClick} />
+        {featuresBasicData.map((item, i) => (
+          <Feature item={item} key={i} showFeature={showFeature} />
+        ))}
 
         <Button name="btn btn-secondary" label="Subscribe now" />
         {popular ? (

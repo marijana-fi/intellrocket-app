@@ -3,6 +3,7 @@ import RevealTitle from "../../utils/reveal-title/RevealTitle";
 import RevealText from "../../utils/reveal-text/RevealText";
 import Button from "../../utils/button/Button";
 import "./choose-plan.scss";
+import { Link } from "react-router-dom";
 
 function ChoosePlan() {
   return (
@@ -16,7 +17,9 @@ function ChoosePlan() {
             />
             <RevealTitle tag="h2" title="Try it, 50% Off First Month" />
             <RevealText tag="p" text="By paying annually, you get a 20% discount" />
-            <Button name="btn" label="Choose your plan" animate="true" />
+            <Link to="/intellrocket-app/maintenance/pricing-plan">
+              <Button name="btn" label="Choose your plan" animate="true" />
+            </Link>
           </div>
         </div>
       </div>

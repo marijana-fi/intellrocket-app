@@ -18,15 +18,22 @@
       display: none;
     }
   }
+  .switch-wrap {
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    animation: text-slide-in 0.6s forwards;
+    animation-delay: 1.6s;
+  }
   .show-additional {
-    display: none;
+    cursor: pointer;
   }
   .additional-cards {
     display: none;
-
     .plan-card-additional {
+      opacity: 0;
       padding: 20px 40px;
-      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.07);
+      box-shadow: var(--pp-box-shadow);
       .title-additional {
         display: flex;
         align-items: center;
@@ -42,14 +49,19 @@
 
   .feature-wrap {
     text-align: left;
-    padding: 35px 0;
-    border-bottom: solid 1px rgba(206, 212, 218, 0.2);
+    overflow: auto;
+    transition: max-height 0.4s ease-in-out;
     .feature-name {
+      padding-top: 30px;
       text-transform: unset;
       font-size: 1rem;
       margin-bottom: 20px;
     }
     .feature-list {
+      padding: 35px 0;
+      padding-top: 0;
+      border-bottom: solid 1px rgba(206, 212, 218, 0.2);
+
       li {
         display: flex;
         align-items: center;

@@ -2,6 +2,7 @@ import React from "react";
 import "./check-mark-input.scss";
 import { ErrorMessage } from "@hookform/error-message";
 import { forwardRef } from "react";
+import { Link } from "react-router-dom";
 
 const CheckmarkInput = forwardRef(({ contact, errors }, ref) => {
   return (
@@ -11,9 +12,9 @@ const CheckmarkInput = forwardRef(({ contact, errors }, ref) => {
         {contact ? (
           <span>
             I have read and agree with{" "}
-            <a href="/" className="underline">
+            <Link to="/intellrocket-app/privacy-policy" className="underline">
               privacy policy
-            </a>
+            </Link>
           </span>
         ) : (
           <span>

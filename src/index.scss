@@ -9,6 +9,7 @@
   --link-color: #00f;
   --work-step: rgba(0, 0, 0, 0.2);
   --support-box-bg: #f9f9ff;
+  --pp-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.07);
   background-color: var(--background);
   overflow: hidden;
   &.dark {
@@ -21,6 +22,7 @@
     --link-color: #fff;
     --work-step: #fff;
     --support-box-bg: #1a191d;
+    --pp-box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.07);
   }
 }
 

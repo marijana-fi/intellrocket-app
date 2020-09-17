@@ -7,7 +7,7 @@ import "./reveal-title.scss";
 
 gsap.registerPlugin(SplitText);
 
-const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
+const RevealTitle = ({ title, tag, customClass = "", rotate = [], titleSecond = "" }) => {
   const splitText = useRef(null);
   const itemsRef = useRef([]);
 
@@ -97,7 +97,8 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
       });
     }
   };
-
+  const colorized = titleSecond.substring(8);
+  const firstPart = titleSecond.slice(0, 8);
   return (
     <>
       <Waypoint onEnter={animateTitle} onLeave={() => setShouldAnimate(false)}>
@@ -111,6 +112,12 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [] }) => {
                 </span>
               ))}
             </div>
+          ) : null}
+          {titleSecond.length ? (
+            <span className="title-size">
+              {firstPart}
+              <span className="colorize">{colorized}</span>
+            </span>
           ) : null}
         </CustomTag>
       </Waypoint>
