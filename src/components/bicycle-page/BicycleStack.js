@@ -10,7 +10,7 @@ function BicycleStack({ isLight }) {
     <section className="margin-b-100">
       <div className="container">
         <div className="row text-center">
-          <div className="col-7 stack-title m-auto">
+          <div className="col-12 col-md-7 stack-title m-auto">
             <RevealTitle tag="h2" title="Our Stack" />
             <RevealText
               tag="p"

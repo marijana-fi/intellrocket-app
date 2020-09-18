@@ -3,18 +3,38 @@ import "./team-section.scss";
 import RevealText from "../../utils/reveal-text/RevealText";
 import RevealSingleLine from "../../utils/reveal-single-line/RevealSingleLine";
 import Button from "../../utils/button/Button";
-import teamData from "./teamData";
+import teamData, { innerData, middleData, outerData } from "./teamData";
 import { gsap, Back } from "gsap";
 import { Waypoint } from "react-waypoint";
 import { Link } from "react-router-dom";
+import RevealTitle from "../../utils/reveal-title/RevealTitle";
 
 function TeamSection() {
   const circleInnerRef = useRef(null);
   const circleMiddleRef = useRef(null);
   const circleOuterRef = useRef(null);
+  const circleWrapRef = useRef(null);
   const [shouldAnimate, setShouldAnimate] = useState(true);
+  const [heightWrap, sethHeightWrap] = useState(true);
 
   const [tl, setTl] = useState(null);
+
+  const heightInner = circleInnerRef.current?.clientWidth;
+  const heightMiddle = circleMiddleRef.current?.clientWidth;
+  const heightOuter = circleOuterRef.current?.clientWidth;
+
+  useEffect(() => {
+    sethHeightWrap(circleWrapRef.current?.clientWidth);
+
+    const handleWindowResize = () => {
+      sethHeightWrap(circleWrapRef.current?.clientWidth);
+    };
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   useEffect(() => {
     let tl = gsap.timeline();
@@ -56,56 +76,56 @@ function TeamSection() {
     <section id="about-team" className="margin-b">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6 mb-5">
             <Waypoint
               bottomOffset="200px"
               onEnter={() => animateCircle()}
               onLeave={() => setShouldAnimate(false)}
             >
-              <div className="circle-wrap">
-                <div className="team">
-                  {teamData.map((item, i) => (
-                    <img key={i} src={item.url} alt="" className="team-avatar" />
+              <div
+                className="circle-wrap"
+                ref={circleWrapRef}
+                style={{ height: `${heightWrap}px` }}
+              >
+                <div
+                  ref={circleInnerRef}
+                  style={{ height: `${heightInner}px` }}
+                  className="circle-inner circle"
+                >
+                  <div className="circle-bg"></div>
+                  {innerData.map((item, i) => (
+                    <div className="team-avatar" key={i}>
+                      <img src={item.url} alt="" />
+                    </div>
                   ))}
                 </div>
-                <svg
-                  width="690"
-                  height="690"
-                  viewBox="0 0 690 690"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  ref={circleMiddleRef}
+                  style={{ height: `${heightMiddle}px` }}
+                  className="circle-middle circle"
                 >
-                  <circle
-                    ref={circleOuterRef}
-                    cx="345"
-                    cy="345"
-                    r="345"
-                    fill="#FF2E2E"
-                    fillOpacity="0.2"
-                    className="circle"
-                  />
-                  <path
-                    ref={circleMiddleRef}
-                    d="M575 345C575 472.025 472.025 575 345 575C217.975 575 115 472.025 115 345C115 217.975 217.975 115 345 115C472.025 115 575 217.975 575 345Z"
-                    fill="#FF2E2E"
-                    fillOpacity="0.2"
-                    className="circle"
-                  />
+                  <div className="circle-bg"></div>
+                  {middleData.map((item, i) => (
+                    <div className="team-avatar" key={i}>
+                      <img src={item.url} alt="" />
+                    </div>
+                  ))}
+                </div>
+                <div ref={circleOuterRef} className="circle-outer circle">
+                  <div className="circle-bg"></div>
 
-                  <path
-                    ref={circleInnerRef}
-                    d="M455 345C455 405.751 405.751 455 345 455C284.249 455 235 405.751 235 345C235 284.249 284.249 235 345 235C405.751 235 455 284.249 455 345Z"
-                    fill="#FF2E2E"
-                    fillOpacity="0.2"
-                    className="circle"
-                  />
-                </svg>
+                  {outerData.map((item, i) => (
+                    <div className="team-avatar" key={i}>
+                      <img src={item.url} alt="" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </Waypoint>
           </div>
-          <div className="col-12 col-lg-5">
+          <div className="col-12 col-lg-5 ml-lg-5">
             <div className="text-wrap">
-              <RevealText tag="h5" text="meet the team" />
+              <RevealTitle tag="h5" title="meet the team" customClass="colorize-text" />
               <RevealSingleLine tag="h3" text="who we are" />
               <RevealText
                 tag="p"

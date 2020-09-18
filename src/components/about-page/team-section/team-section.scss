@@ -2,65 +2,91 @@
   .circle-wrap {
     position: relative;
     width: 100%;
-
-    svg {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      overflow: visible;
-      transform-origin: center;
-      .circle {
-        opacity: 0;
-      }
-    }
-    .team {
-      transform: scale(0);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
     .team-avatar {
       height: 50px;
       width: 50px;
       position: absolute;
       border-radius: 50%;
       overflow: hidden;
+    }
+    .circle-bg {
+      background: rgb(255, 46, 46);
+      height: 100%;
+      opacity: 0.2;
+      border-radius: 50%;
+    }
+    .circle-inner {
+      opacity: 0;
 
-      &:nth-of-type(1) {
-        top: 7%;
-        right: 79%;
+      position: absolute;
+      width: 31.9%;
+      height: 31.9%;
+      top: 34.05%;
+      left: 34.05%;
+      z-index: 2;
+      border-radius: 100%;
+      .team-avatar {
+        top: -5%;
+        right: 1%;
+        &:nth-of-type(2) {
+          top: unset;
+          left: -11%;
+          bottom: -5%;
+        }
       }
-      &:nth-of-type(2) {
+    }
+    .circle-middle {
+      opacity: 0;
+
+      position: absolute;
+      width: 66.67%;
+      height: 66.67%;
+      top: 16.665%;
+      left: 16.665%;
+      z-index: 1;
+      border-radius: 100%;
+      .team-avatar {
+        top: 40%;
+        right: -9%;
+
+        &:nth-of-type(2) {
+          right: 36%;
+          bottom: -9%;
+          top: unset;
+        }
+        &:nth-of-type(3) {
+          top: -8%;
+          left: 30%;
+        }
+      }
+    }
+    .circle-outer {
+      opacity: 0;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      border-radius: 100%;
+      .team-avatar {
         top: -1%;
         right: 18%;
-      }
-      &:nth-of-type(3) {
-        bottom: 15%;
-        right: 3%;
-      }
-      &:nth-of-type(4) {
-        bottom: 10%;
-        right: 79%;
-      }
-      &:nth-of-type(5) {
-        right: 55%;
-        top: 13%;
-      }
-      &:nth-of-type(6) {
-        right: 13%;
-        top: 45%;
-      }
-      &:nth-of-type(7) {
-        right: 40%;
-        bottom: 13%;
-      }
-      &:nth-of-type(8) {
-        right: 58%;
-        bottom: 36%;
-      }
-      &:nth-of-type(9) {
-        right: 35%;
-        bottom: 57%;
+        &:nth-of-type(2) {
+          top: 7%;
+          right: 79%;
+        }
+        &:nth-of-type(3) {
+          top: unset;
+          bottom: 10%;
+          right: 79%;
+        }
+        &:nth-of-type(4) {
+          top: unset;
+          bottom: 15%;
+          right: 3%;
+        }
       }
     }
   }
@@ -68,14 +94,7 @@
     text-transform: uppercase;
   }
   h5 {
-    margin-bottom: 40px;
-    .text-split-child {
-      color: red;
-      background: var(--accent-color);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    margin-bottom: 20px;
   }
   p {
     margin-bottom: 60px;

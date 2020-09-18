@@ -101,7 +101,7 @@ const RevealTitle = ({ title, tag, customClass = "", rotate = [], titleSecond = 
   const firstPart = titleSecond.slice(0, 8);
   return (
     <>
-      <Waypoint onEnter={animateTitle} onLeave={() => setShouldAnimate(false)}>
+      <Waypoint bottomOffset="20%" onEnter={animateTitle} onLeave={() => setShouldAnimate(false)}>
         <CustomTag ref={splitText} className={`reveal-title ${customClass}`}>
           {title}
           {rotate.length ? (

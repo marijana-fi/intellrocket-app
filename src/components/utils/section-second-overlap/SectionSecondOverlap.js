@@ -19,7 +19,7 @@ const SectionSecondOverlap = forwardRef((props, ref) => {
           <div className="col-12 col-lg-5 d-flex align-items-center ">
             <div className="text-wrap">
               {data.heading ? (
-                <RevealTitle tag="h5" title={data.heading} customClass="heading" />
+                <RevealTitle tag="h5" title={data.heading} customClass="heading colorize-text" />
               ) : null}
               <RevealTitle tag="h2" title={data.title} />
               <RevealText tag="p" text={data.desc} />
