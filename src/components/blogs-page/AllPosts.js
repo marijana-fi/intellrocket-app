@@ -30,6 +30,7 @@ function AllPosts() {
     setSlicedBlogsData(sliced);
   }, [blogsData, limit]);
 
+  console.log(postsAmount, limit);
   useEffect(() => {
     setTimeout(() => {
       let split = new SplitText(".post-title", {
@@ -59,7 +60,11 @@ function AllPosts() {
         ))}
       </div>
       <div className="row justify-content-center">
-        <Button name="btn" label="Load More" animate="true" handleClick={handleLoadMore} />
+        {postsAmount == limit ? (
+          <h4>No More Posts</h4>
+        ) : (
+          <Button name="btn" label="Load More" animate="true" handleClick={handleLoadMore} />
+        )}
       </div>
     </section>
   );

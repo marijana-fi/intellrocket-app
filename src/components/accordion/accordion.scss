@@ -25,7 +25,7 @@
     border-bottom: 1px solid #b2b6cd45;
     text-align: start;
     background: var(--background);
-    overflow: auto;
+    overflow: hidden;
     transition: max-height 0.4s ease-in-out;
     .accordion__text {
       padding-bottom: 20px;
